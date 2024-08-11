@@ -13,7 +13,7 @@ function App() {
             <div class="uk-margin">
               <input class="uk-input uk-form-width-medium uk-form-large" type="text" placeholder="Large" aria-label="Large" />
             </div>
-            <button class="uk-button uk-button-default" onClick={sender}>Send</button>
+            <button class="uk-button uk-button-default" onClick={sender}>Send2</button>
           </div>
       </div>
       <div>

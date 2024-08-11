@@ -12,5 +12,20 @@ root.render(
   </React.StrictMode>
 );
 
+// Функция для обновления приложения
+// function updateApp() {
+  navigator.serviceWorker.getRegistration().then((registration) => {
+    if (registration && registration.waiting) {
+      registration.waiting.postMessage({action: 'skipWaiting'});
+    }
+  });
+// }
+
+navigator.serviceWorker.addEventListener('message', (event) => {
+  if (event.data.action === 'refresh') {
+    window.location.reload();
+  }
+});
+
 reportWebVitals();
 serviceWorkerRegistration.register();
