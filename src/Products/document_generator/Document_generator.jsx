@@ -35,12 +35,12 @@ const Document_generator = () => (
         /* and other goodies */
       }) => (
         <form onSubmit={handleSubmit}>
-            <div classNameName="mb-4">
-                <label classNameName="input-label" for="Patrol_task_number" style={{color: "rgb(167, 150, 0);"}}>Номер задания</label>
+            <div className="mb-4">
+                <label className="input-label" for="Patrol_task_number" style={{color: "rgb(167, 150, 0);"}}>Номер задания</label>
 
-                <div classNameName="uk-margin">
+                <div className="uk-margin">
                     <input 
-                        classNameName="uk-input" 
+                        className="uk-input" 
                         type="number" 
                         placeholder="185" 
                         aria-label="Patrol_task_number"
@@ -55,9 +55,9 @@ const Document_generator = () => (
             <div className="mb-4">
                 <label className="input-label" for="Date_issue_task">От какого числа</label>
 
-                <div classNameName="uk-margin">
+                <div className="uk-margin">
                     <input 
-                        classNameName="uk-input date_selection" 
+                        className="uk-input date_selection" 
                         type="text" 
                         placeholder="«10» июня 2024" 
                         aria-label="Date_issue_task"
