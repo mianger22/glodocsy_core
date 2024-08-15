@@ -1,25 +1,20 @@
-function App() {
-  const sender = () => {
-    alert("success");
-  }
+import CenterBlock from "./PartsAppFile/CenterBlock/CenterBlock";
 
+function App() {
   return (
-    <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+    <div class="uk-grid-match uk-child-width-expand@s uk-text-center uk-flex" uk-grid>
       <div>
-          <div class="uk-card uk-card-default uk-card-body"></div>
+        <div class="uk-card uk-card-default uk-card-body"></div>
       </div>
       <div>
-          <div class="uk-card uk-card-default uk-card-body">
-            <div class="uk-margin">
-              <input class="uk-input uk-form-width-medium uk-form-large" type="text" placeholder="Large" aria-label="Large" />
-            </div>
-            <button class="uk-button uk-button-default" onClick={sender}>Send3</button>
-          </div>
+        <div class="uk-card uk-card-default uk-card-body">
+          <CenterBlock />
+        </div>
       </div>
       <div>
-          <div class="uk-card uk-card-default uk-card-body"></div>
+        <div class="uk-card uk-card-default uk-card-body"></div>
       </div>
-    </div>
+  </div>
   );
 }
 
