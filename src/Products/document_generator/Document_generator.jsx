@@ -191,7 +191,6 @@ const Document_generator = () => (
                 </div>
                 {errors.Full_name_senior_patroller && touched.Full_name_senior_patroller && errors.Full_name_senior_patroller}
             </div>
-
             <div className="mb-4">
                 <label className="input-label" for="Who_am_I_patrolling_with">С кем патрулирую</label>
 
@@ -215,7 +214,41 @@ const Document_generator = () => (
                     </select>
                 </div>
                 {errors.Full_name_junior_patroller && touched.Full_name_junior_patroller && errors.Full_name_junior_patroller}
-            </div>         
+            </div> 
+            <div className="mb-4 flex flex-col space-y-1">
+                <label className="input-label" for="Time_assignment_issue" style={{color: "rgb(167, 150, 0);"}}>Время выдачи задания</label>
+
+                <div className="uk-margin">
+                    <input 
+                        className="uk-input date_selection" 
+                        type="text" 
+                        placeholder="12 30" 
+                        aria-label="Time_assignment_issue"
+                        name="Time_assignment_issue"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.Time_assignment_issue}
+                    />
+                </div>
+                {errors.Time_assignment_issue && touched.Time_assignment_issue && errors.Time_assignment_issue}
+            </div> 
+            <div className="mb-4 flex flex-col space-y-1">
+                <label className="input-label" for="Date_assignment_issue">Дата выдачи задания</label>
+
+                <div className="uk-margin">
+                    <input 
+                        className="uk-input date_selection" 
+                        type="text" 
+                        placeholder="«10» июня 2024" 
+                        aria-label="Date_assignment_issue"
+                        name="Date_assignment_issue"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.Date_assignment_issue}
+                    />
+                </div>
+                {errors.Date_assignment_issue && touched.Date_assignment_issue && errors.Date_assignment_issue}
+            </div>     
             
             <button type="submit" disabled={isSubmitting}>
                 Создать документы
