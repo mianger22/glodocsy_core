@@ -378,6 +378,21 @@ const Document_generator = () => (
                 </div>
                 {errors.Patrol_car && touched.Patrol_car && errors.Patrol_car}
             </div>
+            <div className="mb-4">
+                <div className="uk-margin">
+                    <input 
+                        className="uk-input date_selection" 
+                        type="checkbox" 
+                        placeholder="«10» июня 2024" 
+                        aria-label="Is_there_photo_table"
+                        name="Is_there_photo_table"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.Is_there_photo_table}
+                    />
+                </div> Есть ли фототаблица
+                {errors.Is_there_photo_table && touched.Is_there_photo_table && errors.Is_there_photo_table}
+            </div>
 
             <button type="submit" disabled={isSubmitting}>
                 Создать документы
