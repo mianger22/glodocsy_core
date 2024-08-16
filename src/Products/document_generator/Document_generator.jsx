@@ -303,7 +303,18 @@ const Document_generator = () => (
                 </div>
                 {errors.Date_patrol_act && touched.Date_patrol_act && errors.Date_patrol_act}
             </div>
-            
+            <div className="mb-4">
+                <label className="input-label" for="Object_leaflet">На что наклеено</label>
+                
+                <div className="uk-margin">
+                    <select id="Object_leaflet" name="Object_leaflet">
+                        <option value='автобусная остановка'>Остановка</option>
+                        <option value='доска объявлений'>Доска объявлений</option>
+                    </select>
+                </div>
+                {errors.Object_leaflet && touched.Object_leaflet && errors.Object_leaflet}
+            </div>
+
             <button type="submit" disabled={isSubmitting}>
                 Создать документы
             </button>
