@@ -142,7 +142,20 @@ const Document_generator = () => (
                     />
                 </div>
                 {errors.What_date_was_approved && touched.What_date_was_approved && errors.What_date_was_approved}
-            </div>                          
+            </div>  
+            <div className="mb-4 flex flex-col space-y-1">
+                <label className="input-label" for="Year_patrol">Год патрулирования</label>
+
+                <div className="uk-margin">
+                    <select id="Year_patrol" name="Year_patrol">
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                    </select>
+                </div>
+                {errors.What_date_was_approved && touched.What_date_was_approved && errors.What_date_was_approved}
+            </div>                       
             
             <button type="submit" disabled={isSubmitting}>
                 Создать документы
