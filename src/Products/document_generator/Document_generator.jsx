@@ -367,6 +367,17 @@ const Document_generator = () => (
                 </div>
                 {errors.Village_informed_people && touched.Village_informed_people && errors.Village_informed_people}
             </div>
+            <div className="mb-4">
+                <label className="input-label" for="Patrol_car">Машина патрулирования</label>
+                
+                <div className="uk-margin">
+                    <select id="Patrol_car" name="Patrol_car">
+                        <option value='УАЗ С233ТА53' selected>Алексея Евгеньевича</option>
+                        <option value='УАЗ C848ХМ53'>Николая Викторовича</option>
+                    </select>
+                </div>
+                {errors.Patrol_car && touched.Patrol_car && errors.Patrol_car}
+            </div>
 
             <button type="submit" disabled={isSubmitting}>
                 Создать документы
