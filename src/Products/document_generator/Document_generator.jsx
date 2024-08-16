@@ -248,7 +248,22 @@ const Document_generator = () => (
                     />
                 </div>
                 {errors.Date_assignment_issue && touched.Date_assignment_issue && errors.Date_assignment_issue}
-            </div>     
+            </div>
+            <div className="mb-4">
+                <div className="uk-margin">
+                    <input 
+                        className="uk-input date_selection" 
+                        type="checkbox" 
+                        placeholder="«10» июня 2024" 
+                        aria-label="Additional_order"
+                        name="Additional_order"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.Additional_order}
+                    />
+                </div> Дополнительный приказ
+                {errors.Additional_order && touched.Additional_order && errors.Additional_order}
+            </div>
             
             <button type="submit" disabled={isSubmitting}>
                 Создать документы
