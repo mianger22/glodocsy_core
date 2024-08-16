@@ -314,6 +314,24 @@ const Document_generator = () => (
                 </div>
                 {errors.Object_leaflet && touched.Object_leaflet && errors.Object_leaflet}
             </div>
+            <div className="mb-4">
+                <label className="input-label" for="Village_leaflet">Деревня, в которой наклеено</label>
+                
+                <div className="uk-margin">
+                    <select id="Village_leaflet" name="Village_leaflet">
+                        <option disabled selected></option>
+                        <option value='Некохово'>Некохово</option>
+                        <option value='Захарьино'>Захарьино</option>
+                        <option value='Подберезье'>Подберезье</option>
+                        <option value='Вешки'>Вешки</option>
+                        <option value='Котовицы'>Котовицы</option>
+                        <option value='Мясной Бор'>Мясной Бор</option>
+                        <option value='Большое Замошье'>Большое Замошье</option>
+                        <option value='Малое Замошье'>Малое Замошье</option>
+                    </select>
+                </div>
+                {errors.Village_leaflet && touched.Village_leaflet && errors.Village_leaflet}
+            </div>
 
             <button type="submit" disabled={isSubmitting}>
                 Создать документы
