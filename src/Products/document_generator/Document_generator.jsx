@@ -349,6 +349,24 @@ const Document_generator = () => (
                 </div>
                 {errors.Number_informed_people && touched.Number_informed_people && errors.Number_informed_people}
             </div>
+            <div className="mb-4">
+                <label className="input-label" for="Village_informed_people">Деревня, в которой проинформированы люди</label>
+                
+                <div className="uk-margin">
+                    <select id="Village_informed_people" name="Village_informed_people">
+                        <option disabled selected></option>
+                        <option value='Некохово'>Некохово</option>
+                        <option value='Захарьино'>Захарьино</option>
+                        <option value='Подберезье'>Подберезье</option>
+                        <option value='Вешки'>Вешки</option>
+                        <option value='Котовицы'>Котовицы</option>
+                        <option value='Мясной Бор'>Мясной Бор</option>
+                        <option value='Большое Замошье'>Большое Замошье</option>
+                        <option value='Малое Замошье'>Малое Замошье</option>
+                    </select>
+                </div>
+                {errors.Village_informed_people && touched.Village_informed_people && errors.Village_informed_people}
+            </div>
 
             <button type="submit" disabled={isSubmitting}>
                 Создать документы
