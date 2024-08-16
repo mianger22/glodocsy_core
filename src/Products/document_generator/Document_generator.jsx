@@ -264,6 +264,28 @@ const Document_generator = () => (
                 </div> Дополнительный приказ
                 {errors.Additional_order && touched.Additional_order && errors.Additional_order}
             </div>
+
+            {/* ---------------------------------------------------------------------------------------------------- */}
+            
+            <div class="form-title text-indigo-600 text-sm mt-4 mb-4"><ins>Акт</ins></div>
+
+            <div className="mb-4">
+                <label className="input-label" for="Number_patrol_act" style={{color: "rgb(167, 150, 0);"}}>Номер акта о патрулировании</label>
+                
+                <div className="uk-margin">
+                    <input 
+                        className="uk-input date_selection" 
+                        type="number" 
+                        placeholder="105" 
+                        aria-label="Number_patrol_act"
+                        name="Number_patrol_act"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.Number_patrol_act}
+                    />
+                </div>
+                {errors.Number_patrol_act && touched.Number_patrol_act && errors.Number_patrol_act}
+            </div>
             
             <button type="submit" disabled={isSubmitting}>
                 Создать документы
