@@ -154,8 +154,19 @@ const Document_generator = () => (
                         <option value="2027">2027</option>
                     </select>
                 </div>
-                {errors.What_date_was_approved && touched.What_date_was_approved && errors.What_date_was_approved}
-            </div>                       
+                {errors.Year_patrol && touched.Year_patrol && errors.Year_patrol}
+            </div>  
+            <div className="mb-4 flex flex-col space-y-1">
+                <label className="input-label" for="Who_issued_patrol">Кто выдал задание</label>
+
+                <div className="uk-margin">
+                    <select id="Person_issued_task" name="Person_issued_task">
+                        <option value='директор ГОКУ "Новгородское лесничество" Иванов К.В.'>Директор</option>
+                        <option value='заместитель директора ГОКУ "Новгородское лесничество" Орехова И.Н.'>Заместитель</option>
+                    </select>
+                </div>
+                {errors.Person_issued_task && touched.Person_issued_task && errors.Person_issued_task}
+            </div>                  
             
             <button type="submit" disabled={isSubmitting}>
                 Создать документы
