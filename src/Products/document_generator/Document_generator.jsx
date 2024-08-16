@@ -286,6 +286,23 @@ const Document_generator = () => (
                 </div>
                 {errors.Number_patrol_act && touched.Number_patrol_act && errors.Number_patrol_act}
             </div>
+            <div className="mb-4">
+                <label className="input-label" for="Date_patrol_act">Дата акта о патрулировании</label>
+                
+                <div className="uk-margin">
+                    <input 
+                        className="uk-input date_selection" 
+                        type="text" 
+                        placeholder="«03» июня 2024" 
+                        aria-label="Date_patrol_act"
+                        name="Date_patrol_act"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.Date_patrol_act}
+                    />
+                </div>
+                {errors.Date_patrol_act && touched.Date_patrol_act && errors.Date_patrol_act}
+            </div>
             
             <button type="submit" disabled={isSubmitting}>
                 Создать документы
