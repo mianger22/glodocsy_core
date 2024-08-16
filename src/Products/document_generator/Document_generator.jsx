@@ -332,6 +332,23 @@ const Document_generator = () => (
                 </div>
                 {errors.Village_leaflet && touched.Village_leaflet && errors.Village_leaflet}
             </div>
+            <div className="mb-4">
+                <label className="input-label" for="Number_informed_people">Сколько человек проинформировано</label>
+                
+                <div className="uk-margin">
+                    <input 
+                        className="uk-input" 
+                        type="number" 
+                        placeholder="1" 
+                        aria-label="Number_informed_people"
+                        name="Number_informed_people"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.Number_informed_people}
+                    />
+                </div>
+                {errors.Number_informed_people && touched.Number_informed_people && errors.Number_informed_people}
+            </div>
 
             <button type="submit" disabled={isSubmitting}>
                 Создать документы
