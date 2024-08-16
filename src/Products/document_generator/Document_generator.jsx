@@ -124,7 +124,25 @@ const Document_generator = () => (
                     </select> 
                 </div>
                 {errors.Patrol_route_number && touched.Patrol_route_number && errors.Patrol_route_number}
-            </div>               
+            </div>   
+            <div className="mb-4">
+                <label className="input-label" for="What_date_was_approved">Какого числа утверждён</label>
+
+                <div className="uk-margin">
+                    <input 
+                        className="uk-input date_selection" 
+                        type="text" 
+                        placeholder="08.12.2023" 
+                        // value="08.12.2023"
+                        aria-label="What_date_was_approved"
+                        name="What_date_was_approved"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={values.What_date_was_approved}
+                    />
+                </div>
+                {errors.What_date_was_approved && touched.What_date_was_approved && errors.What_date_was_approved}
+            </div>                          
             
             <button type="submit" disabled={isSubmitting}>
                 Создать документы
