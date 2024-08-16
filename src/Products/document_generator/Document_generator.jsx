@@ -166,7 +166,31 @@ const Document_generator = () => (
                     </select>
                 </div>
                 {errors.Person_issued_task && touched.Person_issued_task && errors.Person_issued_task}
-            </div>                  
+            </div>    
+            <div className="mb-4">
+                <label className="input-label" for="Who_is_patrolling">Старший патрульной группы</label>
+
+                <div className="uk-margin">
+                    <select id="Full_name_senior_patroller" name="Full_name_senior_patroller">
+                        <option value='мастер леса Мясноборского участкового лесничества Устинов Дмитрий Сергеевич'>
+                            Устинов, мастер Мясноборского
+                        </option>
+                        <option value='участковый лесничий Ермолинского участкового лесничества Кузнецова Елизавета Михайловна'>
+                            Кузнецова, участковый Ермолинского
+                        </option>
+                        <option value='участковый лесничий Новгородского участкового лесничества Маркова Ирина Фирсовна'>
+                            Маркова, участковый Новгородского
+                        </option>
+                        <option value='мастер леса Советского участкового лесничества Капитонова Марина Александровна'>
+                            Капитонова, мастер Советского
+                        </option>
+                        <option value='мастер леса Новгородского участкового лесничества Зайцев Даниил Алексеевич'>
+                            Зайцев, мастер Новгородского
+                        </option>
+                    </select>
+                </div>
+                {errors.Full_name_senior_patroller && touched.Full_name_senior_patroller && errors.Full_name_senior_patroller}
+            </div>            
             
             <button type="submit" disabled={isSubmitting}>
                 Создать документы
