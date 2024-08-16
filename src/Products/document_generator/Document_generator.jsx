@@ -86,7 +86,45 @@ const Document_generator = () => (
                 </div>
                 {errors.Patrol_date && touched.Patrol_date && errors.Patrol_date}
             </div>
-               
+            <div className="mb-4">
+                <label className="input-label" for="Patrol_route_number" style={{color: "rgb(167, 150, 0);"}}>Номер маршрута патрулирования</label>
+
+                <div className="uk-margin">
+                    <select id="Patrol_route_number" name="Patrol_route_number">
+                        <option disabled selected>
+                            
+                        </option>
+                        <option value='70,1'>
+                            70
+                        </option>
+                        <option value='71,2'>
+                            71
+                        </option>
+                        <option value='72,3'>
+                            72
+                        </option>
+                        <option value='73,4'>
+                            73
+                        </option>
+                        <option value='74,5'>
+                            74
+                        </option>
+                        <option value='75,6'>
+                            75
+                        </option>
+                        <option value='76,7'>
+                            76
+                        </option>
+                        <option value='77,8'>
+                            77
+                        </option>
+                        <option value='78,9'>
+                            78
+                        </option>
+                    </select> 
+                </div>
+                {errors.Patrol_route_number && touched.Patrol_route_number && errors.Patrol_route_number}
+            </div>               
             
             <button type="submit" disabled={isSubmitting}>
                 Создать документы
