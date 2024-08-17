@@ -57,7 +57,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Patrol_task_number && touched.Patrol_task_number && errors.Patrol_task_number}</div>
             </div>
             <div className="mb-4">
-                <label className="input-label" for="Date_issue_task">От какого числа</label>
+                <label for="Date_issue_task">От какого числа</label>
 
                 <div className="uk-margin">
                     <input 
@@ -74,7 +74,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Date_issue_task && touched.Date_issue_task && errors.Date_issue_task}</div>
             </div>
             <div className="mb-4">
-                <label className="input-label" for="Patrol_date">Дата патрулирования</label>
+                <label for="Patrol_date">Дата патрулирования</label>
 
                 <div className="uk-margin">
                     <input 
@@ -130,7 +130,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Patrol_route_number && touched.Patrol_route_number && errors.Patrol_route_number}</div>
             </div>   
             <div className="mb-4">
-                <label className="input-label" for="What_date_was_approved">Какого числа утверждён</label>
+                <label for="What_date_was_approved">Какого числа утверждён</label>
 
                 <div className="uk-margin">
                     <input 
@@ -148,7 +148,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.What_date_was_approved && touched.What_date_was_approved && errors.What_date_was_approved}</div>
             </div>  
             <div className="mb-4 flex flex-col space-y-1">
-                <label className="input-label" for="Year_patrol">Год патрулирования</label>
+                <label for="Year_patrol">Год патрулирования</label>
 
                 <div className="uk-margin">
                     <select id="Year_patrol" name="Year_patrol">
@@ -161,7 +161,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Year_patrol && touched.Year_patrol && errors.Year_patrol}</div>
             </div>  
             <div className="mb-4 flex flex-col space-y-1">
-                <label className="input-label" for="Who_issued_patrol">Кто выдал задание</label>
+                <label for="Who_issued_patrol">Кто выдал задание</label>
 
                 <div className="uk-margin">
                     <select id="Person_issued_task" name="Person_issued_task">
@@ -172,7 +172,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Person_issued_task && touched.Person_issued_task && errors.Person_issued_task}</div>
             </div>    
             <div className="mb-4">
-                <label className="input-label" for="Who_is_patrolling">Старший патрульной группы</label>
+                <label for="Who_is_patrolling">Старший патрульной группы</label>
 
                 <div className="uk-margin">
                     <select id="Full_name_senior_patroller" name="Full_name_senior_patroller">
@@ -196,7 +196,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Full_name_senior_patroller && touched.Full_name_senior_patroller && errors.Full_name_senior_patroller}</div>
             </div>
             <div className="mb-4">
-                <label className="input-label" for="Who_am_I_patrolling_with">С кем патрулирую</label>
+                <label for="Who_am_I_patrolling_with">С кем патрулирую</label>
 
                 <div className="uk-margin">
                     <select id="Full_name_junior_patroller" name="Full_name_junior_patroller">
@@ -237,7 +237,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Time_assignment_issue && touched.Time_assignment_issue && errors.Time_assignment_issue}</div>
             </div> 
             <div className="mb-4 flex flex-col space-y-1">
-                <label className="input-label" for="Date_assignment_issue">Дата выдачи задания</label>
+                <label for="Date_assignment_issue">Дата выдачи задания</label>
 
                 <div className="uk-margin">
                     <input 
@@ -293,7 +293,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Number_patrol_act && touched.Number_patrol_act && errors.Number_patrol_act}</div>
             </div>
             <div className="mb-4">
-                <label className="input-label" for="Date_patrol_act">Дата акта о патрулировании</label>
+                <label for="Date_patrol_act">Дата акта о патрулировании</label>
                 
                 <div className="uk-margin">
                     <input 
@@ -310,7 +310,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Date_patrol_act && touched.Date_patrol_act && errors.Date_patrol_act}</div>
             </div>
             <div className="mb-4">
-                <label className="input-label" for="Object_leaflet">На что наклеено</label>
+                <label for="Object_leaflet">На что наклеено</label>
                 
                 <div className="uk-margin">
                     <select id="Object_leaflet" name="Object_leaflet">
@@ -321,7 +321,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Object_leaflet && touched.Object_leaflet && errors.Object_leaflet}</div>
             </div>
             <div className="mb-4">
-                <label className="input-label" for="Village_leaflet">Деревня, в которой наклеено</label>
+                <label for="Village_leaflet">Деревня, в которой наклеено</label>
                 
                 <div className="uk-margin">
                     <select id="Village_leaflet" name="Village_leaflet">
@@ -339,7 +339,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Village_leaflet && touched.Village_leaflet && errors.Village_leaflet}</div>
             </div>
             <div className="mb-4">
-                <label className="input-label" for="Number_informed_people">Сколько человек проинформировано</label>
+                <label for="Number_informed_people">Сколько человек проинформировано</label>
                 
                 <div className="uk-margin">
                     <input 
@@ -356,7 +356,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Number_informed_people && touched.Number_informed_people && errors.Number_informed_people}</div>
             </div>
             <div className="mb-4">
-                <label className="input-label" for="Village_informed_people">Деревня, в которой проинформированы люди</label>
+                <label for="Village_informed_people">Деревня, в которой проинформированы люди</label>
                 
                 <div className="uk-margin">
                     <select id="Village_informed_people" name="Village_informed_people">
@@ -374,7 +374,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Village_informed_people && touched.Village_informed_people && errors.Village_informed_people}</div>
             </div>
             <div className="mb-4">
-                <label className="input-label" for="Patrol_car">Машина патрулирования</label>
+                <label for="Patrol_car">Машина патрулирования</label>
                 
                 <div className="uk-margin">
                     <select id="Patrol_car" name="Patrol_car">
