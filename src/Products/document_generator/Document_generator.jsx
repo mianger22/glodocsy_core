@@ -6,12 +6,14 @@ const Document_generator = () => (
       initialValues={{ Patrol_task_number: '', val2: '' }}
       validate={values => {
         const errors = {};
-        if (!values.email) {
-          errors.email = 'Required';
+        if (!values.Patrol_task_number) {
+          errors.Patrol_task_number = 'Заполните поле';
         } else if (
-          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+        //   !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+            // values.Patrol_task_number.length > 4
+            !/^\d{1,4}$/i.test(values.Patrol_task_number)
         ) {
-          errors.email = 'Invalid email address';
+          errors.Patrol_task_number = 'Номер задания должен быть не более 4 цифр';
         }
         return errors;
       }}
@@ -49,7 +51,7 @@ const Document_generator = () => (
                         value={values.Patrol_task_number}
                     />
                 </div>
-                {errors.Patrol_task_number && touched.Patrol_task_number && errors.Patrol_task_number}
+                <div className='uk-text-danger'>{errors.Patrol_task_number && touched.Patrol_task_number && errors.Patrol_task_number}</div>
             </div>
             <div className="mb-4">
                 <label className="input-label" for="Date_issue_task">От какого числа</label>
@@ -66,7 +68,7 @@ const Document_generator = () => (
                         value={values.Date_issue_task}
                     />
                 </div>
-                {errors.Date_issue_task && touched.Date_issue_task && errors.Date_issue_task}
+                <div className='uk-text-danger'>{errors.Date_issue_task && touched.Date_issue_task && errors.Date_issue_task}</div>
             </div>
             <div className="mb-4">
                 <label className="input-label" for="Patrol_date">Дата патрулирования</label>
@@ -83,7 +85,7 @@ const Document_generator = () => (
                         value={values.Patrol_date}
                     />
                 </div>
-                {errors.Patrol_date && touched.Patrol_date && errors.Patrol_date}
+                <div className='uk-text-danger'>{errors.Patrol_date && touched.Patrol_date && errors.Patrol_date}</div>
             </div>
             <div className="mb-4">
                 <label className="input-label" for="Patrol_route_number" style={{color: "rgb(167, 150, 0);"}}>Номер маршрута патрулирования</label>
@@ -122,7 +124,7 @@ const Document_generator = () => (
                         </option>
                     </select> 
                 </div>
-                {errors.Patrol_route_number && touched.Patrol_route_number && errors.Patrol_route_number}
+                <div className='uk-text-danger'>{errors.Patrol_route_number && touched.Patrol_route_number && errors.Patrol_route_number}</div>
             </div>   
             <div className="mb-4">
                 <label className="input-label" for="What_date_was_approved">Какого числа утверждён</label>
@@ -140,7 +142,7 @@ const Document_generator = () => (
                         value={values.What_date_was_approved}
                     />
                 </div>
-                {errors.What_date_was_approved && touched.What_date_was_approved && errors.What_date_was_approved}
+                <div className='uk-text-danger'>{errors.What_date_was_approved && touched.What_date_was_approved && errors.What_date_was_approved}</div>
             </div>  
             <div className="mb-4 flex flex-col space-y-1">
                 <label className="input-label" for="Year_patrol">Год патрулирования</label>
@@ -153,7 +155,7 @@ const Document_generator = () => (
                         <option value="2027">2027</option>
                     </select>
                 </div>
-                {errors.Year_patrol && touched.Year_patrol && errors.Year_patrol}
+                <div className='uk-text-danger'>{errors.Year_patrol && touched.Year_patrol && errors.Year_patrol}</div>
             </div>  
             <div className="mb-4 flex flex-col space-y-1">
                 <label className="input-label" for="Who_issued_patrol">Кто выдал задание</label>
@@ -164,7 +166,7 @@ const Document_generator = () => (
                         <option value='заместитель директора ГОКУ "Новгородское лесничество" Орехова И.Н.'>Заместитель</option>
                     </select>
                 </div>
-                {errors.Person_issued_task && touched.Person_issued_task && errors.Person_issued_task}
+                <div className='uk-text-danger'>{errors.Person_issued_task && touched.Person_issued_task && errors.Person_issued_task}</div>
             </div>    
             <div className="mb-4">
                 <label className="input-label" for="Who_is_patrolling">Старший патрульной группы</label>
@@ -188,7 +190,7 @@ const Document_generator = () => (
                         </option>
                     </select>
                 </div>
-                {errors.Full_name_senior_patroller && touched.Full_name_senior_patroller && errors.Full_name_senior_patroller}
+                <div className='uk-text-danger'>{errors.Full_name_senior_patroller && touched.Full_name_senior_patroller && errors.Full_name_senior_patroller}</div>
             </div>
             <div className="mb-4">
                 <label className="input-label" for="Who_am_I_patrolling_with">С кем патрулирую</label>
@@ -212,7 +214,7 @@ const Document_generator = () => (
                         </option>
                     </select>
                 </div>
-                {errors.Full_name_junior_patroller && touched.Full_name_junior_patroller && errors.Full_name_junior_patroller}
+                <div className='uk-text-danger'>{errors.Full_name_junior_patroller && touched.Full_name_junior_patroller && errors.Full_name_junior_patroller}</div>
             </div> 
             <div className="mb-4 flex flex-col space-y-1">
                 <label className="input-label" for="Time_assignment_issue" style={{color: "rgb(167, 150, 0);"}}>Время выдачи задания</label>
@@ -229,7 +231,7 @@ const Document_generator = () => (
                         value={values.Time_assignment_issue}
                     />
                 </div>
-                {errors.Time_assignment_issue && touched.Time_assignment_issue && errors.Time_assignment_issue}
+                <div className='uk-text-danger'>{errors.Time_assignment_issue && touched.Time_assignment_issue && errors.Time_assignment_issue}</div>
             </div> 
             <div className="mb-4 flex flex-col space-y-1">
                 <label className="input-label" for="Date_assignment_issue">Дата выдачи задания</label>
@@ -246,7 +248,7 @@ const Document_generator = () => (
                         value={values.Date_assignment_issue}
                     />
                 </div>
-                {errors.Date_assignment_issue && touched.Date_assignment_issue && errors.Date_assignment_issue}
+                <div className='uk-text-danger'>{errors.Date_assignment_issue && touched.Date_assignment_issue && errors.Date_assignment_issue}</div>
             </div>
             <div className="mb-4">
                 <div className="uk-margin">
@@ -261,7 +263,7 @@ const Document_generator = () => (
                         value={values.Additional_order}
                     />
                 </div> Дополнительный приказ
-                {errors.Additional_order && touched.Additional_order && errors.Additional_order}
+                <div className='uk-text-danger'>{errors.Additional_order && touched.Additional_order && errors.Additional_order}</div>
             </div>
 
             {/* ---------------------------------------------------------------------------------------------------- */}
@@ -283,7 +285,7 @@ const Document_generator = () => (
                         value={values.Number_patrol_act}
                     />
                 </div>
-                {errors.Number_patrol_act && touched.Number_patrol_act && errors.Number_patrol_act}
+                <div className='uk-text-danger'>{errors.Number_patrol_act && touched.Number_patrol_act && errors.Number_patrol_act}</div>
             </div>
             <div className="mb-4">
                 <label className="input-label" for="Date_patrol_act">Дата акта о патрулировании</label>
@@ -300,7 +302,7 @@ const Document_generator = () => (
                         value={values.Date_patrol_act}
                     />
                 </div>
-                {errors.Date_patrol_act && touched.Date_patrol_act && errors.Date_patrol_act}
+                <div className='uk-text-danger'>{errors.Date_patrol_act && touched.Date_patrol_act && errors.Date_patrol_act}</div>
             </div>
             <div className="mb-4">
                 <label className="input-label" for="Object_leaflet">На что наклеено</label>
@@ -311,7 +313,7 @@ const Document_generator = () => (
                         <option value='доска объявлений'>Доска объявлений</option>
                     </select>
                 </div>
-                {errors.Object_leaflet && touched.Object_leaflet && errors.Object_leaflet}
+                <div className='uk-text-danger'>{errors.Object_leaflet && touched.Object_leaflet && errors.Object_leaflet}</div>
             </div>
             <div className="mb-4">
                 <label className="input-label" for="Village_leaflet">Деревня, в которой наклеено</label>
@@ -329,7 +331,7 @@ const Document_generator = () => (
                         <option value='Малое Замошье'>Малое Замошье</option>
                     </select>
                 </div>
-                {errors.Village_leaflet && touched.Village_leaflet && errors.Village_leaflet}
+                <div className='uk-text-danger'>{errors.Village_leaflet && touched.Village_leaflet && errors.Village_leaflet}</div>
             </div>
             <div className="mb-4">
                 <label className="input-label" for="Number_informed_people">Сколько человек проинформировано</label>
@@ -346,7 +348,7 @@ const Document_generator = () => (
                         value={values.Number_informed_people}
                     />
                 </div>
-                {errors.Number_informed_people && touched.Number_informed_people && errors.Number_informed_people}
+                <div className='uk-text-danger'>{errors.Number_informed_people && touched.Number_informed_people && errors.Number_informed_people}</div>
             </div>
             <div className="mb-4">
                 <label className="input-label" for="Village_informed_people">Деревня, в которой проинформированы люди</label>
@@ -364,7 +366,7 @@ const Document_generator = () => (
                         <option value='Малое Замошье'>Малое Замошье</option>
                     </select>
                 </div>
-                {errors.Village_informed_people && touched.Village_informed_people && errors.Village_informed_people}
+                <div className='uk-text-danger'>{errors.Village_informed_people && touched.Village_informed_people && errors.Village_informed_people}</div>
             </div>
             <div className="mb-4">
                 <label className="input-label" for="Patrol_car">Машина патрулирования</label>
@@ -375,7 +377,7 @@ const Document_generator = () => (
                         <option value='УАЗ C848ХМ53'>Николая Викторовича</option>
                     </select>
                 </div>
-                {errors.Patrol_car && touched.Patrol_car && errors.Patrol_car}
+                <div className='uk-text-danger'>{errors.Patrol_car && touched.Patrol_car && errors.Patrol_car}</div>
             </div>
             <div className="mb-4">
                 <div className="uk-margin">
@@ -390,7 +392,7 @@ const Document_generator = () => (
                         value={values.Is_there_photo_table}
                     />
                 </div> Есть ли фототаблица
-                {errors.Is_there_photo_table && touched.Is_there_photo_table && errors.Is_there_photo_table}
+                <div className='uk-text-danger'>{errors.Is_there_photo_table && touched.Is_there_photo_table && errors.Is_there_photo_table}</div>
             </div>
 
             <button type="submit" disabled={isSubmitting}>
