@@ -1,7 +1,7 @@
 import { Formik } from 'formik';
 
 const Document_generator = () => (
-  <div>           
+  <div className='uk-align-left'>           
     <Formik
       initialValues={{ Patrol_task_number: '', val2: '' }}
       validate={values => {
