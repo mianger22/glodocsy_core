@@ -40,7 +40,7 @@ const Document_generator = () => (
             </div>
 
             <div className="mb-4">
-                <label className="input-label" for="Patrol_task_number" style={{color: "rgb(167, 150, 0);"}}>Номер задания</label>
+                <label className="uk-text-primary" for="Patrol_task_number">Номер задания</label>
 
                 <div className="uk-margin">
                     <input 
@@ -91,7 +91,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Patrol_date && touched.Patrol_date && errors.Patrol_date}</div>
             </div>
             <div className="mb-4">
-                <label className="input-label" for="Patrol_route_number" style={{color: "rgb(167, 150, 0);"}}>Номер маршрута патрулирования</label>
+                <label className="uk-text-primary" for="Patrol_route_number">Номер маршрута патрулирования</label>
 
                 <div className="uk-margin">
                     <select id="Patrol_route_number" name="Patrol_route_number">
@@ -220,7 +220,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Full_name_junior_patroller && touched.Full_name_junior_patroller && errors.Full_name_junior_patroller}</div>
             </div> 
             <div className="mb-4 flex flex-col space-y-1">
-                <label className="input-label" for="Time_assignment_issue" style={{color: "rgb(167, 150, 0);"}}>Время выдачи задания</label>
+                <label className="uk-text-primary" for="Time_assignment_issue">Время выдачи задания</label>
 
                 <div className="uk-margin">
                     <input 
@@ -276,7 +276,7 @@ const Document_generator = () => (
             </div>
 
             <div className="mb-4">
-                <label className="input-label" for="Number_patrol_act" style={{color: "rgb(167, 150, 0);"}}>Номер акта о патрулировании</label>
+                <label className="uk-text-primary" for="Number_patrol_act">Номер акта о патрулировании</label>
                 
                 <div className="uk-margin">
                     <input 
