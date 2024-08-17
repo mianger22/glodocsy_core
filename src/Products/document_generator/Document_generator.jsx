@@ -395,9 +395,11 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Is_there_photo_table && touched.Is_there_photo_table && errors.Is_there_photo_table}</div>
             </div>
 
-            <button type="submit" disabled={isSubmitting}>
-                Создать документы
-            </button>
+            <p uk-margin>
+                <button type="submit" disabled={isSubmitting} className="uk-button uk-button-primary uk-button-large">
+                    Создать документы
+                </button>
+            </p>
         </form>
       )}
     </Formik>
