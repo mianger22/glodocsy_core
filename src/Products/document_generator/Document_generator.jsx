@@ -35,7 +35,9 @@ const Document_generator = () => (
         /* and other goodies */
       }) => (
         <form onSubmit={handleSubmit}>
-            <div className='uk-heading-bullet uk-margin'>Задание</div>
+            <div className='uk-margin'>
+                <h2 className='uk-heading-divider'>Задание</h2>
+            </div>
 
             <div className="mb-4">
                 <label className="input-label" for="Patrol_task_number" style={{color: "rgb(167, 150, 0);"}}>Номер задания</label>
@@ -269,7 +271,9 @@ const Document_generator = () => (
 
             {/* ---------------------------------------------------------------------------------------------------- */}
             
-            <div className="uk-heading-bullet uk-margin">Акт</div>
+            <div className='uk-margin'>
+                <h2 className='uk-heading-divider'>Акт</h2>
+            </div>
 
             <div className="mb-4">
                 <label className="input-label" for="Number_patrol_act" style={{color: "rgb(167, 150, 0);"}}>Номер акта о патрулировании</label>
