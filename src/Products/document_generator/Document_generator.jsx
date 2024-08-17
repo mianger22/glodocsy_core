@@ -147,7 +147,7 @@ const Document_generator = () => (
                 </div>
                 <div className='uk-text-danger'>{errors.What_date_was_approved && touched.What_date_was_approved && errors.What_date_was_approved}</div>
             </div>  
-            <div className="mb-4 flex flex-col space-y-1">
+            <div className="mb-4">
                 <label for="Year_patrol">Год патрулирования</label>
 
                 <div className="uk-margin">
@@ -160,7 +160,7 @@ const Document_generator = () => (
                 </div>
                 <div className='uk-text-danger'>{errors.Year_patrol && touched.Year_patrol && errors.Year_patrol}</div>
             </div>  
-            <div className="mb-4 flex flex-col space-y-1">
+            <div className="mb-4">
                 <label for="Who_issued_patrol">Кто выдал задание</label>
 
                 <div className="uk-margin">
@@ -219,7 +219,7 @@ const Document_generator = () => (
                 </div>
                 <div className='uk-text-danger'>{errors.Full_name_junior_patroller && touched.Full_name_junior_patroller && errors.Full_name_junior_patroller}</div>
             </div> 
-            <div className="mb-4 flex flex-col space-y-1">
+            <div className="mb-4">
                 <label className="uk-text-primary" for="Time_assignment_issue">Время выдачи задания</label>
 
                 <div className="uk-margin">
@@ -236,7 +236,7 @@ const Document_generator = () => (
                 </div>
                 <div className='uk-text-danger'>{errors.Time_assignment_issue && touched.Time_assignment_issue && errors.Time_assignment_issue}</div>
             </div> 
-            <div className="mb-4 flex flex-col space-y-1">
+            <div className="mb-4">
                 <label for="Date_assignment_issue">Дата выдачи задания</label>
 
                 <div className="uk-margin">
