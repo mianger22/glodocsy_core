@@ -254,18 +254,20 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Date_assignment_issue && touched.Date_assignment_issue && errors.Date_assignment_issue}</div>
             </div>
             <div className="mb-4">
-                <div className="uk-margin">
-                    <input 
-                        className="uk-input date_selection" 
-                        type="checkbox" 
-                        placeholder="«10» июня 2024" 
-                        aria-label="Additional_order"
-                        name="Additional_order"
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.Additional_order}
-                    />
-                </div> Дополнительный приказ
+                <div className="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                    <label>
+                        <input 
+                            className="uk-checkbox" 
+                            type="checkbox" 
+                            
+                            aria-label="Additional_order"
+                            name="Additional_order"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            // value={values.Additional_order}
+                        /> Дополнительный приказ
+                    </label>
+                </div>
                 <div className='uk-text-danger'>{errors.Additional_order && touched.Additional_order && errors.Additional_order}</div>
             </div>
 
@@ -385,18 +387,20 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Patrol_car && touched.Patrol_car && errors.Patrol_car}</div>
             </div>
             <div className="mb-4">
-                <div className="uk-margin">
-                    <input 
-                        className="uk-input date_selection" 
-                        type="checkbox" 
-                        placeholder="«10» июня 2024" 
-                        aria-label="Is_there_photo_table"
-                        name="Is_there_photo_table"
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.Is_there_photo_table}
-                    />
-                </div> Есть ли фототаблица
+                <div className="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                    <label>
+                        <input 
+                            className="uk-checkbox" 
+                            type="checkbox" 
+                            
+                            aria-label="Is_there_photo_table"
+                            name="Is_there_photo_table"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            // value={values.Is_there_photo_table}
+                        /> Есть ли фототаблица
+                    </label>
+                </div>
                 <div className='uk-text-danger'>{errors.Is_there_photo_table && touched.Is_there_photo_table && errors.Is_there_photo_table}</div>
             </div>
 
