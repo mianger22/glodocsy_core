@@ -94,7 +94,7 @@ const Document_generator = () => (
                 <label className="uk-text-primary" for="Patrol_route_number">Номер маршрута патрулирования</label>
 
                 <div className="uk-margin">
-                    <select id="Patrol_route_number" name="Patrol_route_number">
+                    <select className="uk-select" aria-label="Select" id="Patrol_route_number" name="Patrol_route_number">
                         <option disabled selected>
                             
                         </option>
@@ -125,7 +125,7 @@ const Document_generator = () => (
                         <option value='78,9'>
                             78
                         </option>
-                    </select> 
+                    </select>
                 </div>
                 <div className='uk-text-danger'>{errors.Patrol_route_number && touched.Patrol_route_number && errors.Patrol_route_number}</div>
             </div>   
@@ -151,7 +151,7 @@ const Document_generator = () => (
                 <label for="Year_patrol">Год патрулирования</label>
 
                 <div className="uk-margin">
-                    <select id="Year_patrol" name="Year_patrol">
+                    <select className="uk-select" aria-label="Select" id="Year_patrol" name="Year_patrol">
                         <option value="2024">2024</option>
                         <option value="2025">2025</option>
                         <option value="2026">2026</option>
@@ -164,7 +164,7 @@ const Document_generator = () => (
                 <label for="Who_issued_patrol">Кто выдал задание</label>
 
                 <div className="uk-margin">
-                    <select id="Person_issued_task" name="Person_issued_task">
+                    <select className="uk-select" aria-label="Select" id="Person_issued_task" name="Person_issued_task">
                         <option value='директор ГОКУ "Новгородское лесничество" Иванов К.В.'>Директор</option>
                         <option value='заместитель директора ГОКУ "Новгородское лесничество" Орехова И.Н.'>Заместитель</option>
                     </select>
@@ -175,7 +175,7 @@ const Document_generator = () => (
                 <label for="Who_is_patrolling">Старший патрульной группы</label>
 
                 <div className="uk-margin">
-                    <select id="Full_name_senior_patroller" name="Full_name_senior_patroller">
+                    <select className="uk-select" aria-label="Select" id="Full_name_senior_patroller" name="Full_name_senior_patroller">
                         <option value='мастер леса Мясноборского участкового лесничества Устинов Дмитрий Сергеевич'>
                             Устинов, мастер Мясноборского
                         </option>
@@ -199,7 +199,7 @@ const Document_generator = () => (
                 <label for="Who_am_I_patrolling_with">С кем патрулирую</label>
 
                 <div className="uk-margin">
-                    <select id="Full_name_junior_patroller" name="Full_name_junior_patroller">
+                    <select className="uk-select" aria-label="Select" id="Full_name_junior_patroller" name="Full_name_junior_patroller">
                         <option value='мастер леса Мясноборского участкового лесничества Устинов Дмитрий Сергеевич'>
                             Устинов, мастер Мясноборского
                         </option>
@@ -313,7 +313,7 @@ const Document_generator = () => (
                 <label for="Object_leaflet">На что наклеено</label>
                 
                 <div className="uk-margin">
-                    <select id="Object_leaflet" name="Object_leaflet">
+                    <select className="uk-select" aria-label="Select" id="Object_leaflet" name="Object_leaflet">
                         <option value='автобусная остановка'>Остановка</option>
                         <option value='доска объявлений'>Доска объявлений</option>
                     </select>
@@ -324,7 +324,7 @@ const Document_generator = () => (
                 <label for="Village_leaflet">Деревня, в которой наклеено</label>
                 
                 <div className="uk-margin">
-                    <select id="Village_leaflet" name="Village_leaflet">
+                    <select className="uk-select" aria-label="Select" id="Village_leaflet" name="Village_leaflet">
                         <option disabled selected></option>
                         <option value='Некохово'>Некохово</option>
                         <option value='Захарьино'>Захарьино</option>
@@ -359,7 +359,7 @@ const Document_generator = () => (
                 <label for="Village_informed_people">Деревня, в которой проинформированы люди</label>
                 
                 <div className="uk-margin">
-                    <select id="Village_informed_people" name="Village_informed_people">
+                    <select className="uk-select" aria-label="Select" id="Village_informed_people" name="Village_informed_people">
                         <option disabled selected></option>
                         <option value='Некохово'>Некохово</option>
                         <option value='Захарьино'>Захарьино</option>
@@ -377,7 +377,7 @@ const Document_generator = () => (
                 <label for="Patrol_car">Машина патрулирования</label>
                 
                 <div className="uk-margin">
-                    <select id="Patrol_car" name="Patrol_car">
+                    <select className="uk-select" aria-label="Select" id="Patrol_car" name="Patrol_car">
                         <option value='УАЗ С233ТА53' selected>Алексея Евгеньевича</option>
                         <option value='УАЗ C848ХМ53'>Николая Викторовича</option>
                     </select>
