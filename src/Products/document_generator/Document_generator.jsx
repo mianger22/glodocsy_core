@@ -1,9 +1,7 @@
 import { Formik } from 'formik';
 
 const Document_generator = () => (
-  <div>
-    <div className="form-title text-indigo-600 text-sm mt-4 mb-4"><ins>Задание</ins></div>
-                
+  <div>           
     <Formik
       initialValues={{ Patrol_task_number: '', val2: '' }}
       validate={values => {
@@ -35,6 +33,7 @@ const Document_generator = () => (
         /* and other goodies */
       }) => (
         <form onSubmit={handleSubmit}>
+            <div>Задание</div>
             <div className="mb-4">
                 <label className="input-label" for="Patrol_task_number" style={{color: "rgb(167, 150, 0);"}}>Номер задания</label>
 
