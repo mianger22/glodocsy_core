@@ -11,13 +11,63 @@ const Document_generator = () => (
         Patrol_car: '', Is_there_photo_table: '' }}
       validate={values => {
         const errors = {};
+
         if (!values.Patrol_task_number) {
           errors.Patrol_task_number = 'Заполните поле';
-        } else if (
-            !/^\d{1,4}$/i.test(values.Patrol_task_number)
-        ) {
+        } else if (!/^\d{1,4}$/i.test(values.Patrol_task_number)) {
           errors.Patrol_task_number = 'Номер задания должен быть не более 4 цифр';
         }
+
+        if (!values.Date_issue_task) {
+            errors.Date_issue_task = 'Заполните поле';
+        } 
+
+        if (!values.Patrol_date) {
+            errors.Patrol_date = 'Заполните поле';
+        } 
+
+        if (!values.Patrol_route_number) {
+            errors.Patrol_route_number = 'Заполните поле';
+        } 
+
+        if (!values.What_date_was_approved) {
+            errors.What_date_was_approved = 'Заполните поле';
+        } 
+
+        if (!values.Year_patrol) {
+            errors.Year_patrol = 'Заполните поле';
+        } 
+
+        if (!values.Who_issued_patrol) {
+            errors.Who_issued_patrol = 'Заполните поле';
+        } 
+
+        if (!values.Full_name_senior_patroller) {
+            errors.Full_name_senior_patroller = 'Заполните поле';
+        } 
+
+        if (!values.Full_name_junior_patroller) {
+            errors.Full_name_junior_patroller = 'Заполните поле';
+        }
+        
+        if (!values.Time_assignment_issue) {
+            errors.Time_assignment_issue = 'Заполните поле';
+        } 
+
+        if (!values.Date_assignment_issue) {
+            errors.Date_assignment_issue = 'Заполните поле';
+        }
+
+        if (!values.Number_patrol_act) {
+            errors.Number_patrol_act = 'Заполните поле';
+        } else if (!/^\d{1,4}$/i.test(values.Number_patrol_act)) {
+            errors.Patrol_task_number = 'Номер акта должен быть не более 4 цифр';
+        }
+
+        if (!values.Date_patrol_act) {
+            errors.Date_patrol_act = 'Заполните поле';
+        }
+
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
