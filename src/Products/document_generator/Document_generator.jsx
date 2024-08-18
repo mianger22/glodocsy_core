@@ -1,7 +1,6 @@
 import { Formik } from 'formik';
 
-const Document_generator = () => (
-  <div className='uk-align-left'>           
+const Document_generator = () => (          
     <Formik
       initialValues={{ Patrol_task_number: '', Date_issue_task: '', Patrol_date: '', 
         Patrol_route_number: '', What_date_was_approved: '', Year_patrol: '', Who_issued_patrol: '', 
@@ -465,7 +464,6 @@ const Document_generator = () => (
         </form>
       )}
     </Formik>
-  </div>
 );
 
 export default Document_generator;
