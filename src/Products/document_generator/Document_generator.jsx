@@ -93,7 +93,7 @@ const Document_generator = () => (
 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" id="Patrol_route_number" name="Patrol_route_number">
-                        <option value="" disabled selected>
+                        <option value='' disabled selected>
                             Выберите
                         </option>
                         <option value='70,1'>
@@ -239,14 +239,13 @@ const Document_generator = () => (
 
                 <div className="uk-margin">
                     <input 
-                        className="uk-input date_selection" 
-                        type="text" 
-                        placeholder="«10» июня 2024" 
+                        type="date" 
+                        className='uk-input'
                         aria-label="Date_assignment_issue"
                         name="Date_assignment_issue"
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        value={values.Date_assignment_issue}
+                        value={values.Date_assignment_issue} 
                     />
                 </div>
                 <div className='uk-text-danger'>{errors.Date_assignment_issue && touched.Date_assignment_issue && errors.Date_assignment_issue}</div>
@@ -324,7 +323,9 @@ const Document_generator = () => (
                 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" id="Village_leaflet" name="Village_leaflet">
-                        <option disabled selected></option>
+                        <option value='' disabled selected>
+                            Выберите
+                        </option>
                         <option value='Некохово'>Некохово</option>
                         <option value='Захарьино'>Захарьино</option>
                         <option value='Подберезье'>Подберезье</option>
@@ -359,7 +360,9 @@ const Document_generator = () => (
                 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" id="Village_informed_people" name="Village_informed_people">
-                        <option disabled selected></option>
+                        <option value='' disabled selected>
+                            Выберите
+                        </option>
                         <option value='Некохово'>Некохово</option>
                         <option value='Захарьино'>Захарьино</option>
                         <option value='Подберезье'>Подберезье</option>
