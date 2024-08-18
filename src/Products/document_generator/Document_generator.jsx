@@ -93,8 +93,8 @@ const Document_generator = () => (
 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" id="Patrol_route_number" name="Patrol_route_number">
-                        <option disabled selected>
-                            
+                        <option value="" disabled selected>
+                            Выберите
                         </option>
                         <option value='70,1'>
                             70
