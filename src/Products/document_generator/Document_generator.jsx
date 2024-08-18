@@ -14,8 +14,6 @@ const Document_generator = () => (
         if (!values.Patrol_task_number) {
           errors.Patrol_task_number = 'Заполните поле';
         } else if (
-        //   !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-            // values.Patrol_task_number.length > 4
             !/^\d{1,4}$/i.test(values.Patrol_task_number)
         ) {
           errors.Patrol_task_number = 'Номер задания должен быть не более 4 цифр';
