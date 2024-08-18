@@ -61,14 +61,13 @@ const Document_generator = () => (
 
                 <div className="uk-margin">
                     <input 
-                        className="uk-input date_selection" 
-                        type="text" 
-                        placeholder="«10» июня 2024" 
+                        type="date" 
+                        className='uk-input'
                         aria-label="Date_issue_task"
                         name="Date_issue_task"
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        value={values.Date_issue_task}
+                        value={values.Date_issue_task} 
                     />
                 </div>
                 <div className='uk-text-danger'>{errors.Date_issue_task && touched.Date_issue_task && errors.Date_issue_task}</div>
@@ -78,14 +77,13 @@ const Document_generator = () => (
 
                 <div className="uk-margin">
                     <input 
-                        className="uk-input date_selection" 
-                        type="text" 
-                        placeholder="«15» июня 2024" 
+                        type="date" 
+                        className='uk-input'
                         aria-label="Patrol_date"
                         name="Patrol_date"
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        value={values.Patrol_date}
+                        value={values.Patrol_date} 
                     />
                 </div>
                 <div className='uk-text-danger'>{errors.Patrol_date && touched.Patrol_date && errors.Patrol_date}</div>
@@ -134,7 +132,7 @@ const Document_generator = () => (
 
                 <div className="uk-margin">
                     <input 
-                        className="uk-input date_selection" 
+                        className="uk-input" 
                         type="text" 
                         placeholder="08.12.2023" 
                         // value="08.12.2023"
@@ -282,7 +280,7 @@ const Document_generator = () => (
                 
                 <div className="uk-margin">
                     <input 
-                        className="uk-input date_selection" 
+                        className="uk-input" 
                         type="number" 
                         placeholder="105" 
                         aria-label="Number_patrol_act"
@@ -299,14 +297,13 @@ const Document_generator = () => (
                 
                 <div className="uk-margin">
                     <input 
-                        className="uk-input date_selection" 
-                        type="text" 
-                        placeholder="«03» июня 2024" 
+                        type="date" 
+                        className='uk-input'
                         aria-label="Date_patrol_act"
                         name="Date_patrol_act"
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        value={values.Date_patrol_act}
+                        value={values.Date_patrol_act} 
                     />
                 </div>
                 <div className='uk-text-danger'>{errors.Date_patrol_act && touched.Date_patrol_act && errors.Date_patrol_act}</div>
