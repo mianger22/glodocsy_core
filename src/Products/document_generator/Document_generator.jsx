@@ -51,7 +51,9 @@ const Document_generator = () => (
         
         if (!values.Time_assignment_issue) {
             errors.Time_assignment_issue = 'Заполните поле';
-        } 
+        } else if (!/^\d{2} \d{2}$/i.test(values.Time_assignment_issue)) {
+            errors.Time_assignment_issue = "Время выдачи задания должно быть вида 12 30"
+        }
 
         if (!values.Date_assignment_issue) {
             errors.Date_assignment_issue = 'Заполните поле';
@@ -68,6 +70,9 @@ const Document_generator = () => (
         }
 
         return errors;
+
+        // } else if (validate_getted_time(Time_assignment_issue) === false) {
+        //     custom_alert("Время выдачи задания должно быть корректным"); 
       }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
@@ -275,7 +280,7 @@ const Document_generator = () => (
                 <div className="uk-margin">
                     <input 
                         className="uk-input date_selection" 
-                        type="text" 
+                        type="number" 
                         placeholder="12 30" 
                         aria-label="Time_assignment_issue"
                         name="Time_assignment_issue"
