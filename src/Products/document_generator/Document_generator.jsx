@@ -63,7 +63,7 @@ const Document_generator = () => (
         if (!values.Number_patrol_act) {
             errors.Number_patrol_act = 'Заполните поле';
         } else if (!/^\d{1,4}$/i.test(values.Number_patrol_act)) {
-            errors.Patrol_task_number = 'Номер акта должен быть не более 4 цифр';
+            errors.Number_patrol_act = 'Номер акта должен быть не более 4 цифр';
         }
 
         if (!values.Date_patrol_act) {
