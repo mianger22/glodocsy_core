@@ -3,7 +3,7 @@ import { Formik } from 'formik';
 const Document_generator = () => (          
     <Formik
       initialValues={{ Patrol_task_number: '', Date_issue_task: '', Patrol_date: '', 
-        Patrol_route_number: '', What_date_was_approved: '', Year_patrol: '', Who_issued_patrol: '', 
+        Patrol_route_number: '', What_date_was_approved: '08.12.2023', Year_patrol: '', Who_issued_patrol: '', 
         Full_name_senior_patroller: '', Full_name_junior_patroller: '', Time_assignment_issue: '',
         Date_assignment_issue: '', Additional_order: '', Number_patrol_act: '', Date_patrol_act: '', 
         Object_leaflet: '', Village_leaflet: '', Number_informed_people: '', Village_informed_people: '', 
@@ -31,7 +31,9 @@ const Document_generator = () => (
 
         if (!values.What_date_was_approved) {
             errors.What_date_was_approved = 'Заполните поле';
-        } 
+        } else if (!/^\d{2}.\d{2}.\d{4}$/i.test(values.What_date_was_approved)) {
+            errors.Patrol_task_number = 'Дата должна быть подобной 08.12.2023';
+          }
 
         if (!values.Year_patrol) {
             errors.Year_patrol = 'Заполните поле';
@@ -95,11 +97,11 @@ const Document_generator = () => (
             </div>
 
             <div className="mb-4">
-                <label className="uk-text-primary" for="Patrol_task_number">Номер задания</label>
+                <label className="uk-text-primary" htmlFor="Patrol_task_number">Номер задания</label>
 
                 <div className="uk-margin">
                     <input 
-                        className="uk-input" 
+                        className={`${errors.Patrol_task_number ? `uk-input uk-form-danger` : `uk-input`}`}
                         type="number" 
                         placeholder="185" 
                         aria-label="Patrol_task_number"
@@ -108,16 +110,16 @@ const Document_generator = () => (
                         onBlur={handleBlur}
                         value={values.Patrol_task_number}
                     />
+                    <p className='uk-text-danger'>{errors.Patrol_task_number && touched.Patrol_task_number && errors.Patrol_task_number}</p>
                 </div>
-                <div className='uk-text-danger'>{errors.Patrol_task_number && touched.Patrol_task_number && errors.Patrol_task_number}</div>
             </div>
             <div className="mb-4">
-                <label for="Date_issue_task">От какого числа</label>
+                <label htmlFor="Date_issue_task">От какого числа</label>
 
                 <div className="uk-margin">
                     <input 
                         type="date" 
-                        className='uk-input'
+                        className={`${errors.Date_issue_task ? `uk-input uk-form-danger` : `uk-input`}`}
                         aria-label="Date_issue_task"
                         name="Date_issue_task"
                         onChange={handleChange}
@@ -128,12 +130,12 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Date_issue_task && touched.Date_issue_task && errors.Date_issue_task}</div>
             </div>
             <div className="mb-4">
-                <label for="Patrol_date">Дата патрулирования</label>
+                <label htmlFor="Patrol_date">Дата патрулирования</label>
 
                 <div className="uk-margin">
                     <input 
                         type="date" 
-                        className='uk-input'
+                        className={`${errors.Patrol_date ? `uk-input uk-form-danger` : `uk-input`}`}
                         aria-label="Patrol_date"
                         name="Patrol_date"
                         onChange={handleChange}
@@ -144,7 +146,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Patrol_date && touched.Patrol_date && errors.Patrol_date}</div>
             </div>
             <div className="mb-4">
-                <label className="uk-text-primary" for="Patrol_route_number">Номер маршрута патрулирования</label>
+                <label className="uk-text-primary" htmlFor="Patrol_route_number">Номер маршрута патрулирования</label>
 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" name="Patrol_route_number">
@@ -183,11 +185,11 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Patrol_route_number && touched.Patrol_route_number && errors.Patrol_route_number}</div>
             </div>   
             <div className="mb-4">
-                <label for="What_date_was_approved">Какого числа утверждён</label>
+                <label htmlFor="What_date_was_approved">Какого числа утверждён</label>
 
                 <div className="uk-margin">
                     <input 
-                        className="uk-input" 
+                        className={`${errors.What_date_was_approved ? `uk-input uk-form-danger` : `uk-input`}`}
                         type="text" 
                         placeholder="08.12.2023" 
                         // value="08.12.2023"
@@ -201,7 +203,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.What_date_was_approved && touched.What_date_was_approved && errors.What_date_was_approved}</div>
             </div>  
             <div className="mb-4">
-                <label for="Year_patrol">Год патрулирования</label>
+                <label htmlFor="Year_patrol">Год патрулирования</label>
 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" name="Year_patrol">
@@ -214,7 +216,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Year_patrol && touched.Year_patrol && errors.Year_patrol}</div>
             </div>  
             <div className="mb-4">
-                <label for="Who_issued_patrol">Кто выдал задание</label>
+                <label htmlFor="Who_issued_patrol">Кто выдал задание</label>
 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" id="Person_issued_task" name="Person_issued_task">
@@ -225,7 +227,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Person_issued_task && touched.Person_issued_task && errors.Person_issued_task}</div>
             </div>    
             <div className="mb-4">
-                <label for="Who_is_patrolling">Старший патрульной группы</label>
+                <label htmlFor="Who_is_patrolling">Старший патрульной группы</label>
 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" name="Full_name_senior_patroller">
@@ -249,7 +251,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Full_name_senior_patroller && touched.Full_name_senior_patroller && errors.Full_name_senior_patroller}</div>
             </div>
             <div className="mb-4">
-                <label for="Who_am_I_patrolling_with">С кем патрулирую</label>
+                <label htmlFor="Who_am_I_patrolling_with">С кем патрулирую</label>
 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" name="Full_name_junior_patroller">
@@ -273,11 +275,11 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Full_name_junior_patroller && touched.Full_name_junior_patroller && errors.Full_name_junior_patroller}</div>
             </div> 
             <div className="mb-4">
-                <label className="uk-text-primary" for="Time_assignment_issue">Время выдачи задания</label>
+                <label className="uk-text-primary" htmlFor="Time_assignment_issue">Время выдачи задания</label>
 
                 <div className="uk-margin">
                     <input 
-                        className="uk-input" 
+                        className={`${errors.Time_assignment_issue ? `uk-input uk-form-danger` : `uk-input`}`}
                         type="time" 
                         // placeholder="12 30" 
                         aria-label="Time_assignment_issue"
@@ -290,12 +292,12 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Time_assignment_issue && touched.Time_assignment_issue && errors.Time_assignment_issue}</div>
             </div> 
             <div className="mb-4">
-                <label for="Date_assignment_issue">Дата выдачи задания</label>
+                <label htmlFor="Date_assignment_issue">Дата выдачи задания</label>
 
                 <div className="uk-margin">
                     <input 
                         type="date" 
-                        className='uk-input'
+                        className={`${errors.Date_assignment_issue ? `uk-input uk-form-danger` : `uk-input`}`}
                         aria-label="Date_assignment_issue"
                         name="Date_assignment_issue"
                         onChange={handleChange}
@@ -330,11 +332,11 @@ const Document_generator = () => (
             </div>
 
             <div className="mb-4">
-                <label className="uk-text-primary" for="Number_patrol_act">Номер акта о патрулировании</label>
+                <label className="uk-text-primary" htmlFor="Number_patrol_act">Номер акта о патрулировании</label>
                 
                 <div className="uk-margin">
                     <input 
-                        className="uk-input" 
+                        className={`${errors.Number_patrol_act ? `uk-input uk-form-danger` : `uk-input`}`}
                         type="number" 
                         placeholder="105" 
                         aria-label="Number_patrol_act"
@@ -347,12 +349,12 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Number_patrol_act && touched.Number_patrol_act && errors.Number_patrol_act}</div>
             </div>
             <div className="mb-4">
-                <label for="Date_patrol_act">Дата акта о патрулировании</label>
+                <label htmlFor="Date_patrol_act">Дата акта о патрулировании</label>
                 
                 <div className="uk-margin">
                     <input 
                         type="date" 
-                        className='uk-input'
+                        className={`${errors.Date_patrol_act ? `uk-input uk-form-danger` : `uk-input`}`}
                         aria-label="Date_patrol_act"
                         name="Date_patrol_act"
                         onChange={handleChange}
@@ -363,7 +365,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Date_patrol_act && touched.Date_patrol_act && errors.Date_patrol_act}</div>
             </div>
             <div className="mb-4">
-                <label for="Object_leaflet">На что наклеено</label>
+                <label htmlFor="Object_leaflet">На что наклеено</label>
                 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" name="Object_leaflet">
@@ -374,7 +376,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Object_leaflet && touched.Object_leaflet && errors.Object_leaflet}</div>
             </div>
             <div className="mb-4">
-                <label for="Village_leaflet">Деревня, в которой наклеено</label>
+                <label htmlFor="Village_leaflet">Деревня, в которой наклеено</label>
                 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" name="Village_leaflet">
@@ -394,11 +396,11 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Village_leaflet && touched.Village_leaflet && errors.Village_leaflet}</div>
             </div>
             <div className="mb-4">
-                <label for="Number_informed_people">Сколько человек проинформировано</label>
+                <label htmlFor="Number_informed_people">Сколько человек проинформировано</label>
                 
                 <div className="uk-margin">
                     <input 
-                        className="uk-input" 
+                        className={`${errors.Number_informed_people ? `uk-input uk-form-danger` : `uk-input`}`}
                         type="number" 
                         placeholder="1" 
                         aria-label="Number_informed_people"
@@ -411,7 +413,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Number_informed_people && touched.Number_informed_people && errors.Number_informed_people}</div>
             </div>
             <div className="mb-4">
-                <label for="Village_informed_people">Деревня, в которой проинформированы люди</label>
+                <label htmlFor="Village_informed_people">Деревня, в которой проинформированы люди</label>
                 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" name="Village_informed_people">
@@ -431,7 +433,7 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Village_informed_people && touched.Village_informed_people && errors.Village_informed_people}</div>
             </div>
             <div className="mb-4">
-                <label for="Patrol_car">Машина патрулирования</label>
+                <label htmlFor="Patrol_car">Машина патрулирования</label>
                 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" name="Patrol_car">
@@ -459,11 +461,11 @@ const Document_generator = () => (
                 <div className='uk-text-danger'>{errors.Is_there_photo_table && touched.Is_there_photo_table && errors.Is_there_photo_table}</div>
             </div>
 
-            <p uk-margin>
+            <div className="uk-margin">
                 <button type="submit" disabled={isSubmitting} className="uk-button uk-button-primary uk-button-large">
                     Создать документы
                 </button>
-            </p>
+            </div>
         </form>
       )}
     </Formik>
