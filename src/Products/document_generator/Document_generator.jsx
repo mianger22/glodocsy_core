@@ -12,64 +12,64 @@ const Document_generator = () => (
         const errors = {};
 
         if (!values.Patrol_task_number) {
-          errors.Patrol_task_number = 'Заполните поле';
+          errors.Patrol_task_number = 'Введите номер задания';
         } else if (!/^\d{1,4}$/i.test(values.Patrol_task_number)) {
           errors.Patrol_task_number = 'Номер задания должен быть не более 4 цифр';
         }
 
         if (!values.Date_issue_task) {
-            errors.Date_issue_task = 'Заполните поле';
+            errors.Date_issue_task = 'Введите дату выдачи задания';
         } 
 
         if (!values.Patrol_date) {
-            errors.Patrol_date = 'Заполните поле';
+            errors.Patrol_date = 'Введите дату патрулирования';
         } 
 
         if (!values.Patrol_route_number) {
-            errors.Patrol_route_number = 'Заполните поле';
+            errors.Patrol_route_number = 'Введите номер маршрута патрулирования';
         } 
 
         if (!values.What_date_was_approved) {
-            errors.What_date_was_approved = 'Заполните поле';
+            errors.What_date_was_approved = 'Введите дату выдачи задания';
         } else if (!/^\d{2}.\d{2}.\d{4}$/i.test(values.What_date_was_approved)) {
             errors.Patrol_task_number = 'Дата должна быть подобной 08.12.2023';
           }
 
         if (!values.Year_patrol) {
-            errors.Year_patrol = 'Заполните поле';
+            errors.Year_patrol = 'Введите год патрулирования';
         } 
 
         if (!values.Who_issued_patrol) {
-            errors.Who_issued_patrol = 'Заполните поле';
+            errors.Who_issued_patrol = 'Введите имя выдавшего задание';
         } 
 
         if (!values.Full_name_senior_patroller) {
-            errors.Full_name_senior_patroller = 'Заполните поле';
+            errors.Full_name_senior_patroller = 'Введите имя старшего патрульной группы';
         } 
 
         if (!values.Full_name_junior_patroller) {
-            errors.Full_name_junior_patroller = 'Заполните поле';
+            errors.Full_name_junior_patroller = 'Введите имя сопатрульного';
         }
         
         if (!values.Time_assignment_issue) {
-            errors.Time_assignment_issue = 'Заполните поле';
+            errors.Time_assignment_issue = 'Введите время выдачи задания';
         } 
         // else if (!/^\d{2} \d{2}$/i.test(values.Time_assignment_issue)) {
         //     errors.Time_assignment_issue = "Время выдачи задания должно быть вида 12 30"
         // }
 
         if (!values.Date_assignment_issue) {
-            errors.Date_assignment_issue = 'Заполните поле';
+            errors.Date_assignment_issue = 'Введите дату выдачи задания';
         }
 
         if (!values.Number_patrol_act) {
-            errors.Number_patrol_act = 'Заполните поле';
+            errors.Number_patrol_act = 'Введите номер акта патрулирования';
         } else if (!/^\d{1,4}$/i.test(values.Number_patrol_act)) {
             errors.Number_patrol_act = 'Номер акта должен быть не более 4 цифр';
         }
 
         if (!values.Date_patrol_act) {
-            errors.Date_patrol_act = 'Заполните поле';
+            errors.Date_patrol_act = 'Введите дату акта патрулирования';
         }
 
         return errors;
@@ -86,7 +86,7 @@ const Document_generator = () => (
                 background: "#fff url(/pictures/trees_phone.png)",
             });
         }
-        
+
         //
         let Person_issued_task = values.Person_issued_task;
         let Patrol_task_number = values.Patrol_task_number;
