@@ -3,11 +3,13 @@ import { Formik } from 'formik';
 const Document_generator = () => (          
     <Formik
       initialValues={{ Patrol_task_number: '', Date_issue_task: '', Patrol_date: '', 
-        Patrol_route_number: '', What_date_was_approved: '08.12.2023', Year_patrol: '', Who_issued_patrol: '', 
-        Full_name_senior_patroller: '', Full_name_junior_patroller: '', Time_assignment_issue: '',
-        Date_assignment_issue: '', Additional_order: '', Number_patrol_act: '', Date_patrol_act: '', 
-        Object_leaflet: '', Village_leaflet: '', Number_informed_people: '', Village_informed_people: '', 
-        Patrol_car: '', Is_there_photo_table: '', Person_issued_task: '' }}
+        Patrol_route_number: '', What_date_was_approved: '08.12.2023', Year_patrol: '2024', Who_issued_patrol: '', 
+        Full_name_senior_patroller: 'мастер леса Мясноборского участкового лесничества Устинов Дмитрий Сергеевич', 
+        Full_name_junior_patroller: 'мастер леса Новгородского участкового лесничества Зайцев Даниил Алексеевич', 
+        Time_assignment_issue: '', Date_assignment_issue: '', Additional_order: '', Number_patrol_act: '', Date_patrol_act: '', 
+        Object_leaflet: 'доска объявлений', Village_leaflet: 'Захарьино', Number_informed_people: '1', 
+        Village_informed_people: 'Захарьино', Patrol_car: 'С948ХК', Is_there_photo_table: false, 
+        Person_issued_task: 'директор ГОКУ "Новгородское лесничество" Иванов К.В.' }}
       validate={values => {
         const errors = {};
 
@@ -464,7 +466,7 @@ const Document_generator = () => (
 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" name="Patrol_route_number">
-                        <option value='' disabled selected>
+                        <option disabled selected>
                             Выберите
                         </option>
                         <option value='70,1'>
@@ -521,7 +523,7 @@ const Document_generator = () => (
 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" name="Year_patrol">
-                        <option value="2024">2024</option>
+                        <option value="2024" selected>2024</option>
                         <option value="2025">2025</option>
                         <option value="2026">2026</option>
                         <option value="2027">2027</option>
@@ -534,7 +536,7 @@ const Document_generator = () => (
 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" name="Person_issued_task">
-                        <option value='директор ГОКУ "Новгородское лесничество" Иванов К.В.'>Директор</option>
+                        <option value='директор ГОКУ "Новгородское лесничество" Иванов К.В.' selected>Директор</option>
                         <option value='заместитель директора ГОКУ "Новгородское лесничество" Орехова И.Н.'>Заместитель</option>
                     </select>
                 </div>
@@ -545,7 +547,7 @@ const Document_generator = () => (
 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" name="Full_name_senior_patroller">
-                        <option value='мастер леса Мясноборского участкового лесничества Устинов Дмитрий Сергеевич'>
+                        <option value='мастер леса Мясноборского участкового лесничества Устинов Дмитрий Сергеевич' selected>
                             Устинов, мастер Мясноборского
                         </option>
                         <option value='участковый лесничий Ермолинского участкового лесничества Кузнецова Елизавета Михайловна'>
@@ -683,8 +685,9 @@ const Document_generator = () => (
                 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" name="Object_leaflet">
+                        <option disabled selected>Выберите</option>
                         <option value='автобусная остановка'>Остановка</option>
-                        <option value='доска объявлений'>Доска объявлений</option>
+                        <option value='доска объявлений' selected>Доска объявлений</option>
                     </select>
                 </div>
                 <div className='uk-text-danger'>{errors.Object_leaflet && touched.Object_leaflet && errors.Object_leaflet}</div>
@@ -694,9 +697,7 @@ const Document_generator = () => (
                 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" name="Village_leaflet">
-                        <option value='' disabled selected>
-                            Выберите
-                        </option>
+                        <option disabled selected>Выберите</option>
                         <option value='Некохово'>Некохово</option>
                         <option value='Захарьино'>Захарьино</option>
                         <option value='Подберезье'>Подберезье</option>
@@ -731,9 +732,7 @@ const Document_generator = () => (
                 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" name="Village_informed_people">
-                        <option value='' disabled selected>
-                            Выберите
-                        </option>
+                        <option disabled selected>Выберите</option>
                         <option value='Некохово'>Некохово</option>
                         <option value='Захарьино'>Захарьино</option>
                         <option value='Подберезье'>Подберезье</option>
@@ -751,8 +750,8 @@ const Document_generator = () => (
                 
                 <div className="uk-margin">
                     <select className="uk-select" aria-label="Select" name="Patrol_car">
-                        <option value='УАЗ С233ТА53' selected>Алексея Евгеньевича</option>
-                        <option value='УАЗ C848ХМ53'>Николая Викторовича</option>
+                        <option value='С948ХК' selected>Алексея Евгеньевича</option>
+                        <option value='C848ХМ'>Николая Викторовича</option>
                     </select>
                 </div>
                 <div className='uk-text-danger'>{errors.Patrol_car && touched.Patrol_car && errors.Patrol_car}</div>
@@ -763,12 +762,11 @@ const Document_generator = () => (
                         <input 
                             className="uk-checkbox" 
                             type="checkbox" 
-                            
                             aria-label="Is_there_photo_table"
                             name="Is_there_photo_table"
                             onChange={handleChange}
                             onBlur={handleBlur}
-                            // value={values.Is_there_photo_table}
+                            value={values.Is_there_photo_table}
                         /> Есть ли фототаблица
                     </label>
                 </div>
