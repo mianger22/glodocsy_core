@@ -7,7 +7,7 @@ const Document_generator = () => (
         Full_name_senior_patroller: '', Full_name_junior_patroller: '', Time_assignment_issue: '',
         Date_assignment_issue: '', Additional_order: '', Number_patrol_act: '', Date_patrol_act: '', 
         Object_leaflet: '', Village_leaflet: '', Number_informed_people: '', Village_informed_people: '', 
-        Patrol_car: '', Is_there_photo_table: '' }}
+        Patrol_car: '', Is_there_photo_table: '', Person_issued_task: '' }}
       validate={values => {
         const errors = {};
 
@@ -75,7 +75,20 @@ const Document_generator = () => (
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
+        // Общие функции
+        const custom_alert = (message, color = "red") => {
+            return window.Swal.fire({
+                title: message,
+                width: 400,
+                height: 200,
+                padding: "1em",
+                color: color,
+                background: "#fff url(/pictures/trees_phone.png)",
+            });
+        }
+        
         //
+        let Person_issued_task = values.Person_issued_task;
         let Patrol_task_number = values.Patrol_task_number;
         let Date_issue_task = values.Date_issue_task; 
         let Patrol_date = values.Patrol_date; 
@@ -520,7 +533,7 @@ const Document_generator = () => (
                 <label htmlFor="Who_issued_patrol">Кто выдал задание</label>
 
                 <div className="uk-margin">
-                    <select className="uk-select" aria-label="Select" id="Person_issued_task" name="Person_issued_task">
+                    <select className="uk-select" aria-label="Select" name="Person_issued_task">
                         <option value='директор ГОКУ "Новгородское лесничество" Иванов К.В.'>Директор</option>
                         <option value='заместитель директора ГОКУ "Новгородское лесничество" Орехова И.Н.'>Заместитель</option>
                     </select>
