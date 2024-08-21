@@ -227,7 +227,7 @@ const Document_generator = () => (
                 return response.arrayBuffer();
             })
             .then(data => {
-                const zip = new PizZip(data);
+                const zip = new window.PizZip(data);
                 const doc = new window.docxtemplater(zip, {
                     paragraphLoop: true,
                     linebreaks: true,
@@ -269,7 +269,7 @@ const Document_generator = () => (
                 return response.arrayBuffer();
             })
             .then(data => {
-                const zip = new PizZip(data);
+                const zip = new window.PizZip(data);
                 const doc = new window.docxtemplater(zip, {
                     paragraphLoop: true,
                     linebreaks: true,
@@ -311,7 +311,7 @@ const Document_generator = () => (
                 return response.arrayBuffer();
             })
             .then(data => {
-                const zip = new PizZip(data);
+                const zip = new window.PizZip(data);
                 const doc = new window.docxtemplater(zip, {
                     paragraphLoop: true,
                     linebreaks: true,
@@ -349,7 +349,7 @@ const Document_generator = () => (
                     return response.arrayBuffer();
                 })
                 .then(data => {
-                    const zip = new PizZip(data);
+                    const zip = new window.PizZip(data);
                     const doc = new window.docxtemplater(zip, {
                         paragraphLoop: true,
                         linebreaks: true,
