@@ -75,11 +75,33 @@ const Document_generator = () => (
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
+        //
+        let Patrol_task_number = values.Patrol_task_number;
+        let Date_issue_task = values.Date_issue_task; 
+        let Patrol_date = values.Patrol_date; 
+        let Patrol_route_number = values.Patrol_route_number; 
+        let What_date_was_approved = values.What_date_was_approved; 
+        let Year_patrol = values.Year_patrol; 
+        let Who_issued_patrol = values.Who_issued_patrol; 
+        let Full_name_senior_patroller = values.Full_name_senior_patroller; 
+        let Full_name_junior_patroller = values.Full_name_junior_patroller; 
+        let Time_assignment_issue = values.Time_assignment_issue;
+        let Date_assignment_issue = values.Date_assignment_issue; 
+        let Additional_order = values.Additional_order; 
+        let Number_patrol_act = values.Number_patrol_act; 
+        let Date_patrol_act = values.Date_patrol_act; 
+        let Object_leaflet = values.Object_leaflet; 
+        let Village_leaflet = values.Village_leaflet; 
+        let Number_informed_people = values.Number_informed_people; 
+        let Village_informed_people = values.Village_informed_people; 
+        let Patrol_car = values.Patrol_car; 
+        let Is_there_photo_table = values.Is_there_photo_table;
+
         setTimeout(() => {
         //   alert(JSON.stringify(values, null, 2));
         //   setSubmitting(false);
 
-        Time_assignment_issue = `${Time_assignment_issue.split(" ")[0]} часов ${Time_assignment_issue.split(" ")[1]} минут`;
+        let Time_assignment_issue = `${Time_assignment_issue.split(":")[0]} часов ${Time_assignment_issue.split(":")[1]} минут`;
 
         // Создание фамилии с инициалами из полного имени
         let Senior_patroller, Declension_name_senior_patroller, Initials_senior_patroller, 
