@@ -3,6 +3,8 @@ import { Form, Formik, FormikProps } from 'formik';
 import Input from './Input';
 import Select from './Select';
 import Checkbox from './Checkbox';
+import PizZip from 'pizzip';
+import Docxtemplater from 'docxtemplater';
 
 const Document_generator = () => {
   // Общие функции
@@ -251,8 +253,8 @@ const Document_generator = () => {
                   return response.arrayBuffer();
               })
               .then(data => {
-                  const zip = new window.PizZip(data);
-                  const doc = new window.docxtemplater(zip, {
+                  const zip = new PizZip(data);
+                  const doc = new Docxtemplater(zip, {
                       paragraphLoop: true,
                       linebreaks: true,
                   });
@@ -292,8 +294,8 @@ const Document_generator = () => {
                   return response.arrayBuffer();
               })
               .then(data => {
-                  const zip = new window.PizZip(data);
-                  const doc = new window.docxtemplater(zip, {
+                  const zip = new PizZip(data);
+                  const doc = new Docxtemplater(zip, {
                       paragraphLoop: true,
                       linebreaks: true,
                   });
@@ -333,8 +335,8 @@ const Document_generator = () => {
                   return response.arrayBuffer();
               })
               .then(data => {
-                  const zip = new window.PizZip(data);
-                  const doc = new window.docxtemplater(zip, {
+                  const zip = new PizZip(data);
+                  const doc = new Docxtemplater(zip, {
                       paragraphLoop: true,
                       linebreaks: true,
                   });
@@ -370,8 +372,8 @@ const Document_generator = () => {
                     return response.arrayBuffer();
                 })
                 .then(data => {
-                    const zip = new window.PizZip(data);
-                    const doc = new window.docxtemplater(zip, {
+                    const zip = new PizZip(data);
+                    const doc = new Docxtemplater(zip, {
                         paragraphLoop: true,
                         linebreaks: true,
                     });
