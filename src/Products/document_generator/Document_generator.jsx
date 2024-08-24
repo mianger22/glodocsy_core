@@ -11,9 +11,9 @@ const Document_generator = () => {
         title: message,
         width: 400,
         height: 200,
-        padding: "1em",
-        color: green,
-        background: "#fff url(/pictures/trees_phone.png)",
+        padding: '1em',
+        color: 'green',
+        background: '#fff url(/pictures/trees_phone.png)',
     });
   }
 
