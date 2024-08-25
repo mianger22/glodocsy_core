@@ -103,7 +103,7 @@ const Document_generator = () => {
         }}
         onSubmit={(values, actions) => {
           setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
+            // alert(JSON.stringify(values, null, 2));
 
             // 1. Получаю данные из полей формы
             let Person_issued_task = values.Person_issued_task;
@@ -127,17 +127,42 @@ const Document_generator = () => {
             let Patrol_car = values.Patrol_car; 
             let Is_there_photo_table = values.Is_there_photo_table;
 
+            const month_names = [
+              {'01': 'января'},
+              {'02': 'февраля'},
+              {'03': 'марта'},
+              {'04': 'апреля'},
+              {'05': 'мая'},
+              {'06': 'июня'},
+              {'07': 'июля'},
+              {'08': 'августа'},
+              {'09': 'сентября'},
+              {'10': 'октября'},
+              {'11': 'ноября'},
+              {'12': 'декабря'},
+            ];
+
             // 2. Обрабатываю их, формируя новые
 
             // 2.1. Формирование нужного формата времени
             Time_assignment_issue = `${Time_assignment_issue.split(":")[0]} часов ${Time_assignment_issue.split(":")[1]} минут`;
 
-            // 2.2. Создание фамилии с инициалами из полного имени
+            // 2.2. Формирование нужного формата даты
+            // 2.2.1. Получение численного обозначения месяца
+            const month_number = month_names.Date_issue_task.split("-")[1];
+            // 2.2.2. Поиск соответствующего месяца
+            const foundMonth = month_names.find(month => month[month_number]);
+            // 2.2.3. Получение значения месяца, если он найден
+            const monthName = foundMonth ? foundMonth[month_number] : 'Месяц не найден';
+            // 2.2.4. Формирование даты
+            Date_issue_task = `«${Date_issue_task.split("-")[2]}» ${monthName} ${Date_issue_task.split("-")[0]}`;
+
+            // 2.3. Создание фамилии с инициалами из полного имени
             let Senior_patroller, Declension_name_senior_patroller, Initials_senior_patroller, 
             Junior_patroller, Declension_name_junior_patroller, Initials_junior_patroller,
             Patrol_route_declaration;
 
-            // 2.3. Создание инициалов старшего патрульной группы
+            // 2.4. Создание инициалов старшего патрульной группы
             switch (Full_name_senior_patroller) {
                 case 'мастер леса Мясноборского участкового лесничества Устинов Дмитрий Сергеевич':
                     Senior_patroller = 'мастер леса Мясноборского участкового лесничества Устинов Д.С.';
@@ -168,7 +193,7 @@ const Document_generator = () => {
                     break;
             }
 
-            // 2.4. Создание инициалов младшего патрульной группы
+            // 2.5. Создание инициалов младшего патрульной группы
             switch (Full_name_junior_patroller) {
                 case 'мастер леса Мясноборского участкового лесничества Устинов Дмитрий Сергеевич':
                     Junior_patroller = 'мастер леса Мясноборского участкового лесничества Устинов Д.С.';
@@ -199,10 +224,10 @@ const Document_generator = () => {
                     break;
             }
 
-            // 2.5. Создание переменных для хранения времени и протяжённости маршрута патрулирования
+            // 2.6. Создание переменных для хранения времени и протяжённости маршрута патрулирования
             let Patrol_time, Length_patrol;
 
-            // 2.6. Создание описания маршрута патрулирования
+            // 2.7. Создание описания маршрута патрулирования
             switch (Patrol_route_number) {
                 case '70,1':
                     Patrol_route_declaration = 'квартал 128 (выдела 14,17,26,30,36,38), квартал 126 (выдела 8,7,15), квартал 228 (выдела 13,21,25), квартал 216 (выдела 17,18,19,23,30), квартал 213 (выдела 20,24,16), квартал 211 (выдела 20,21,24,30,32), квартал 199 (выдела 21,22,31,33,35), квартал 12 (выдела 7,10), квартал 13 (выдела 1,23,40,35)';
