@@ -23,6 +23,32 @@ const Document_generator = () => {
     });
   }
 
+  const date_formation = (date) => {
+    const month_names = [
+      {'01': 'января'},
+      {'02': 'февраля'},
+      {'03': 'марта'},
+      {'04': 'апреля'},
+      {'05': 'мая'},
+      {'06': 'июня'},
+      {'07': 'июля'},
+      {'08': 'августа'},
+      {'09': 'сентября'},
+      {'10': 'октября'},
+      {'11': 'ноября'},
+      {'12': 'декабря'},
+    ];
+
+    // 1. Получение численного обозначения месяца
+    const month_number = date.split("-")[1];
+    // 2. Поиск соответствующего месяца
+    const foundMonth = month_names.find(month => month[month_number]);
+    // 3. Получение значения месяца, если он найден
+    const monthName = foundMonth ? foundMonth[month_number] : 'Месяц не найден';
+    // 4. Формирование даты
+    return `«${date.split("-")[2]}» ${monthName} ${date.split("-")[0]}`;
+  }
+
   return (
     <div>
       <h1>Отчёт по патрулированию</h1>
@@ -151,35 +177,16 @@ const Document_generator = () => {
             let Patrol_car = values.Patrol_car; 
             let Is_there_photo_table = values.Is_there_photo_table;
 
-            const month_names = [
-              {'01': 'января'},
-              {'02': 'февраля'},
-              {'03': 'марта'},
-              {'04': 'апреля'},
-              {'05': 'мая'},
-              {'06': 'июня'},
-              {'07': 'июля'},
-              {'08': 'августа'},
-              {'09': 'сентября'},
-              {'10': 'октября'},
-              {'11': 'ноября'},
-              {'12': 'декабря'},
-            ];
-
             // 2. Обрабатываю их, формируя новые
 
             // 2.1. Формирование нужного формата времени
             Time_assignment_issue = `${Time_assignment_issue.split(":")[0]} часов ${Time_assignment_issue.split(":")[1]} минут`;
 
             // 2.2. Формирование нужного формата даты
-            // 2.2.1. Получение численного обозначения месяца
-            const month_number = Date_issue_task.split("-")[1];
-            // 2.2.2. Поиск соответствующего месяца
-            const foundMonth = month_names.find(month => month[month_number]);
-            // 2.2.3. Получение значения месяца, если он найден
-            const monthName = foundMonth ? foundMonth[month_number] : 'Месяц не найден';
-            // 2.2.4. Формирование даты
-            Date_issue_task = `«${Date_issue_task.split("-")[2]}» ${monthName} ${Date_issue_task.split("-")[0]}`;
+            Date_issue_task = date_formation(Date_issue_task);
+            Patrol_date = date_formation(Patrol_date);
+            Date_patrol_act = date_formation(Date_patrol_act);
+            Date_assignment_issue = date_formation(Date_assignment_issue);          
 
             // 2.3. Создание фамилии с инициалами из полного имени
             let Senior_patroller, Declension_name_senior_patroller, Initials_senior_patroller, 
@@ -460,7 +467,7 @@ const Document_generator = () => {
                 });
             }
 
-            // actions.setSubmitting(false);
+            actions.setSubmitting(false);
           }, 500);
         }}
       >
