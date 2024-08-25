@@ -156,26 +156,26 @@ const Document_generator = () => {
             // alert(JSON.stringify(values, null, 2));
 
             // 1. Получаю данные из полей формы
-            let Person_issued_task = values.Person_issued_task;
-            let Patrol_task_number = values.Patrol_task_number;
+            const Person_issued_task = values.Person_issued_task;
+            const Patrol_task_number = values.Patrol_task_number;
             let Date_issue_task = values.Date_issue_task; 
             let Patrol_date = values.Patrol_date; 
-            let Patrol_route_number = values.Patrol_route_number; 
-            let What_date_was_approved = values.What_date_was_approved; 
-            let Year_patrol = values.Year_patrol; 
-            let Full_name_senior_patroller = values.Full_name_senior_patroller; 
-            let Full_name_junior_patroller = values.Full_name_junior_patroller; 
+            const Patrol_route_number = values.Patrol_route_number; 
+            const What_date_was_approved = values.What_date_was_approved; 
+            const Year_patrol = values.Year_patrol; 
+            const Full_name_senior_patroller = values.Full_name_senior_patroller; 
+            const Full_name_junior_patroller = values.Full_name_junior_patroller; 
             let Time_assignment_issue = values.Time_assignment_issue;
             let Date_assignment_issue = values.Date_assignment_issue; 
-            let Additional_order = values.Additional_order; 
-            let Number_patrol_act = values.Number_patrol_act; 
+            const Additional_order = values.Additional_order === true ? " (приказ директора от _____._____._____ года № _____)" : "";
+            const Number_patrol_act = values.Number_patrol_act; 
             let Date_patrol_act = values.Date_patrol_act; 
-            let Object_leaflet = values.Object_leaflet; 
-            let Village_leaflet = values.Village_leaflet; 
-            let Number_informed_people = values.Number_informed_people; 
-            let Village_informed_people = values.Village_informed_people; 
-            let Patrol_car = values.Patrol_car; 
-            let Is_there_photo_table = values.Is_there_photo_table;
+            const Object_leaflet = values.Object_leaflet; 
+            const Village_leaflet = values.Village_leaflet; 
+            const Number_informed_people = values.Number_informed_people; 
+            const Village_informed_people = values.Village_informed_people; 
+            const Patrol_car = values.Patrol_car; 
+            const Is_there_photo_table = values.Is_there_photo_table === true ? ", фототаблица" : "";
 
             // 2. Обрабатываю их, формируя новые
 
