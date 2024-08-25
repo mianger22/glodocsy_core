@@ -5,6 +5,10 @@ import Select from './Select';
 import Checkbox from './Checkbox';
 import PizZip from 'pizzip';
 import Docxtemplater from 'docxtemplater';
+import Phototable_template from '../../Assets/Шаблон фототаблицы по патрулированию.docx';
+import Act_template from '../../Assets/Шаблон акта о проведённом патрулировании.docx';
+import Schema_template from '../../Assets/Шаблон схемы проведённого патрулирования.docx';
+import Task_template from '../../Assets/Шаблон задания на патрулирование.docx';
 
 const Document_generator = () => {
   // Общие функции
@@ -250,7 +254,7 @@ const Document_generator = () => {
             }
 
             // 3. Генерирую документы
-            fetch('Шаблон задания на патрулирование.docx')
+            fetch(Task_template)
               .then(response => {
                   if (!response.ok) {
                       throw new Error('Network response was not ok ' + response.statusText);
@@ -291,7 +295,7 @@ const Document_generator = () => {
                   alert('Ошибка! Смотри в console');
               });
 
-            fetch('Шаблон акта о проведённом патрулировании.docx')
+            fetch(Act_template)
               .then(response => {
                   if (!response.ok) {
                       throw new Error('Network response was not ok ' + response.statusText);
@@ -332,7 +336,7 @@ const Document_generator = () => {
                   alert('Ошибка! Смотри в console');
               });
 
-            fetch('Шаблон схемы проведённого патрулирования.docx')
+            fetch(Schema_template)
               .then(response => {
                   if (!response.ok) {
                       throw new Error('Network response was not ok ' + response.statusText);
@@ -368,8 +372,8 @@ const Document_generator = () => {
                   alert('Ошибка! Смотри в console');
               });
 
-            if (Is_there_photo_table !== "") {
-              fetch('Шаблон фототаблицы по патрулированию.docx')
+            if (Is_there_photo_table === true) {
+              fetch(Phototable_template)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok ' + response.statusText);
