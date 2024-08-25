@@ -173,7 +173,7 @@ const Document_generator = () => {
 
             // 2.2. Формирование нужного формата даты
             // 2.2.1. Получение численного обозначения месяца
-            const month_number = month_names.Date_issue_task.split("-")[1];
+            const month_number = Date_issue_task.split("-")[1];
             // 2.2.2. Поиск соответствующего месяца
             const foundMonth = month_names.find(month => month[month_number]);
             // 2.2.3. Получение значения месяца, если он найден
