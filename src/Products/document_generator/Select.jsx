@@ -1,7 +1,6 @@
 import { Field } from "formik"
 
 const Select = ({label_name, field_name, options_list, is_primary}) => {
-    debugger
     return (
         <div className="mb-4">
             <label className={`${is_primary && `uk-text-primary`}`} htmlFor={field_name}>{label_name}</label>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Formik, FormikProps } from 'formik';
+import { Form, Formik } from 'formik';
 import Input from './Input';
 import Select from './Select';
 import Checkbox from './Checkbox';
@@ -109,7 +109,6 @@ const Document_generator = () => {
             let Patrol_route_number = values.Patrol_route_number; 
             let What_date_was_approved = values.What_date_was_approved; 
             let Year_patrol = values.Year_patrol; 
-            let Who_issued_patrol = values.Who_issued_patrol; 
             let Full_name_senior_patroller = values.Full_name_senior_patroller; 
             let Full_name_junior_patroller = values.Full_name_junior_patroller; 
             let Time_assignment_issue = values.Time_assignment_issue;
@@ -161,6 +160,8 @@ const Document_generator = () => {
                     Declension_name_senior_patroller = 'мастером леса Новгородского участкового лесничества Зайцевым Даниилом Алексеевичем';
                     Initials_senior_patroller = 'Зайцев Д.А.';
                     break;
+                default:
+                    break;
             }
 
             // 2.4. Создание инициалов младшего патрульной группы
@@ -189,6 +190,8 @@ const Document_generator = () => {
                     Junior_patroller = 'мастер леса Новгородского участкового лесничества Зайцев Д.А.';
                     Declension_name_junior_patroller = 'мастером леса Новгородского участкового лесничества Зайцевым Даниилом Алексеевичем';
                     Initials_junior_patroller = 'Зайцев Д.А.';
+                    break;
+                default:
                     break;
             }
 
@@ -242,6 +245,8 @@ const Document_generator = () => {
                     Patrol_time = '40 мин.';
                     Length_patrol = '12 км.';
                     break;
+                default:
+                    break;
             }
 
             // 3. Генерирую документы
@@ -264,7 +269,7 @@ const Document_generator = () => {
                       Full_name_senior_patroller, Senior_patroller, Full_name_junior_patroller, 
                       Junior_patroller, Additional_order, Time_assignment_issue, Date_assignment_issue, 
                       Patrol_task_number, Date_issue_task, Patrol_date, Patrol_route_number, What_date_was_approved, 
-                      Year_patrol, Year_patrol, Person_issued_task
+                      Year_patrol, Person_issued_task
                   });
 
                   // Генерация и сохранение нового документа
