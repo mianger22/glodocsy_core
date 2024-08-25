@@ -28,14 +28,14 @@ const Document_generator = () => {
       <h1>Отчёт по патрулированию</h1>
 
       <Formik
-        initialValues={{ Patrol_task_number: '', Date_issue_task: '', Patrol_date: '', 
-          Patrol_route_number: '', What_date_was_approved: '08.12.2023', Year_patrol: 2024,
+        initialValues={{ Patrol_task_number: undefined, Date_issue_task: '', Patrol_date: '', 
+          Patrol_route_number: undefined, What_date_was_approved: '08.12.2023', Year_patrol: 2024,
           Person_issued_task: 'директор ГОКУ "Новгородское лесничество" Иванов К.В.',
           Full_name_senior_patroller: 'мастер леса Мясноборского участкового лесничества Устинов Дмитрий Сергеевич', 
           Full_name_junior_patroller: 'мастер леса Новгородского участкового лесничества Зайцев Даниил Алексеевич', 
           Time_assignment_issue: '', Date_assignment_issue: '', Additional_order: false, 
-          Number_patrol_act: '', Date_patrol_act: '', Object_leaflet: '', Village_leaflet: '', 
-          Number_informed_people: 2, Village_informed_people: '', Patrol_car: 'С948ХК',
+          Number_patrol_act: undefined, Date_patrol_act: '', Object_leaflet: '', Village_leaflet: '', 
+          Number_informed_people: 0, Village_informed_people: '', Patrol_car: 'С948ХК',
           Is_there_photo_table: false 
         }}
         validate={values => {
@@ -97,6 +97,30 @@ const Document_generator = () => {
 
           if (!values.Date_patrol_act) {
             errors.Date_patrol_act = 'Выберите дату акта патрулирования';
+          }
+
+          if (!values.Object_leaflet) {
+            errors.Object_leaflet = 'Выберите объект расклейки';
+          }
+
+          if (!values.Village_leaflet) {
+            errors.Village_leaflet = 'Выберите деревню расклейки';
+          }
+
+          if (!values.Village_leaflet) {
+            errors.Village_leaflet = 'Выберите деревню расклейки';
+          }
+
+          if (!values.Number_informed_people) {
+            errors.Number_informed_people = 'Введите количество народа';
+          }
+
+          if (!values.Village_informed_people) {
+            errors.Village_informed_people = 'Выберите деревню информирования';
+          }
+
+          if (!values.Patrol_car) {
+            errors.Patrol_car = 'Выберите машину патрулирования';
           }
 
           return errors;
@@ -560,7 +584,7 @@ const Document_generator = () => {
               is_primary={false}           
             />
 
-            <Input label_name='Сколько человек проинформировано' field_name='Number_informed_people' placeholder='2' input_type='number' is_primary={false} />   
+            <Input label_name='Сколько человек проинформировано' field_name='Number_informed_people' placeholder='' input_type='number' is_primary={false} />   
 
             <Select 
               label_name='Деревня, в которой проинформированы люди' 
@@ -580,8 +604,9 @@ const Document_generator = () => {
               label_name='Машина патрулирования' 
               field_name='Patrol_car' 
               options_list={[
-                {id: '1', value: 'С948ХК', name_option: 'Алексея Евгеньевича', selected: true, disabled: false},
-                {id: '2', value: 'C848ХМ', name_option: 'Николая Викторовича', selected: false, disabled: false},
+                {id: '1', value: '', name_option: 'Выберите', selected: false, disabled: true},
+                {id: '2', value: 'С948ХК', name_option: 'Алексея Евгеньевича', selected: true, disabled: false},
+                {id: '3', value: 'C848ХМ', name_option: 'Николая Викторовича', selected: false, disabled: false},
               ]}  
               is_primary={false}           
             />
