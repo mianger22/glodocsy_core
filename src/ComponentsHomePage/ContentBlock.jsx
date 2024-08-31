@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CardLink from "./CardLink";
 import PatrolReportGenerator from "../Products/PatrolReportGenerator/PatrolReportGenerator";
 import CubatureCalculation from "../Products/CubatureCalculation/CubatureCalculation";
@@ -38,7 +38,7 @@ function ContentBlock() {
             {
                 (is_show_patrol_report_generator !== undefined || 
                     is_show_cubature_calculation !== undefined)
-                    && <h3><a className="uk-link-heading" href='' onClick={reset_zero}>Назад</a></h3>
+                    && <h3><a className="uk-link-heading" href='/#' onClick={reset_zero}>Назад</a></h3>
             }
         </div>
     );
