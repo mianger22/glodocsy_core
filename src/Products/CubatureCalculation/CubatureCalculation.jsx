@@ -26,11 +26,17 @@ const CubatureCalculation = () => {
                 <div className="uk-margin-small-right">
                     <button onClick={() => change_el_val(0.029)}>+</button>
                 </div>
-                <div>
-                    {inf}
+            </div>
+            <hr />
+            <div className="uk-flex">
+                <div className="uk-margin-small-right">0,091</div>
+                <div className="uk-margin-small-right">12</div>
+                <div className="uk-margin-small-right">
+                    <button onClick={() => change_el_val(0.091)}>+</button>
                 </div>
             </div>
             <div>
+                {inf}
                 итог: {isEl}
                 всего: {isKol}
             </div>
