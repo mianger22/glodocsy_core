@@ -44,6 +44,24 @@ const CubatureCalculation = () => {
                 {id: 10, diameter: 44, volume: 1.77},
                 {id: 11, diameter: 48, volume: 2.14},
             ]
+        },
+        {
+            id: 3,
+            breed: 'Берёза',
+            category: 4,
+            cubatures: [
+                {id: 1, diameter: 8, volume: 0.030},
+                {id: 2, diameter: 12, volume: 0.090},
+                {id: 3, diameter: 16, volume: 0.18},
+                {id: 4, diameter: 20, volume: 0.31},
+                {id: 5, diameter: 24, volume: 0.49},
+                {id: 6, diameter: 28, volume: 0.68},
+                {id: 7, diameter: 32, volume: 0.91},
+                {id: 8, diameter: 36, volume: 1.18},
+                {id: 9, diameter: 40, volume: 1.48},
+                {id: 10, diameter: 44, volume: 1.81},
+                {id: 11, diameter: 48, volume: 2.13},
+            ]
         }
     ]
 
@@ -63,6 +81,7 @@ const CubatureCalculation = () => {
 
             <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={cubatureData[0]} cubatureDataId={1} />
             <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={cubatureData[1]} cubatureDataId={2} />
+            <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={cubatureData[2]} cubatureDataId={3} />
 
             <div>
                 <div className='uk-text-danger'>
