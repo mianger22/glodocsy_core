@@ -20,26 +20,47 @@ const CubatureCalculation = () => {
             <h1>Подсчёт кубатуры</h1>
 
             <h5>Ель</h5>
-            <div className="uk-flex">
-                <div className="uk-margin-small-right">0,029</div>
-                <div className="uk-margin-small-right">8</div>
-                <div className="uk-margin-small-right">
-                    <button onClick={() => change_el_val(0.029)}>+</button>
-                </div>
-            </div>
-            <hr />
-            <div className="uk-flex">
-                <div className="uk-margin-small-right">0,091</div>
-                <div className="uk-margin-small-right">12</div>
-                <div className="uk-margin-small-right">
-                    <button onClick={() => change_el_val(0.091)}>+</button>
-                </div>
-            </div>
+            
             <div>
                 {inf}
                 итог: {isEl}
                 всего: {isKol}
             </div>
+
+            <div class="uk-inline">
+
+            <button class="uk-button uk-button-default" type="button" uk-toggle="target: #dropdown-1">Выберите опцию</button>
+            <div id="dropdown-1" uk-dropdown="mode: click">
+                <ul class="uk-nav uk-dropdown-nav">
+                    <li className='uk-flex'>
+                        <a href='' className='uk-margin-small-right'>8</a>
+                        <button onClick={() => change_el_val(0.029)}>+</button>
+                    </li>
+                    <li className='uk-flex'>
+                        <a href='' className='uk-margin-small-right'>12</a>
+                        <button onClick={() => change_el_val(0.091)}>+</button>
+                    </li>
+                    <li className='uk-flex'>
+                        <a href='' className='uk-margin-small-right'>16</a>
+                        <button onClick={() => change_el_val(0.19)}>+</button>
+                    </li>
+                    <li className='uk-flex'>
+                        <a href='' className='uk-margin-small-right'>20</a>
+                        <button onClick={() => change_el_val(0.33)}>+</button>
+                    </li>
+                    <li className='uk-flex'>
+                        <a href='' className='uk-margin-small-right'>24</a>
+                        <button onClick={() => change_el_val(0.50)}>+</button>
+                    </li>
+                    <li className='uk-flex'>
+                        <a href='' className='uk-margin-small-right'>28</a>
+                        <button onClick={() => change_el_val(0.71)}>+</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
         </div>
     )
 }
