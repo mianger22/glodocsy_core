@@ -428,7 +428,7 @@ const Document_generator = () => {
                   alert('Ошибка! Смотри в console');
               });
 
-            if (Is_there_photo_table === true) {
+            if (values.Is_there_photo_table === true) {
               fetch(Phototable_template)
                 .then(response => {
                     if (!response.ok) {
