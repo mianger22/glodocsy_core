@@ -1,8 +1,8 @@
 import React from 'react';
 import { Form, Formik } from 'formik';
-import Input from './Input';
-import Select from './Select';
-import Checkbox from './Checkbox';
+import Input from '../../Common/Input';
+import Select from '../../Common/Select';
+import Checkbox from '../../Common/Checkbox';
 import PizZip from 'pizzip';
 import Docxtemplater from 'docxtemplater';
 import Phototable_template from '../../Assets/Шаблон фототаблицы по патрулированию.docx';
