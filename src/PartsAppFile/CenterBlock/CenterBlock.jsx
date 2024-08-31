@@ -1,6 +1,8 @@
 import { useState } from "react";
 import CardLink from "./CardLink";
 import PatrolReportGenerator from "../../Products/PatrolReportGenerator/PatrolReportGenerator";
+import CubatureCalculation from "../../Products/CubatureCalculation/CubatureCalculation";
+
 
 function CenterBlock() {  
     const [is_show_patrol_report_generator, set_show_patrol_report_generator] = useState(false);
@@ -19,7 +21,7 @@ function CenterBlock() {
     return (
         <div>
             {is_show_patrol_report_generator ? <PatrolReportGenerator /> : <CardLink title_card="Отчёт по патрулированию" click_handler={show_patrol_report_generator} />}
-            {is_show_cubature_calculation ? <PatrolReportGenerator /> : <CardLink title_card="Подсчёт кубатуры" click_handler={show_cubature_calculation} />}
+            {is_show_cubature_calculation ? <CubatureCalculation /> : <CardLink title_card="Подсчёт кубатуры" click_handler={show_cubature_calculation} />}
         </div>
     );
 }
