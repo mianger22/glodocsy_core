@@ -43,7 +43,7 @@ const CubatureCalculation = () => {
         <div>
             <h1>Подсчёт кубатуры</h1>
 
-            <CubatureCalculationBlock handlerClick={change_el_val} inf={inf} isEl={isEl} isKol={isKol} cubatureData={cubatureData} />
+            <CubatureCalculationBlock handlerClick={change_el_val} inf={inf} isEl={isEl} isKol={isKol} cubatureData={cubatureData[0]} />
         </div>
     )
 }

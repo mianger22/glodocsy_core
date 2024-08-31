@@ -7,7 +7,7 @@ const CubatureCalculationBlock = ({handlerClick, inf, isEl, isKol, cubatureData}
                 <button className="uk-button uk-button-default" type="button" uk-toggle="target: #dropdown-1">{cubatureData.breed} - {cubatureData.category}</button>
                 <div id="dropdown-1" uk-dropdown="mode: click">
                     <ul className="uk-nav uk-dropdown-nav">
-                        {cubatureData[0].cubatures.map(el => 
+                        {cubatureData.cubatures.map(el => 
                             <CubatureList 
                                 key={el.id} 
                                 diameter={el.diameter} 
