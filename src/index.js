@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 // import './index.css';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import Home from './Home';
+import HomePage from './HomePage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home />
+    <HomePage />
   </React.StrictMode>
 );
 

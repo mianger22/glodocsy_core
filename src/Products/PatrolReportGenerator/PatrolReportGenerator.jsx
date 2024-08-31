@@ -50,7 +50,7 @@ const PatrolReportGenerator = () => {
   }
 
   return (
-    <div className='uk-margin-xlarge-bottom'>
+    <div className='uk-margin-small-bottom'>
       <h1>Отчёт по патрулированию</h1>
 
       <Formik
