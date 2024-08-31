@@ -354,8 +354,6 @@ const Document_generator = () => {
                   link.href = URL.createObjectURL(out);
                   link.download = `1. Задание на проведение патрулирования по МБ л-ву № ${Patrol_task_number}.docx`;
                   link.click();
-
-                  custom_alert('Задание готово')
               })
               .catch(error => {
                   console.error('Ошибка:', error);
@@ -479,6 +477,7 @@ const Document_generator = () => {
             }
 
             actions.setSubmitting(false);
+            custom_alert('Задание и акт готовы');
           }, 500);
         }}
       >
