@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CubatureList from "./CubatureList";
+import CubatureCalculationBlock from "./CubatureCalculationBlock";
 
 const CubatureCalculation = () => {
     const [isEl, setEl] = useState(0);
@@ -16,42 +16,33 @@ const CubatureCalculation = () => {
         }, 1000);
     }
 
+    const cubatureData = [
+        {
+            breed: 'Ель',
+            category: 4,
+            cubatures: [
+                {id: 1, diameter: 8, volume: 0.029},
+                {id: 2, diameter: 12, volume: 0.091},
+                {id: 3, diameter: 16, volume: 0.19},
+                {id: 4, diameter: 20, volume: 0.33},
+                {id: 5, diameter: 24, volume: 0.50},
+                {id: 6, diameter: 28, volume: 0.71},
+                {id: 7, diameter: 32, volume: 0.96},
+                {id: 8, diameter: 36, volume: 1.25},
+                {id: 9, diameter: 40, volume: 1.74},
+                {id: 10, diameter: 44, volume: 1.91},
+                {id: 11, diameter: 48, volume: 2.31},
+                {id: 12, diameter: 52, volume: 2.74},
+                {id: 13, diameter: 56, volume: 3.19},
+            ]
+        }
+    ]
+
     return (
-        <div className='uk-margin-small-bottom'>
+        <div>
             <h1>Подсчёт кубатуры</h1>
 
-            <div className="uk-inline uk-margin-small-bottom">
-                <button className="uk-button uk-button-default" type="button" uk-toggle="target: #dropdown-1">Ель - 4</button>
-                <div id="dropdown-1" uk-dropdown="mode: click">
-                    <ul className="uk-nav uk-dropdown-nav">
-                        <CubatureList diameter={8} volume={0.029} handlerClick={change_el_val} />
-                        <CubatureList diameter={12} volume={0.091} handlerClick={change_el_val} />
-                        <CubatureList diameter={16} volume={0.19} handlerClick={change_el_val} />
-                        <CubatureList diameter={20} volume={0.33} handlerClick={change_el_val} />
-                        <CubatureList diameter={24} volume={0.50} handlerClick={change_el_val} />
-                        <CubatureList diameter={28} volume={0.71} handlerClick={change_el_val} />
-                        <CubatureList diameter={32} volume={0.96} handlerClick={change_el_val} />
-                        <CubatureList diameter={36} volume={1.25} handlerClick={change_el_val} />
-                        <CubatureList diameter={40} volume={1.74} handlerClick={change_el_val} />
-                        <CubatureList diameter={44} volume={1.91} handlerClick={change_el_val} />
-                        <CubatureList diameter={48} volume={2.31} handlerClick={change_el_val} />
-                        <CubatureList diameter={52} volume={2.74} handlerClick={change_el_val} />
-                        <CubatureList diameter={56} volume={3.19} handlerClick={change_el_val} />
-                    </ul>
-                </div>
-            </div>
-
-            <div>
-                <div className='uk-text-danger'>
-                    {inf}
-                </div>
-                <div>
-                    Итог: <span className="uk-badge">{isEl}</span>
-                </div>
-                <div>
-                    Всего: <span className="uk-badge">{isKol}</span>
-                </div>
-            </div>
+            <CubatureCalculationBlock handlerClick={change_el_val} inf={inf} isEl={isEl} isKol={isKol} cubatureData={cubatureData} />
         </div>
     )
 }
