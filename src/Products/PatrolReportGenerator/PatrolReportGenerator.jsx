@@ -10,7 +10,7 @@ import Act_template from '../../Assets/Шаблон акта о проведён
 import Schema_template from '../../Assets/Шаблон схемы проведённого патрулирования.docx';
 import Task_template from '../../Assets/Шаблон задания на патрулирование.docx';
 
-const Document_generator = () => {
+const PatrolReportGenerator = () => {
   // Общие функции
   const custom_alert = (message) => {
     return window.Swal.fire({
@@ -658,4 +658,4 @@ const Document_generator = () => {
   )
 };
 
-export default Document_generator;
+export default PatrolReportGenerator;
