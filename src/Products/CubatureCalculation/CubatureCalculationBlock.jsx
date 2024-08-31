@@ -1,6 +1,6 @@
 import CubatureList from "./CubatureList";
 
-const CubatureCalculationBlock = ({handlerClick, inf, isEl, isKol, cubatureData}) => {
+const CubatureCalculationBlock = ({handlerClick, cubatureData}) => {
     return (
         <div className='uk-margin-small-bottom'>
             <div className="uk-inline uk-margin-small-bottom">
@@ -15,18 +15,6 @@ const CubatureCalculationBlock = ({handlerClick, inf, isEl, isKol, cubatureData}
                                 handlerClick={handlerClick} 
                             />)}
                     </ul>
-                </div>
-            </div>
-
-            <div>
-                <div className='uk-text-danger'>
-                    {inf}
-                </div>
-                <div>
-                    Итог: <span className="uk-badge">{isEl}</span>
-                </div>
-                <div>
-                    Всего: <span className="uk-badge">{isKol}</span>
                 </div>
             </div>
         </div>

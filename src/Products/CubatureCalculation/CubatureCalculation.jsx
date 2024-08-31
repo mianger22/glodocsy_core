@@ -43,7 +43,19 @@ const CubatureCalculation = () => {
         <div>
             <h1>Подсчёт кубатуры</h1>
 
-            <CubatureCalculationBlock handlerClick={change_el_val} inf={inf} isEl={isEl} isKol={isKol} cubatureData={cubatureData[0]} />
+            <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={cubatureData[0]} />
+
+            <div>
+                <div className='uk-text-danger'>
+                    {inf}
+                </div>
+                <div>
+                    Итог: <span className="uk-badge">{isEl}</span>
+                </div>
+                <div>
+                    Всего: <span className="uk-badge">{isKol}</span>
+                </div>
+            </div>
         </div>
     )
 }
