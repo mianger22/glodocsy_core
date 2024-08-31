@@ -602,8 +602,6 @@ const Document_generator = () => {
               is_primary={false}           
             />
 
-            <Input label_name='' field_name='' placeholder='' input_type='number' is_primary={false} />   
-
             <Select 
               label_name='Сколько человек проинформировано' 
               field_name='Number_informed_people' 
@@ -613,6 +611,7 @@ const Document_generator = () => {
                 {id: '3', value: '2', name_option: '2', selected: false, disabled: false},
                 {id: '4', value: '3', name_option: '3', selected: false, disabled: false},
                 {id: '5', value: '4', name_option: '4', selected: false, disabled: false},
+                {id: '6', value: '5', name_option: '5', selected: false, disabled: false},
               ]}  
               is_primary={false}           
             />
