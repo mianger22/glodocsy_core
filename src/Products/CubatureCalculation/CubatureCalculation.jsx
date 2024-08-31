@@ -2,9 +2,17 @@ import { useState } from "react";
 
 const CubatureCalculation = () => {
     const [isEl, setEl] = useState(0);
+    const [isKol, setKol] = useState(0);
+    const [inf, setInf] = useState('');
 
     const change_el_val = (val) => {
         setEl(prevIsEl => prevIsEl + val);
+        setKol(prevIsKol => prevIsKol + 1);
+
+        setInf('+ 1');
+        setTimeout(()=>{
+            setInf('');
+        }, 1000);
     }
 
     return (
@@ -19,11 +27,12 @@ const CubatureCalculation = () => {
                     <button onClick={() => change_el_val(0.029)}>+</button>
                 </div>
                 <div>
-
+                    {inf}
                 </div>
             </div>
             <div>
                 итог: {isEl}
+                всего: {isKol}
             </div>
         </div>
     )
