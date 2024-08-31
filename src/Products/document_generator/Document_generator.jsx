@@ -477,7 +477,7 @@ const Document_generator = () => {
             }
 
             actions.setSubmitting(false);
-            custom_alert('Задание и акт готовы');
+            custom_alert('Задание, акт, схема готовы');
           }, 500);
         }}
       >
