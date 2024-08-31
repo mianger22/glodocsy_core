@@ -18,6 +18,7 @@ const CubatureCalculation = () => {
 
     const cubatureData = [
         {
+            id: 1,
             breed: 'Ель',
             category: 4,
             cubatures: [
