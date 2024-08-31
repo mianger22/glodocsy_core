@@ -60,8 +60,8 @@ const Document_generator = () => {
           Full_name_senior_patroller: 'мастер леса Мясноборского участкового лесничества Устинов Дмитрий Сергеевич', 
           Full_name_junior_patroller: 'мастер леса Новгородского участкового лесничества Зайцев Даниил Алексеевич', 
           Time_assignment_issue: '', Date_assignment_issue: '', Additional_order: false, 
-          Number_patrol_act: undefined, Date_patrol_act: '', Object_leaflet: '', Village_leaflet: '', 
-          Number_informed_people: 0, Village_informed_people: '', Patrol_car: 'С948ХК',
+          Number_patrol_act: undefined, Object_leaflet: '', Village_leaflet: '', 
+          Number_informed_people: '', Village_informed_people: '', Patrol_car: 'С948ХК',
           Is_there_photo_table: false 
         }}
         validate={values => {
@@ -121,10 +121,6 @@ const Document_generator = () => {
             errors.Number_patrol_act = 'Номер акта должен быть не более 4 цифр';
           }
 
-          if (!values.Date_patrol_act) {
-            errors.Date_patrol_act = 'Выберите дату акта патрулирования';
-          }
-
           if (!values.Object_leaflet) {
             errors.Object_leaflet = 'Выберите объект расклейки';
           }
@@ -138,7 +134,7 @@ const Document_generator = () => {
           }
 
           if (!values.Number_informed_people) {
-            errors.Number_informed_people = 'Введите количество народа';
+            errors.Number_informed_people = 'Выберите количество народа';
           }
 
           if (!values.Village_informed_people) {
@@ -169,7 +165,22 @@ const Document_generator = () => {
             let Date_assignment_issue = values.Date_assignment_issue; 
             const Additional_order = values.Additional_order === true ? " (приказ директора от _____._____._____ года № _____)" : "";
             const Number_patrol_act = values.Number_patrol_act; 
-            let Date_patrol_act = values.Date_patrol_act; 
+            
+            function generate_date_patrol_act() {
+              // получаем дату патрулирования
+              const date = values.Patrol_date;
+              // для удобства делим её на части и каждую часть заносим в отдельную переменную
+              let [day, month, year] = [date.split("-")[2], date.split("-")[1], date.split("-")[0]];
+              // форматируем день, делая его числом и прибавляя единицу
+              day = +day + 1;
+              // если полученный день меньше 10, то добавляем ноль, переведя в строку
+              day = day < 10 ? `0${day}` : `${day}`;
+              // формируем новую дату, которая будет являться датой акта патрулирования
+              return `${year}-${month}-${day}`;
+            }
+
+            let Date_patrol_act = generate_date_patrol_act();
+
             const Object_leaflet = values.Object_leaflet; 
             const Village_leaflet = values.Village_leaflet; 
             const Number_informed_people = values.Number_informed_people; 
@@ -564,7 +575,6 @@ const Document_generator = () => {
             </div>
 
             <Input label_name='Номер акта о патрулировании' field_name='Number_patrol_act' placeholder='105' input_type='number' is_primary={true} />   
-            <Input label_name='Дата акта о патрулировании' field_name='Date_patrol_act' placeholder='' input_type='date' is_primary={false} />   
 
             <Select 
               label_name='На что наклеено' 
@@ -592,7 +602,20 @@ const Document_generator = () => {
               is_primary={false}           
             />
 
-            <Input label_name='Сколько человек проинформировано' field_name='Number_informed_people' placeholder='' input_type='number' is_primary={false} />   
+            <Input label_name='' field_name='' placeholder='' input_type='number' is_primary={false} />   
+
+            <Select 
+              label_name='Сколько человек проинформировано' 
+              field_name='Number_informed_people' 
+              options_list={[
+                {id: '1', value: '', name_option: 'Выберите', selected: true, disabled: true},
+                {id: '2', value: '1', name_option: '1', selected: false, disabled: false},
+                {id: '3', value: '2', name_option: '2', selected: false, disabled: false},
+                {id: '4', value: '3', name_option: '3', selected: false, disabled: false},
+                {id: '5', value: '4', name_option: '4', selected: false, disabled: false},
+              ]}  
+              is_primary={false}           
+            />
 
             <Select 
               label_name='Деревня, в которой проинформированы люди' 
