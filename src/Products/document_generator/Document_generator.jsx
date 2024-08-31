@@ -377,13 +377,13 @@ const Document_generator = () => {
                   });
 
                   // Создание отчёта о патрулировании
-                  const Initial_report = `Во время патрулирования не было обнаружено ни нарушений лесного законодательства, ни лесозаготовительной техники, ни граждан, незаконно вывозящих древесину из лесного фонда. Также мною были проинформированы ${Number_informed_people} граждан деревни ${Village_informed_people} о правилах пожарной безопасности в лесном массиве и прилегающей территории. Каждому гражданину был вручён информационный лист с соответствующей информацией. Кроме того мною была прикреплена памятка с правилами пожарной безопасности в деревне ${Village_leaflet} (${Object_leaflet}). Для проведения патрулирования мы задействовали автомобиль ${Patrol_car}, маршрут которого составил ${Length_patrol}`;
+                  const Initial_report = `Также мною были проинформированы ${Number_informed_people} граждан деревни ${Village_informed_people} о правилах пожарной безопасности в лесном массиве и прилегающей территории. Каждому гражданину был вручён информационный лист с соответствующей информацией. Кроме того мною была прикреплена памятка с правилами пожарной безопасности в деревне ${Village_leaflet} (${Object_leaflet}).`;
 
                   // Обработка документа (замена {user_name} на имя пользователя, {user_surname} на фамилию пользователя и т.д.)
                   doc.render({
                       Declension_name_senior_patroller, Initials_senior_patroller, Declension_name_junior_patroller, 
                       Initials_junior_patroller, Number_patrol_act, Date_patrol_act, Patrol_task_number, Date_issue_task, 
-                      Patrol_route_declaration, Initial_report, Is_there_photo_table
+                      Patrol_route_declaration, Initial_report, Patrol_car, Length_patrol, Is_there_photo_table
                   });
 
                   // Генерация и сохранение нового документа
