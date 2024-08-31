@@ -1,6 +1,6 @@
 const CubatureCalculation = () => {
     return (
-        <div>
+        <div className='uk-margin-xlarge-top'>
             <h1>Подсчёт кубатуры</h1>
         </div>
     )
