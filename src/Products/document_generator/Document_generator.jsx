@@ -603,6 +603,8 @@ const Document_generator = () => {
                 {id: '4', value: 'Подберезье', name_option: 'Подберезье', selected: false, disabled: false},
                 {id: '5', value: 'Вешки', name_option: 'Вешки', selected: false, disabled: false},
                 {id: '6', value: 'Котовицы', name_option: 'Котовицы', selected: false, disabled: false},
+                {id: '7', value: 'Малое Замошье', name_option: 'Малое Замошье', selected: false, disabled: false},
+                {id: '8', value: 'Большое Замошье', name_option: 'Большое Замошье', selected: false, disabled: false},
               ]}  
               is_primary={false}           
             />
