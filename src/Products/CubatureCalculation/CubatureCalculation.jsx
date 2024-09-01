@@ -62,6 +62,24 @@ const CubatureCalculation = () => {
                 {id: 10, diameter: 44, volume: 1.81},
                 {id: 11, diameter: 48, volume: 2.13},
             ]
+        },
+        {
+            id: 4,
+            breed: 'Осина',
+            category: 4,
+            cubatures: [
+                {id: 1, diameter: 8, volume: 0.035},
+                {id: 2, diameter: 12, volume: 0.096},
+                {id: 3, diameter: 16, volume: 0.19},
+                {id: 4, diameter: 20, volume: 0.31},
+                {id: 5, diameter: 24, volume: 0.47},
+                {id: 6, diameter: 28, volume: 0.67},
+                {id: 7, diameter: 32, volume: 0.89},
+                {id: 8, diameter: 36, volume: 1.16},
+                {id: 9, diameter: 40, volume: 1.45},
+                {id: 10, diameter: 44, volume: 1.78},
+                {id: 11, diameter: 48, volume: 2.09},
+            ]
         }
     ]
 
