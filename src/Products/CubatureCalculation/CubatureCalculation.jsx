@@ -137,6 +137,7 @@ const CubatureCalculation = () => {
                 <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={cubatureData[0]} cubatureDataId={1} />
                 <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={cubatureData[1]} cubatureDataId={2} />
                 <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={cubatureData[2]} cubatureDataId={3} />
+                <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={cubatureData[3]} cubatureDataId={4} />
             </div>
         </div>
     )
