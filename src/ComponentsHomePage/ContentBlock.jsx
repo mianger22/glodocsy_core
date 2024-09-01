@@ -20,6 +20,8 @@ function ContentBlock() {
     const reset_zero = () => {
         set_show_cubature_calculation(undefined);
         set_show_patrol_report_generator(undefined);
+
+        window.location.reload();
     }
 
     return (
@@ -38,7 +40,7 @@ function ContentBlock() {
             {
                 (is_show_patrol_report_generator !== undefined || 
                     is_show_cubature_calculation !== undefined)
-                    && <h3><a className="uk-link-heading" href='/#' onClick={reset_zero}>Назад</a></h3>
+                    && <h3><span className="uk-link-heading" style={{cursor: 'pointer'}} onClick={reset_zero}>Назад</span></h3>
             }
         </div>
     );
