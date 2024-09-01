@@ -57,7 +57,7 @@ const CubatureList = ({diameter, volume, handlerClick}) => {
                             onClick={handlerClickBtnDelete} 
                             className='uk-button uk-button-default uk-button-small' 
                         >
-                            +
+                            -
                         </button>
             }
         </li>
