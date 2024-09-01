@@ -4,7 +4,7 @@ import CubatureCalculationBlock from "./CubatureCalculationBlock";
 const CubatureCalculation = () => {
     const [isEl, setEl] = useState(0);
     const [isKol, setKol] = useState(0);
-    const [inf, setInf] = useState('');
+    const [inf, setInf] = useState({changed: '', status: '', diameter: undefined});
 
     const cubatureData = [
         {
@@ -83,23 +83,25 @@ const CubatureCalculation = () => {
         }
     ]
 
-    const change_el_val = (value, action) => {
+    const clearInf = () => {
+        return setTimeout(() => {
+            setInf({changed: '', diameter: undefined});
+        }, 2000);
+    }
+
+    const change_el_val = (volume, diameter, action) => {
         if (action === 'add') {
-            setEl(prevIsEl => prevIsEl + value);
+            setEl(prevIsEl => prevIsEl + volume);
             setKol(prevIsKol => prevIsKol + 1);
 
-            setInf('+ 1');
-            setTimeout(()=>{
-                setInf('');
-            }, 1000);
+            setInf({changed: '+ 1', status: 'success', diameter: diameter});
+            clearInf();
         } else if (action === 'delete') {
-            setEl(prevIsEl => prevIsEl - value);
+            setEl(prevIsEl => prevIsEl - volume);
             setKol(prevIsKol => prevIsKol - 1);
 
-            setInf('- 1');
-            setTimeout(()=>{
-                setInf('');
-            }, 1000);
+            setInf({changed: '- 1', status: 'danger', diameter: diameter});
+            clearInf();
         }
     }
 
@@ -110,8 +112,18 @@ const CubatureCalculation = () => {
             </div>
             
             <div className='uk-margin-medium-bottom'>
-                <div>
-                    Статус: <span className='uk-text-danger'>{inf}</span>
+                <div className='uk-margin-small-bottom'>
+                    Статус:
+                    <div>
+                        {
+                            inf.changed === '' 
+                                ? <span> в процессе</span> 
+                                : <>
+                                    <span className={`uk-text-${inf.status}`}>{inf.changed}, </span>
+                                    диаметр: <span className={`uk-text-${inf.status}`}>{inf.diameter}</span>
+                                </>
+                        }
+                    </div> 
                 </div>
                 <div>
                     Итог: <span className='uk-badge'>{isEl}</span>
