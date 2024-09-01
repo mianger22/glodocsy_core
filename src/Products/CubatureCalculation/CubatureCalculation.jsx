@@ -463,6 +463,27 @@ const CubatureCalculation = () => {
                     cubatureData.map(el => <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={el} cubatureDataId={el.id} />)
                 }
             </div>
+
+            <ul uk-accordion>
+                <li className="uk-open">
+                    <a className="uk-accordion-title" href>3-й разряд высот</a>
+                    <div className="uk-accordion-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </li>
+                <li>
+                    <a className="uk-accordion-title" href>4-й разряд высот</a>
+                    <div className="uk-accordion-content">
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
+                    </div>
+                </li>
+                <li>
+                    <a className="uk-accordion-title" href>5-й разряд высот</a>
+                    <div className="uk-accordion-content">
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                    </div>
+                </li>
+            </ul>
         </div>
     )
 }
