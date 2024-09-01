@@ -80,6 +80,168 @@ const CubatureCalculation = () => {
                 {id: 10, diameter: 44, volume: 1.78},
                 {id: 11, diameter: 48, volume: 2.09},
             ]
+        },
+        {
+            id: 5,
+            breed: 'Сосна',
+            category: 3,
+            cubatures: [
+                {id: 1, diameter: 8, volume: 0.039},
+                {id: 2, diameter: 12, volume: 0.112},
+                {id: 3, diameter: 16, volume: 0.21},
+                {id: 4, diameter: 20, volume: 0.35},
+                {id: 5, diameter: 24, volume: 0.52},
+                {id: 6, diameter: 28, volume: 0.73},
+                {id: 7, diameter: 32, volume: 0.98},
+                {id: 8, diameter: 36, volume: 1.26},
+                {id: 9, diameter: 40, volume: 1.57},
+                {id: 10, diameter: 44, volume: 1.92},
+                {id: 11, diameter: 48, volume: 2.28},
+            ]
+        },
+        {
+            id: 6,
+            breed: 'Сосна',
+            category: 5,
+            cubatures: [
+                {id: 1, diameter: 8, volume: 0.031},
+                {id: 2, diameter: 12, volume: 0.087},
+                {id: 3, diameter: 16, volume: 0.17},
+                {id: 4, diameter: 20, volume: 0.28},
+                {id: 5, diameter: 24, volume: 0.43},
+                {id: 6, diameter: 28, volume: 0.61},
+                {id: 7, diameter: 32, volume: 0.81},
+                {id: 8, diameter: 36, volume: 1.04},
+                {id: 9, diameter: 40, volume: 1.32},
+                {id: 10, diameter: 44, volume: 1.61},
+                {id: 11, diameter: 48, volume: 1.91},
+            ]
+        },
+        {
+            id: 7,
+            breed: 'Сосна',
+            category: 6,
+            cubatures: [
+                {id: 1, diameter: 8, volume: 0.029},
+                {id: 2, diameter: 12, volume: 0.080},
+                {id: 3, diameter: 16, volume: 0.16},
+                {id: 4, diameter: 20, volume: 0.26},
+                {id: 5, diameter: 24, volume: 0.40},
+                {id: 6, diameter: 28, volume: 0.57},
+                {id: 7, diameter: 32, volume: 0.76},
+                {id: 8, diameter: 36, volume: 0.98},
+                {id: 9, diameter: 40, volume: 1.23},
+                {id: 10, diameter: 44, volume: 1.48},
+                {id: 11, diameter: 48, volume: 1.80},
+            ]
+        },
+        {
+            id: 8,
+            breed: 'Сосна',
+            category: 7,
+            cubatures: [
+                {id: 1, diameter: 8, volume: 0.027},
+                {id: 2, diameter: 12, volume: 0.074},
+                {id: 3, diameter: 16, volume: 0.15},
+                {id: 4, diameter: 20, volume: 0.25},
+                {id: 5, diameter: 24, volume: 0.38},
+                {id: 6, diameter: 28, volume: 0.54},
+                {id: 7, diameter: 32, volume: 0.72},
+                {id: 8, diameter: 36, volume: 0.92},
+                {id: 9, diameter: 40, volume: 1.14},
+                {id: 10, diameter: 44, volume: 1.41},
+                {id: 11, diameter: 48, volume: 1.72},
+            ]
+        },
+        {
+            id: 9,
+            breed: 'Берёза',
+            category: 3,
+            cubatures: [
+                {id: 1, diameter: 8, volume: 0.032},
+                {id: 2, diameter: 12, volume: 0.097},
+                {id: 3, diameter: 16, volume: 0.20},
+                {id: 4, diameter: 20, volume: 0.34},
+                {id: 5, diameter: 24, volume: 0.52},
+                {id: 6, diameter: 28, volume: 0.73},
+                {id: 7, diameter: 32, volume: 0.98},
+                {id: 8, diameter: 36, volume: 1.26},
+                {id: 9, diameter: 40, volume: 1.59},
+                {id: 10, diameter: 44, volume: 1.95},
+                {id: 11, diameter: 48, volume: 2.31},
+            ]
+        },
+        {
+            id: 10,
+            breed: 'Берёза',
+            category: 5,
+            cubatures: [
+                {id: 1, diameter: 8, volume: 0.028},
+                {id: 2, diameter: 12, volume: 0.081},
+                {id: 3, diameter: 16, volume: 0.17},
+                {id: 4, diameter: 20, volume: 0.28},
+                {id: 5, diameter: 24, volume: 0.43},
+                {id: 6, diameter: 28, volume: 0.61},
+                {id: 7, diameter: 32, volume: 0.82},
+                {id: 8, diameter: 36, volume: 1.06},
+                {id: 9, diameter: 40, volume: 1.33},
+                {id: 10, diameter: 44, volume: 1.65},
+                {id: 11, diameter: 48, volume: 1.97},
+            ]
+        },
+        {
+            id: 11,
+            breed: 'Берёза',
+            category: 1,
+            cubatures: [
+                {id: 1, diameter: 8, volume: 0.036},
+                {id: 2, diameter: 12, volume: 0.114},
+                {id: 3, diameter: 16, volume: 0.23},
+                {id: 4, diameter: 20, volume: 0.40},
+                {id: 5, diameter: 24, volume: 0.61},
+                {id: 6, diameter: 28, volume: 0.87},
+                {id: 7, diameter: 32, volume: 1.17},
+                {id: 8, diameter: 36, volume: 1.52},
+                {id: 9, diameter: 40, volume: 1.89},
+                {id: 10, diameter: 44, volume: 2.31},
+                {id: 11, diameter: 48, volume: 2.77},
+            ]
+        },
+        {
+            id: 12,
+            breed: 'Берёза',
+            category: 2,
+            cubatures: [
+                {id: 1, diameter: 8, volume: 0.034},
+                {id: 2, diameter: 12, volume: 0.104},
+                {id: 3, diameter: 16, volume: 0.22},
+                {id: 4, diameter: 20, volume: 0.37},
+                {id: 5, diameter: 24, volume: 0.56},
+                {id: 6, diameter: 28, volume: 0.80},
+                {id: 7, diameter: 32, volume: 1.08},
+                {id: 8, diameter: 36, volume: 1.38},
+                {id: 9, diameter: 40, volume: 1.73},
+                {id: 10, diameter: 44, volume: 2.11},
+                {id: 11, diameter: 48, volume: 2.53},
+            ]
+        },
+        {
+            id: 13,
+            breed: 'Берёза',
+            category: 6,
+            cubatures: [
+                {id: 1, diameter: 8, volume: 0.026},
+                {id: 2, diameter: 12, volume: 0.074},
+                {id: 3, diameter: 16, volume: 0.15},
+                {id: 4, diameter: 20, volume: 0.26},
+                {id: 5, diameter: 24, volume: 0.38},
+                {id: 6, diameter: 28, volume: 0.54},
+                {id: 7, diameter: 32, volume: 0.71},
+                {id: 8, diameter: 36, volume: 0.91},
+                {id: 9, diameter: 40, volume: 1.16},
+                {id: 10, diameter: 44, volume: 1.43},
+                {id: 11, diameter: 48, volume: 1.75},
+            ]
         }
     ]
 
@@ -104,7 +266,7 @@ const CubatureCalculation = () => {
     return (
         <div>
             <div className='uk-margin-medium-bottom'>
-                <h1>Подсчёт кубатуры</h1>
+                <h1>Подсчёт суммы объёмов стволов в коре, м3</h1>
             </div>
             
             <div className='uk-margin-medium-bottom'>
@@ -130,10 +292,9 @@ const CubatureCalculation = () => {
             </div>
 
             <div>
-                <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={cubatureData[0]} cubatureDataId={1} />
-                <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={cubatureData[1]} cubatureDataId={2} />
-                <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={cubatureData[2]} cubatureDataId={3} />
-                <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={cubatureData[3]} cubatureDataId={4} />
+                {
+                    cubatureData.map(el => <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={el} cubatureDataId={el.id} />)
+                }
             </div>
         </div>
     )
