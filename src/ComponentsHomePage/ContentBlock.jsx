@@ -25,7 +25,7 @@ function ContentBlock() {
     }
 
     return (
-        <div className='uk-card uk-card-body uk-container uk-flex uk-flex-middle uk-height-viewport'>
+        <div className='uk-card uk-card-body'>
             {is_show_patrol_report_generator === undefined
                 ? <CardLink title_card='Отчёт по патрулированию' click_handler={show_patrol_report_generator} />
                 :  is_show_patrol_report_generator === true
