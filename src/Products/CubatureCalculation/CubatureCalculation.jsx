@@ -77,13 +77,11 @@ const CubatureCalculation = () => {
 
     return (
         <div>
-            <h1>Подсчёт кубатуры</h1>
-
-            <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={cubatureData[0]} cubatureDataId={1} />
-            <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={cubatureData[1]} cubatureDataId={2} />
-            <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={cubatureData[2]} cubatureDataId={3} />
-
-            <div>
+            <div className='uk-margin-medium-bottom'>
+                <h1>Подсчёт кубатуры</h1>
+            </div>
+            
+            <div className='uk-margin-medium-bottom'>
                 <div className='uk-text-danger'>
                     {inf}
                 </div>
@@ -93,6 +91,12 @@ const CubatureCalculation = () => {
                 <div>
                     Всего: <span className="uk-badge">{isKol}</span>
                 </div>
+            </div>
+
+            <div>
+                <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={cubatureData[0]} cubatureDataId={1} />
+                <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={cubatureData[1]} cubatureDataId={2} />
+                <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={cubatureData[2]} cubatureDataId={3} />
             </div>
         </div>
     )
