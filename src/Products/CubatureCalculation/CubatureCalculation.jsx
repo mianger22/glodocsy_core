@@ -83,25 +83,21 @@ const CubatureCalculation = () => {
         }
     ]
 
-    const clearInf = () => {
-        return setTimeout(() => {
-            setInf({changed: '', status: '', diameter: undefined});
-        }, 2000);
-    }
-
     const change_el_val = (volume, diameter, action) => {
         if (action === 'add') {
+            setInf({changed: '', status: '', diameter: undefined});
+
             setEl(prevIsEl => prevIsEl + volume);
             setKol(prevIsKol => prevIsKol + 1);
 
             setInf({changed: '+ 1', status: 'success', diameter: diameter});
-            clearInf();
         } else if (action === 'delete') {
+            setInf({changed: '', status: '', diameter: undefined});
+
             setEl(prevIsEl => prevIsEl - volume);
             setKol(prevIsKol => prevIsKol - 1);
 
             setInf({changed: '- 1', status: 'danger', diameter: diameter});
-            clearInf();
         }
     }
 
