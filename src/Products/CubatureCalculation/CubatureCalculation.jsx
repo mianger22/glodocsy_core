@@ -85,7 +85,7 @@ const CubatureCalculation = () => {
 
     const clearInf = () => {
         return setTimeout(() => {
-            setInf({changed: '', diameter: undefined});
+            setInf({changed: '', status: '', diameter: undefined});
         }, 2000);
     }
 
