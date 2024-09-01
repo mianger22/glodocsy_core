@@ -111,7 +111,7 @@ const CubatureCalculation = () => {
             
             <div className='uk-margin-medium-bottom'>
                 <div>
-                    Добавлено: <span className='uk-text-danger'>{inf}</span>
+                    Статус: <span className='uk-text-danger'>{inf}</span>
                 </div>
                 <div>
                     Итог: <span className='uk-badge'>{isEl}</span>
