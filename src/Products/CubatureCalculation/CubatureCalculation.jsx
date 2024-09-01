@@ -8,7 +8,7 @@ const CubatureCalculation = () => {
 
     const cubatureData = [
         {
-            section_name: 'основные',
+            section_name: 'Основные',
             section_data: [
                 {   
                     group_name: '3 разряд',
@@ -232,7 +232,7 @@ const CubatureCalculation = () => {
             ]
         },
         {
-            section_name: 'редкие',
+            section_name: 'Редко используемые',
             section_data: [
                 {   
                     group_name: '1 разряд',
