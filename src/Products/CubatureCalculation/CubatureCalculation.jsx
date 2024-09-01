@@ -117,10 +117,10 @@ const CubatureCalculation = () => {
                     <div>
                         {
                             inf.changed === '' 
-                                ? <span> в процессе</span> 
+                                ? <span className='uk-text-secondary'> в процессе</span> 
                                 : <>
-                                    <span className={`uk-text-${inf.status}`}>{inf.changed}, </span>
-                                    диаметр: <span className={`uk-text-${inf.status}`}>{inf.diameter}</span>
+                                    <span className={`uk-text-${inf.status} uk-text-bold`}>{inf.changed}, </span>
+                                    диаметр: <span className={`uk-text-${inf.status} uk-text-bold`}>{inf.diameter}</span>
                                 </>
                         }
                     </div> 
