@@ -215,11 +215,87 @@ const CubatureCalculation = () => {
                 {id: 12, diameter: 52, volume: 2.48},
                 {id: 13, diameter: 56, volume: 2.90},
             ]
-        },
-        
-        
+        },        
+
         {
             id: 12,
+            breed: 'Берёза',
+            category: 1,
+            cubatures: [
+                {id: 1, diameter: 8, volume: 0.036},
+                {id: 2, diameter: 12, volume: 0.114},
+                {id: 3, diameter: 16, volume: 0.23},
+                {id: 4, diameter: 20, volume: 0.40},
+                {id: 5, diameter: 24, volume: 0.61},
+                {id: 6, diameter: 28, volume: 0.87},
+                {id: 7, diameter: 32, volume: 1.17},
+                {id: 8, diameter: 36, volume: 1.52},
+                {id: 9, diameter: 40, volume: 1.89},
+                {id: 10, diameter: 44, volume: 2.31},
+                {id: 11, diameter: 48, volume: 2.77},
+            ]
+        },
+        {
+            id: 13,
+            breed: 'Берёза',
+            category: 2,
+            cubatures: [
+                {id: 1, diameter: 8, volume: 0.034},
+                {id: 2, diameter: 12, volume: 0.104},
+                {id: 3, diameter: 16, volume: 0.22},
+                {id: 4, diameter: 20, volume: 0.37},
+                {id: 5, diameter: 24, volume: 0.56},
+                {id: 6, diameter: 28, volume: 0.80},
+                {id: 7, diameter: 32, volume: 1.08},
+                {id: 8, diameter: 36, volume: 1.38},
+                {id: 9, diameter: 40, volume: 1.73},
+                {id: 10, diameter: 44, volume: 2.11},
+                {id: 11, diameter: 48, volume: 2.53},
+            ]
+        },
+        {
+            id: 14,
+            breed: 'Осина',
+            category: 2,
+            cubatures: [
+                {id: 1, diameter: 8, volume: 0.038},
+                {id: 2, diameter: 12, volume: 0.106},
+                {id: 3, diameter: 16, volume: 0.21},
+                {id: 4, diameter: 20, volume: 0.36},
+                {id: 5, diameter: 24, volume: 0.55},
+                {id: 6, diameter: 28, volume: 0.78},
+                {id: 7, diameter: 32, volume: 1.06},
+                {id: 8, diameter: 36, volume: 1.35},
+                {id: 9, diameter: 40, volume: 1.70},
+                {id: 10, diameter: 44, volume: 2.06},
+                {id: 11, diameter: 48, volume: 2.46},
+            ]
+        },
+        {
+            id: 15,
+            breed: 'Ель',
+            category: 2,
+            cubatures: [
+                {id: 1, diameter: 8, volume: 0.036},
+                {id: 2, diameter: 12, volume: 0.110},
+                {id: 3, diameter: 16, volume: 0.23},
+                {id: 4, diameter: 20, volume: 0.39},
+                {id: 5, diameter: 24, volume: 0.60},
+                {id: 6, diameter: 28, volume: 0.86},
+                {id: 7, diameter: 32, volume: 1.17},
+                {id: 8, diameter: 36, volume: 1.52},
+                {id: 9, diameter: 40, volume: 1.90},
+                {id: 10, diameter: 44, volume: 2.35},
+                {id: 11, diameter: 48, volume: 2.81},
+                {id: 12, diameter: 52, volume: 3.32},
+                {id: 13, diameter: 56, volume: 3.87},
+            ]
+        },
+
+
+        
+        {
+            id: 16,
             breed: 'Сосна',
             category: 6,
             cubatures: [
@@ -237,7 +313,7 @@ const CubatureCalculation = () => {
             ]
         },
         {
-            id: 13,
+            id: 17,
             breed: 'Берёза',
             category: 6,
             cubatures: [
@@ -255,7 +331,7 @@ const CubatureCalculation = () => {
             ]
         },
         {
-            id: 14,
+            id: 18,
             breed: 'Ель',
             category: 6,
             cubatures: [
@@ -276,7 +352,7 @@ const CubatureCalculation = () => {
         },
         
         {
-            id: 15,
+            id: 19,
             breed: 'Сосна',
             category: 7,
             cubatures: [
@@ -294,7 +370,7 @@ const CubatureCalculation = () => {
             ]
         },
         {
-            id: 16,
+            id: 20,
             breed: 'Ель',
             category: 7,
             cubatures: [
@@ -314,82 +390,6 @@ const CubatureCalculation = () => {
             ]
         },
 
-        
-
-        {
-            id: 17,
-            breed: 'Берёза',
-            category: 1,
-            cubatures: [
-                {id: 1, diameter: 8, volume: 0.036},
-                {id: 2, diameter: 12, volume: 0.114},
-                {id: 3, diameter: 16, volume: 0.23},
-                {id: 4, diameter: 20, volume: 0.40},
-                {id: 5, diameter: 24, volume: 0.61},
-                {id: 6, diameter: 28, volume: 0.87},
-                {id: 7, diameter: 32, volume: 1.17},
-                {id: 8, diameter: 36, volume: 1.52},
-                {id: 9, diameter: 40, volume: 1.89},
-                {id: 10, diameter: 44, volume: 2.31},
-                {id: 11, diameter: 48, volume: 2.77},
-            ]
-        },
-        {
-            id: 18,
-            breed: 'Берёза',
-            category: 2,
-            cubatures: [
-                {id: 1, diameter: 8, volume: 0.034},
-                {id: 2, diameter: 12, volume: 0.104},
-                {id: 3, diameter: 16, volume: 0.22},
-                {id: 4, diameter: 20, volume: 0.37},
-                {id: 5, diameter: 24, volume: 0.56},
-                {id: 6, diameter: 28, volume: 0.80},
-                {id: 7, diameter: 32, volume: 1.08},
-                {id: 8, diameter: 36, volume: 1.38},
-                {id: 9, diameter: 40, volume: 1.73},
-                {id: 10, diameter: 44, volume: 2.11},
-                {id: 11, diameter: 48, volume: 2.53},
-            ]
-        },
-        {
-            id: 19,
-            breed: 'Осина',
-            category: 2,
-            cubatures: [
-                {id: 1, diameter: 8, volume: 0.038},
-                {id: 2, diameter: 12, volume: 0.106},
-                {id: 3, diameter: 16, volume: 0.21},
-                {id: 4, diameter: 20, volume: 0.36},
-                {id: 5, diameter: 24, volume: 0.55},
-                {id: 6, diameter: 28, volume: 0.78},
-                {id: 7, diameter: 32, volume: 1.06},
-                {id: 8, diameter: 36, volume: 1.35},
-                {id: 9, diameter: 40, volume: 1.70},
-                {id: 10, diameter: 44, volume: 2.06},
-                {id: 11, diameter: 48, volume: 2.46},
-            ]
-        },
-        {
-            id: 20,
-            breed: 'Ель',
-            category: 2,
-            cubatures: [
-                {id: 1, diameter: 8, volume: 0.036},
-                {id: 2, diameter: 12, volume: 0.110},
-                {id: 3, diameter: 16, volume: 0.23},
-                {id: 4, diameter: 20, volume: 0.39},
-                {id: 5, diameter: 24, volume: 0.60},
-                {id: 6, diameter: 28, volume: 0.86},
-                {id: 7, diameter: 32, volume: 1.17},
-                {id: 8, diameter: 36, volume: 1.52},
-                {id: 9, diameter: 40, volume: 1.90},
-                {id: 10, diameter: 44, volume: 2.35},
-                {id: 11, diameter: 48, volume: 2.81},
-                {id: 12, diameter: 52, volume: 3.32},
-                {id: 13, diameter: 56, volume: 3.87},
-            ]
-        },
         {
             id: 21,
             breed: 'Ель',
@@ -463,27 +463,6 @@ const CubatureCalculation = () => {
                     cubatureData.map(el => <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={el} cubatureDataId={el.id} />)
                 }
             </div>
-
-            <ul uk-accordion>
-                <li className="uk-open">
-                    <a className="uk-accordion-title" href>3-й разряд высот</a>
-                    <div className="uk-accordion-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </li>
-                <li>
-                    <a className="uk-accordion-title" href>4-й разряд высот</a>
-                    <div className="uk-accordion-content">
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
-                    </div>
-                </li>
-                <li>
-                    <a className="uk-accordion-title" href>5-й разряд высот</a>
-                    <div className="uk-accordion-content">
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
-                    </div>
-                </li>
-            </ul>
         </div>
     )
 }
