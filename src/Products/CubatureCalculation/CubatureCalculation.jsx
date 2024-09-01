@@ -83,14 +83,24 @@ const CubatureCalculation = () => {
         }
     ]
 
-    const change_el_val = (val) => {
-        setEl(prevIsEl => prevIsEl + val);
-        setKol(prevIsKol => prevIsKol + 1);
+    const change_el_val = (value, action) => {
+        if (action === 'add') {
+            setEl(prevIsEl => prevIsEl + value);
+            setKol(prevIsKol => prevIsKol + 1);
 
-        setInf('+ 1');
-        setTimeout(()=>{
-            setInf('');
-        }, 1000);
+            setInf('+ 1');
+            setTimeout(()=>{
+                setInf('');
+            }, 1000);
+        } else if (action === 'delete') {
+            setEl(prevIsEl => prevIsEl - value);
+            setKol(prevIsKol => prevIsKol - 1);
+
+            setInf('- 1');
+            setTimeout(()=>{
+                setInf('');
+            }, 1000);
+        }
     }
 
     return (
@@ -100,14 +110,14 @@ const CubatureCalculation = () => {
             </div>
             
             <div className='uk-margin-medium-bottom'>
-                <div className='uk-text-danger'>
-                    {inf}
+                <div>
+                    Добавлено: <span className='uk-text-danger'>{inf}</span>
                 </div>
                 <div>
-                    Итог: <span className="uk-badge">{isEl}</span>
+                    Итог: <span className='uk-badge'>{isEl}</span>
                 </div>
                 <div>
-                    Всего: <span className="uk-badge">{isKol}</span>
+                    Всего: <span className='uk-badge'>{isKol}</span>
                 </div>
             </div>
 
