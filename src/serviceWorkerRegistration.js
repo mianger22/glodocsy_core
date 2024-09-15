@@ -21,11 +21,27 @@ const isLocalhost = Boolean(
         // новое
         navigator.serviceWorker.register('service-worker.js')
             .then(registration => {
-                console.log('Service Worker зарегистрирован', registration);
+              console.log('Service Worker зарегистрирован с областью:', registration.scope);
+    
+              registration.onupdatefound = () => {
+                  const newWorker = registration.installing;
+                  newWorker.onstatechange = () => {
+                      if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                          // Новая версия доступна
+                          showUpdateNotification(); // Функция для показа сообщения
+                      }
+                  };
+              };
             })
             .catch(error => {
-                console.log('Ошибка регистрации Service Worker', error);
+              console.error('Ошибка регистрации Service Worker:', error);
             });
+          
+        navigator.serviceWorker.addEventListener('message', event => {
+            if (event.data.type === 'NEW_VERSION_AVAILABLE') {
+                showUpdateNotification();
+            }
+        });
 
         // старое
         const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
