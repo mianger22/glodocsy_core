@@ -509,30 +509,29 @@ function CubatureCalculation() {
             style={{ height: '100%', padding: '20px' }}
           >
             <div>
-              {
-                  cubatureData.map(section => (
-                      <div>
-                          <h2>
-                              {section.section_name}
-                          </h2>
-                          <div>
-                              {section.section_data.map(group => (
-                                  <div>
-                                      <h3>
-                                          {group.group_name}
-                                      </h3>
-                                      <div>
-                                          {group.group_data.map(element => (
-                                              <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={element} cubatureDataId={element.id} />
-                                          ))}
-                                      </div>
-                                  </div>
-                              ))}
-                          </div>
-                      </div>                        
-                      )               
-                  )
-              }
+                <ul uk-accordion="collapsible: false">
+                    {
+                        cubatureData.map(section => (
+                            <li>
+                                <a className="uk-accordion-title" href>{section.section_name}</a>
+                                <div className="uk-accordion-content">
+                                    {section.section_data.map(group => (
+                                        <div>
+                                            <h3>
+                                                {group.group_name}
+                                            </h3>
+                                            <div>
+                                                {group.group_data.map(element => (
+                                                    <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={element} cubatureDataId={element.id} />
+                                                ))}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </li>
+                        ))
+                    }
+                </ul>
             </div>
           </div>
         </div>
