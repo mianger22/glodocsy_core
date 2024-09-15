@@ -519,9 +519,11 @@ function CubatureCalculation() {
                                         <li>
                                             <a className="uk-accordion-title" href>{group.group_name}</a>
                                             <div className="uk-accordion-content">
-                                                {group.group_data.map(element => (
-                                                    <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={element} cubatureDataId={element.id} />
-                                                ))}
+                                                <ul uk-accordion="collapsible: false">
+                                                    {group.group_data.map(element => (
+                                                        <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={element} cubatureDataId={element.id} />
+                                                    ))}
+                                                </ul>
                                             </div>
                                         </li>
                                     ))}
