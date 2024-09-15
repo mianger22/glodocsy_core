@@ -474,27 +474,24 @@ function CubatureCalculation() {
       {/* Фиксированная верхняя панель */}
       <div className="uk-card uk-card-default uk-margin-top uk-sticky uk-sticky-top" uk-sticky="top: 0; offset: 0">
         <div className="uk-card-body" style={{ height: '100%' }}>
-          <h3 style={{ margin: 0 }}>Подсчёт суммы объёмов стволов в коре, м3</h3>
+          <div className='uk-margin-small-bottom'>
+            Статус:
+            <div>
+                {
+                    inf.changed === '' 
+                        ? <span className='uk-text-secondary'> в процессе</span> 
+                        : <>
+                            <span className={`uk-text-${inf.status} uk-text-bold`}>{inf.changed}, </span>
+                            диаметр: <span className={`uk-text-${inf.status} uk-text-bold`}>{inf.diameter}</span>
+                        </>
+                }
+            </div> 
+          </div>
           <div>
-            <div className='uk-margin-small-bottom'>
-              Статус:
-              <div>
-                  {
-                      inf.changed === '' 
-                          ? <span className='uk-text-secondary'> в процессе</span> 
-                          : <>
-                              <span className={`uk-text-${inf.status} uk-text-bold`}>{inf.changed}, </span>
-                              диаметр: <span className={`uk-text-${inf.status} uk-text-bold`}>{inf.diameter}</span>
-                          </>
-                  }
-              </div> 
-            </div>
-            <div>
-                Итого: <span className='uk-badge'>{isEl}</span>
-            </div>
-            <div>
-                Всего: <span className='uk-badge'>{isKol}</span>
-            </div>
+              Итого: <span className='uk-badge'>{isEl}</span>
+          </div>
+          <div>
+              Всего: <span className='uk-badge'>{isKol}</span>
           </div>
         </div>
       </div>
@@ -506,32 +503,35 @@ function CubatureCalculation() {
             className="content-section" 
             style={{ height: '100%', padding: '20px' }}
           >
-            <div>
-              {
-                  cubatureData.map(section => (
-                      <div>
-                          <h2>
-                              {section.section_name}
-                          </h2>
-                          <div>
-                              {section.section_data.map(group => (
-                                  <div>
-                                      <h3>
-                                          {group.group_name}
-                                      </h3>
-                                      <div>
-                                          {group.group_data.map(element => (
-                                              <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={element} cubatureDataId={element.id} />
-                                          ))}
-                                      </div>
-                                  </div>
-                              ))}
-                          </div>
-                      </div>                        
-                      )               
-                  )
-              }
-            </div>
+              <div className='uk-margin-medium-bottom'>
+                <h1>Подсчёт суммы объёмов стволов в коре, м3</h1>
+              </div>
+              <div>
+                {
+                    cubatureData.map(section => (
+                        <div>
+                            <h2>
+                                {section.section_name}
+                            </h2>
+                            <div>
+                                {section.section_data.map(group => (
+                                    <div>
+                                        <h3>
+                                            {group.group_name}
+                                        </h3>
+                                        <div>
+                                            {group.group_data.map(element => (
+                                                <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={element} cubatureDataId={element.id} />
+                                            ))}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>                        
+                        )               
+                    )
+                }
+              </div>
           </div>
         </div>
       </div>
