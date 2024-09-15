@@ -475,7 +475,7 @@ function CubatureCalculation() {
       <div className="uk-card uk-card-default uk-margin-top uk-sticky uk-sticky-top" uk-sticky="top: 0; offset: 0">
         <div className="uk-card-body" style={{ height: '100%' }}>
           <div className='uk-margin-small-bottom'>
-            <h3 style={{ margin: 0 }}>Подсчёт суммы объёмов стволов в коре, м3</h3>
+            <h3>Подсчёт суммы объёмов стволов в коре, м3</h3>
           </div>
           <div>
             <div className='uk-margin-small-bottom'>
