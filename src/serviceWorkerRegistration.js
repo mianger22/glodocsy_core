@@ -12,11 +12,22 @@ const isLocalhost = Boolean(
   export function register(config) {
     if ('serviceWorker' in navigator) {
       const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
+
       if (publicUrl.origin !== window.location.origin) {
         return;
       }
   
       window.addEventListener('load', () => {
+        // новое
+        navigator.serviceWorker.register('service-worker.js')
+            .then(registration => {
+                console.log('Service Worker зарегистрирован', registration);
+            })
+            .catch(error => {
+                console.log('Ошибка регистрации Service Worker', error);
+            });
+
+        // старое
         const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
   
         if (isLocalhost) {
