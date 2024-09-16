@@ -493,13 +493,33 @@ const PatrolReportGenerator = () => {
               <h2 className='uk-heading-divider'>Задание</h2>
             </div>
 
-            <Input handleChange={handleChange} isFresh={isFresh} setIsFresh={setIsFresh}
-            label_name='Номер задания' field_name='Patrol_task_number' placeholder='185' input_type='number' is_primary={true} />       
-            <Input handleChange={handleChange}  isFresh={isFresh} setIsFresh={setIsFresh}
-            label_name='От какого числа' field_name='Date_issue_task' placeholder='' input_type='date' is_primary={false} />   
-            <Input handleChange={handleChange}  setIsFresh={setIsFresh}
-             isFresh={isFresh}
-            label_name='Дата патрулирования' field_name='Patrol_date' placeholder='' input_type='date' is_primary={false} />      
+            <Input 
+              handleChange={handleChange} 
+              isFresh={isFresh} 
+              setIsFresh={setIsFresh}
+              label_name='Номер задания' 
+              field_name='Patrol_task_number' 
+              placeholder='185' 
+              input_type='number' 
+              is_primary={true} />       
+            <Input 
+              handleChange={handleChange} 
+              isFresh={isFresh} 
+              setIsFresh={setIsFresh}
+              label_name='От какого числа' 
+              field_name='Date_issue_task' 
+              placeholder='' 
+              input_type='date' 
+              is_primary={false} />   
+            <Input 
+              handleChange={handleChange}  
+              setIsFresh={setIsFresh}
+              isFresh={isFresh}
+              label_name='Дата патрулирования' 
+              field_name='Patrol_date' 
+              placeholder='' 
+              input_type='date' 
+              is_primary={false} />      
             
             <Select 
               label_name='Номер маршрута патрулирования' 
@@ -519,9 +539,15 @@ const PatrolReportGenerator = () => {
               is_primary={true}           
             />
 
-            <Input handleChange={handleChange} 
-             isFresh={isFresh} setIsFresh={setIsFresh}
-            label_name='Какого числа утверждён' field_name='What_date_was_approved' placeholder='08.12.2023' input_type='text' is_primary={false} />   
+            <Input 
+              handleChange={handleChange} 
+              isFresh={isFresh} 
+              setIsFresh={setIsFresh}
+              label_name='Какого числа утверждён' 
+              field_name='What_date_was_approved' 
+              placeholder='08.12.2023' 
+              input_type='text' 
+              is_primary={false} />   
             
             <Select 
               label_name='Год патрулирования' 
@@ -571,12 +597,24 @@ const PatrolReportGenerator = () => {
               is_primary={false}           
             />
 
-            <Input handleChange={handleChange} 
-             isFresh={isFresh}setIsFresh={setIsFresh}
-            label_name='Время выдачи задания' field_name='Time_assignment_issue' placeholder='' input_type='time' is_primary={true} />   
-            <Input handleChange={handleChange} 
-             isFresh={isFresh}setIsFresh={setIsFresh}
-            label_name='Дата выдачи задания' field_name='Date_assignment_issue' placeholder='' input_type='date' is_primary={false} />   
+            <Input 
+              handleChange={handleChange} 
+              isFresh={isFresh}
+              setIsFresh={setIsFresh}
+              label_name='Время выдачи задания' 
+              field_name='Time_assignment_issue' 
+              placeholder='' 
+              input_type='time' 
+              is_primary={true} />   
+            <Input 
+              handleChange={handleChange} 
+              isFresh={isFresh}
+              setIsFresh={setIsFresh}
+              label_name='Дата выдачи задания' 
+              field_name='Date_assignment_issue' 
+              placeholder='' 
+              input_type='date' 
+              is_primary={false} />   
 
             <Checkbox name="Additional_order" label="Дополнительный приказ" />
 
@@ -586,9 +624,14 @@ const PatrolReportGenerator = () => {
               <h2 className='uk-heading-divider'>Акт</h2>
             </div>
 
-            <Input handleChange={handleChange} 
-             isFresh={isFresh}setIsFresh={setIsFresh}
-            label_name='Номер акта о патрулировании' field_name='Number_patrol_act' placeholder='105' input_type='number' is_primary={true} />   
+            <Input 
+              handleChange={handleChange} 
+              isFresh={isFresh}setIsFresh={setIsFresh}
+              label_name='Номер акта о патрулировании' 
+              field_name='Number_patrol_act' 
+              placeholder='105' 
+              input_type='number' 
+              is_primary={true} />   
 
             <Select 
               label_name='На что наклеено' 
@@ -662,8 +705,7 @@ const PatrolReportGenerator = () => {
             {/* --------------------------------------------------------------------------- */}
 
             <div className="uk-margin">
-              <button type="submit" disabled={isSubmitting} 
-              className="uk-button uk-button-primary uk-button-large">
+              <button type="submit" disabled={isSubmitting} className="uk-button uk-button-primary uk-button-large">
                   Создать документы
               </button>
             </div>
