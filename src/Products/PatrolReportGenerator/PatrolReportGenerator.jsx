@@ -626,7 +626,8 @@ const PatrolReportGenerator = () => {
 
             <Input 
               handleChange={handleChange} 
-              isFresh={isFresh}setIsFresh={setIsFresh}
+              isFresh={isFresh}
+              setIsFresh={setIsFresh}
               label_name='Номер акта о патрулировании' 
               field_name='Number_patrol_act' 
               placeholder='105' 
