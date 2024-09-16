@@ -522,6 +522,9 @@ const PatrolReportGenerator = () => {
               is_primary={false} />      
             
             <Select 
+              handleChange={handleChange}  
+              setIsFresh={setIsFresh}
+              isFresh={isFresh}
               label_name='Номер маршрута патрулирования' 
               field_name='Patrol_route_number' 
               options_list={[
@@ -550,6 +553,9 @@ const PatrolReportGenerator = () => {
               is_primary={false} />   
             
             <Select 
+              handleChange={handleChange}  
+              setIsFresh={setIsFresh}
+              isFresh={isFresh}
               label_name='Год патрулирования' 
               field_name='Year_patrol' 
               options_list={[
@@ -562,6 +568,9 @@ const PatrolReportGenerator = () => {
             />
 
             <Select 
+              handleChange={handleChange}  
+              setIsFresh={setIsFresh}
+              isFresh={isFresh}
               label_name='Кто выдал задание' 
               field_name='Person_issued_task' 
               options_list={[
@@ -572,6 +581,9 @@ const PatrolReportGenerator = () => {
             />
 
             <Select 
+              handleChange={handleChange}  
+              setIsFresh={setIsFresh}
+              isFresh={isFresh}
               label_name='Старший патрульной группы' 
               field_name='Full_name_senior_patroller' 
               options_list={[
@@ -585,6 +597,9 @@ const PatrolReportGenerator = () => {
             />
 
             <Select 
+              handleChange={handleChange}  
+              setIsFresh={setIsFresh}
+              isFresh={isFresh}
               label_name='С кем патрулирование' 
               field_name='Full_name_junior_patroller' 
               options_list={[
@@ -635,6 +650,9 @@ const PatrolReportGenerator = () => {
               is_primary={true} />   
 
             <Select 
+              handleChange={handleChange}  
+              setIsFresh={setIsFresh}
+              isFresh={isFresh}
               label_name='На что наклеено' 
               field_name='Object_leaflet' 
               options_list={[
@@ -646,6 +664,9 @@ const PatrolReportGenerator = () => {
             />
 
             <Select 
+              handleChange={handleChange}  
+              setIsFresh={setIsFresh}
+              isFresh={isFresh}
               label_name='Деревня, в которой наклеено' 
               field_name='Village_leaflet' 
               options_list={[
@@ -661,6 +682,9 @@ const PatrolReportGenerator = () => {
             />
 
             <Select 
+              handleChange={handleChange}  
+              setIsFresh={setIsFresh}
+              isFresh={isFresh}
               label_name='Сколько человек проинформировано' 
               field_name='Number_informed_people' 
               options_list={[
@@ -675,6 +699,9 @@ const PatrolReportGenerator = () => {
             />
 
             <Select 
+              handleChange={handleChange}  
+              setIsFresh={setIsFresh}
+              isFresh={isFresh}
               label_name='Деревня, в которой проинформированы люди' 
               field_name='Village_informed_people' 
               options_list={[
@@ -691,6 +718,9 @@ const PatrolReportGenerator = () => {
             />
 
             <Select 
+              handleChange={handleChange}  
+              setIsFresh={setIsFresh}
+              isFresh={isFresh}
               label_name='Машина патрулирования' 
               field_name='Patrol_car' 
               options_list={[

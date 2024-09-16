@@ -1,6 +1,21 @@
-import { Field } from "formik"
+import { Field } from "formik";
+import { useEffect, useState } from "react";
 
-const Select = ({label_name, field_name, options_list, is_primary}) => {
+const Select = ({label_name, field_name, options_list, is_primary, handleChange, isFresh, setIsFresh}) => {
+    const [isChangedSelectValue, setIsChangedSelectValue] = useState(false);
+
+    useEffect(() => {
+        if (isFresh) {
+            setIsChangedSelectValue(false);
+        }
+    }, [isFresh, isChangedSelectValue])
+
+    const handleChangeLocal = (e) => {
+        handleChange(e);
+        setIsChangedSelectValue(true); 
+        setIsFresh(false);
+    }
+
     return (
         <div className="mb-4">
             <label className={`${is_primary && `uk-text-primary`}`} htmlFor={field_name}>{label_name}</label>
@@ -14,9 +29,10 @@ const Select = ({label_name, field_name, options_list, is_primary}) => {
                     }) => (
                     <div>
                         <select 
-                            className={`${meta.error ? `uk-select uk-form-danger` : `uk-select`}`}
+                            className={`${meta.error ? 'uk-select uk-form-danger' : isChangedSelectValue ? 'uk-select uk-form-success' : 'uk-select'}`}
                             aria-label="Select"
                             {...field}
+                            onChange={handleChangeLocal}    
                         >
                             {options_list.map(option => (
                                 <option 
