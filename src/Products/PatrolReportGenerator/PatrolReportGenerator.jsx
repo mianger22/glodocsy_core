@@ -51,6 +51,13 @@ const PatrolReportGenerator = () => {
     return `«${date.split("-")[2]}» ${monthName} ${date.split("-")[0]}`;
   }
 
+  const patrol_participants = [
+    {id: '1', value: 'мастер леса Мясноборского участкового лесничества Устинов Дмитрий Сергеевич', name_option: 'Устинов, мастер Мясноборского', selected: false, disabled: false},
+    {id: '2', value: 'участковый лесничий Ермолинского участкового лесничества Кузнецова Елизавета Михайловна', name_option: 'Кузнецова, участковый Ермолинского', selected: false, disabled: false},
+    {id: '3', value: 'участковый лесничий Новгородского участкового лесничества Маркова Ирина Фирсовна', name_option: 'Маркова, участковый Новгородского', selected: false, disabled: false},
+    {id: '4', value: 'мастер леса Советского участкового лесничества Капитонова Марина Александровна', name_option: 'Капитонова, мастер Советского', selected: false, disabled: false},
+  ]
+
   return (
     <div className='uk-margin-small-bottom'>
       <h1>Отчёт по патрулированию</h1>
@@ -586,13 +593,7 @@ const PatrolReportGenerator = () => {
               isFresh={isFresh}
               label_name='Старший патрульной группы' 
               field_name='Full_name_senior_patroller' 
-              options_list={[
-                {id: '1', value: 'мастер леса Мясноборского участкового лесничества Устинов Дмитрий Сергеевич', name_option: 'Устинов, мастер Мясноборского', selected: true, disabled: false},
-                {id: '2', value: 'участковый лесничий Ермолинского участкового лесничества Кузнецова Елизавета Михайловна', name_option: 'Кузнецова, участковый Ермолинского', selected: false, disabled: false},
-                {id: '3', value: 'участковый лесничий Новгородского участкового лесничества Маркова Ирина Фирсовна', name_option: 'Маркова, участковый Новгородского', selected: false, disabled: false},
-                {id: '4', value: 'мастер леса Советского участкового лесничества Капитонова Марина Александровна', name_option: 'Капитонова, мастер Советского', selected: false, disabled: false},
-                {id: '5', value: 'мастер леса Новгородского участкового лесничества Зайцев Даниил Алексеевич', name_option: 'Зайцев, мастер Новгородского', selected: false, disabled: false},
-              ]}   
+              options_list={patrol_participants}   
               is_primary={false}         
             />
 
@@ -602,13 +603,7 @@ const PatrolReportGenerator = () => {
               isFresh={isFresh}
               label_name='С кем патрулирование' 
               field_name='Full_name_junior_patroller' 
-              options_list={[
-                {id: '1', value: 'мастер леса Мясноборского участкового лесничества Устинов Дмитрий Сергеевич', name_option: 'Устинов, мастер Мясноборского', selected: false, disabled: false},
-                {id: '2', value: 'участковый лесничий Ермолинского участкового лесничества Кузнецова Елизавета Михайловна', name_option: 'Кузнецова, участковый Ермолинского', selected: false, disabled: false},
-                {id: '3', value: 'участковый лесничий Новгородского участкового лесничества Маркова Ирина Фирсовна', name_option: 'Маркова, участковый Новгородского', selected: false, disabled: false},
-                {id: '4', value: 'мастер леса Советского участкового лесничества Капитонова Марина Александровна', name_option: 'Капитонова, мастер Советского', selected: false, disabled: false},
-                {id: '5', value: 'мастер леса Новгородского участкового лесничества Зайцев Даниил Алексеевич', name_option: 'Зайцев, мастер Новгородского', selected: true, disabled: false},
-              ]} 
+              options_list={patrol_participants} 
               is_primary={false}           
             />
 
