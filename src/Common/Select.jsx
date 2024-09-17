@@ -37,8 +37,7 @@ const Select = ({label_name, field_name, options_list, is_primary, handleChange,
                             {options_list.map(option => (
                                 <option 
                                     key={option.id}
-                                    value={option.value} 
-                                    selected={option.selected} 
+                                    value={option.value}  
                                     disabled={option.disabled}
                                 >
                                     {option.name_option}

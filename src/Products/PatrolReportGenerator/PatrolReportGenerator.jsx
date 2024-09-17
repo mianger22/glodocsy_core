@@ -52,10 +52,10 @@ const PatrolReportGenerator = () => {
   }
 
   const patrol_participants = [
-    {id: '1', value: 'мастер леса Мясноборского участкового лесничества Устинов Дмитрий Сергеевич', name_option: 'Устинов, мастер Мясноборского', selected: false, disabled: false},
-    {id: '2', value: 'участковый лесничий Ермолинского участкового лесничества Кузнецова Елизавета Михайловна', name_option: 'Кузнецова, участковый Ермолинского', selected: false, disabled: false},
-    {id: '3', value: 'участковый лесничий Новгородского участкового лесничества Маркова Ирина Фирсовна', name_option: 'Маркова, участковый Новгородского', selected: false, disabled: false},
-    {id: '4', value: 'мастер леса Советского участкового лесничества Капитонова Марина Александровна', name_option: 'Капитонова, мастер Советского', selected: false, disabled: false},
+    {id: '1', value: 'мастер леса Мясноборского участкового лесничества Устинов Дмитрий Сергеевич', name_option: 'Устинов, мастер Мясноборского', disabled: false},
+    {id: '2', value: 'участковый лесничий Ермолинского участкового лесничества Кузнецова Елизавета Михайловна', name_option: 'Кузнецова, участковый Ермолинского', disabled: false},
+    {id: '3', value: 'участковый лесничий Новгородского участкового лесничества Маркова Ирина Фирсовна', name_option: 'Маркова, участковый Новгородского', disabled: false},
+    {id: '4', value: 'мастер леса Советского участкового лесничества Капитонова Марина Александровна', name_option: 'Капитонова, мастер Советского', disabled: false},
   ]
 
   return (
@@ -64,10 +64,10 @@ const PatrolReportGenerator = () => {
 
       <Formik
         initialValues={{ Patrol_task_number: undefined, Date_issue_task: '', Patrol_date: '', 
-          Patrol_route_number: undefined, What_date_was_approved: '08.12.2023', Year_patrol: 2024,
+          Patrol_route_number: '', What_date_was_approved: '08.12.2023', Year_patrol: 2024,
           Person_issued_task: 'директор ГОКУ "Новгородское лесничество" Иванов К.В.',
           Full_name_senior_patroller: 'мастер леса Мясноборского участкового лесничества Устинов Дмитрий Сергеевич', 
-          Full_name_junior_patroller: 'мастер леса Новгородского участкового лесничества Зайцев Даниил Алексеевич', 
+          Full_name_junior_patroller: 'участковый лесничий Новгородского участкового лесничества Маркова Ирина Фирсовна', 
           Time_assignment_issue: '', Date_assignment_issue: '', Additional_order: false, 
           Number_patrol_act: undefined, Object_leaflet: '', Village_leaflet: '', 
           Number_informed_people: '', Village_informed_people: '', Patrol_car: 'С948ХК',
@@ -535,16 +535,16 @@ const PatrolReportGenerator = () => {
               label_name='Номер маршрута патрулирования' 
               field_name='Patrol_route_number' 
               options_list={[
-                {id: '1', value: '', name_option: 'Выберите', selected: true, disabled: true},
-                {id: '2', value: '70,1', name_option: '70', selected: false, disabled: false},
-                {id: '3', value: '71,2', name_option: '71', selected: false, disabled: false},
-                {id: '4', value: '72,3', name_option: '72', selected: false, disabled: false},
-                {id: '5', value: '73,4', name_option: '73', selected: false, disabled: false},
-                {id: '6', value: '74,5', name_option: '74', selected: false, disabled: false},
-                {id: '7', value: '75,6', name_option: '75', selected: false, disabled: false},
-                {id: '8', value: '76,7', name_option: '76', selected: false, disabled: false},
-                {id: '9', value: '77,8', name_option: '77', selected: false, disabled: false},
-                {id: '10', value: '78,9', name_option: '78', selected: false, disabled: false},
+                {id: '1', value: '', name_option: 'Выберите', disabled: true},
+                {id: '2', value: '70,1', name_option: '70', disabled: false},
+                {id: '3', value: '71,2', name_option: '71', disabled: false},
+                {id: '4', value: '72,3', name_option: '72', disabled: false},
+                {id: '5', value: '73,4', name_option: '73', disabled: false},
+                {id: '6', value: '74,5', name_option: '74', disabled: false},
+                {id: '7', value: '75,6', name_option: '75', disabled: false},
+                {id: '8', value: '76,7', name_option: '76', disabled: false},
+                {id: '9', value: '77,8', name_option: '77', disabled: false},
+                {id: '10', value: '78,9', name_option: '78', disabled: false},
               ]} 
               is_primary={true}           
             />
@@ -566,10 +566,10 @@ const PatrolReportGenerator = () => {
               label_name='Год патрулирования' 
               field_name='Year_patrol' 
               options_list={[
-                {id: '1', value: '2024', name_option: '2024', selected: true, disabled: false},
-                {id: '2', value: '2025', name_option: '2025', selected: false, disabled: false},
-                {id: '3', value: '2026', name_option: '2026', selected: false, disabled: false},
-                {id: '4', value: '2027', name_option: '2027', selected: false, disabled: false},
+                {id: '1', value: '2024', name_option: '2024', disabled: false},
+                {id: '2', value: '2025', name_option: '2025', disabled: false},
+                {id: '3', value: '2026', name_option: '2026', disabled: false},
+                {id: '4', value: '2027', name_option: '2027', disabled: false},
               ]} 
               is_primary={false} 
             />
@@ -581,8 +581,8 @@ const PatrolReportGenerator = () => {
               label_name='Кто выдал задание' 
               field_name='Person_issued_task' 
               options_list={[
-                {id: '1', value: 'директор ГОКУ "Новгородское лесничество" Иванов К.В.', name_option: 'Директор', selected: true, disabled: false},
-                {id: '2', value: 'заместитель директора ГОКУ "Новгородское лесничество" Орехова И.Н.', name_option: 'Заместитель', selected: false, disabled: false},
+                {id: '1', value: 'директор ГОКУ "Новгородское лесничество" Иванов К.В.', name_option: 'Директор', disabled: false},
+                {id: '2', value: 'заместитель директора ГОКУ "Новгородское лесничество" Орехова И.Н.', name_option: 'Заместитель', disabled: false},
               ]} 
               is_primary={false} 
             />
@@ -651,9 +651,9 @@ const PatrolReportGenerator = () => {
               label_name='На что наклеено' 
               field_name='Object_leaflet' 
               options_list={[
-                {id: '1', value: '', name_option: 'Выберите', selected: true, disabled: true},
-                {id: '2', value: 'автобусная остановка', name_option: 'Остановка', selected: false, disabled: false},
-                {id: '3', value: 'доска объявлений', name_option: 'Доска объявлений', selected: false, disabled: false},
+                {id: '1', value: '', name_option: 'Выберите', disabled: true},
+                {id: '2', value: 'автобусная остановка', name_option: 'Остановка', disabled: false},
+                {id: '3', value: 'доска объявлений', name_option: 'Доска объявлений', disabled: false},
               ]} 
               is_primary={false}           
             />
@@ -665,13 +665,13 @@ const PatrolReportGenerator = () => {
               label_name='Деревня, в которой наклеено' 
               field_name='Village_leaflet' 
               options_list={[
-                {id: '1', value: '', name_option: 'Выберите', selected: true, disabled: true},
-                {id: '2', value: 'Некохово', name_option: 'Некохово', selected: false, disabled: false},
-                {id: '3', value: 'Захарьино', name_option: 'Захарьино', selected: false, disabled: false},
-                {id: '4', value: 'Подберезье', name_option: 'Подберезье', selected: false, disabled: false},
-                {id: '5', value: 'Вешки', name_option: 'Вешки', selected: false, disabled: false},
-                {id: '6', value: 'Котовицы', name_option: 'Котовицы', selected: false, disabled: false},
-                {id: '7', value: 'Теремец', name_option: 'Теремец', selected: false, disabled: false},
+                {id: '1', value: '', name_option: 'Выберите', disabled: true},
+                {id: '2', value: 'Некохово', name_option: 'Некохово', disabled: false},
+                {id: '3', value: 'Захарьино', name_option: 'Захарьино', disabled: false},
+                {id: '4', value: 'Подберезье', name_option: 'Подберезье', disabled: false},
+                {id: '5', value: 'Вешки', name_option: 'Вешки', disabled: false},
+                {id: '6', value: 'Котовицы', name_option: 'Котовицы', disabled: false},
+                {id: '7', value: 'Теремец', name_option: 'Теремец', disabled: false},
               ]}  
               is_primary={false}           
             />
@@ -683,12 +683,14 @@ const PatrolReportGenerator = () => {
               label_name='Сколько человек проинформировано' 
               field_name='Number_informed_people' 
               options_list={[
-                {id: '1', value: '', name_option: 'Выберите', selected: true, disabled: true},
-                {id: '2', value: '1', name_option: '1', selected: false, disabled: false},
-                {id: '3', value: '2', name_option: '2', selected: false, disabled: false},
-                {id: '4', value: '3', name_option: '3', selected: false, disabled: false},
-                {id: '5', value: '4', name_option: '4', selected: false, disabled: false},
-                {id: '6', value: '5', name_option: '5', selected: false, disabled: false},
+                {id: '1', value: '', name_option: 'Выберите',disabled: true},
+                {id: '2', value: '1', name_option: '1', disabled: false},
+                {id: '3', value: '2', name_option: '2', disabled: false},
+                {id: '4', value: '3', name_option: '3', disabled: false},
+                {id: '5', value: '4', name_option: '4', disabled: false},
+                {id: '6', value: '5', name_option: '5', disabled: false},
+                {id: '7', value: '6', name_option: '6', disabled: false},
+                {id: '8', value: '7', name_option: '7', disabled: false},
               ]}  
               is_primary={false}           
             />
@@ -700,14 +702,14 @@ const PatrolReportGenerator = () => {
               label_name='Деревня, в которой проинформированы люди' 
               field_name='Village_informed_people' 
               options_list={[
-                {id: '1', value: '', name_option: 'Выберите', selected: true, disabled: true},
-                {id: '2', value: 'Некохово', name_option: 'Некохово', selected: false, disabled: false},
-                {id: '3', value: 'Захарьино', name_option: 'Захарьино', selected: false, disabled: false},
-                {id: '4', value: 'Подберезье', name_option: 'Подберезье', selected: false, disabled: false},
-                {id: '5', value: 'Вешки', name_option: 'Вешки', selected: false, disabled: false},
-                {id: '6', value: 'Котовицы', name_option: 'Котовицы', selected: false, disabled: false},
-                {id: '7', value: 'Малое Замошье', name_option: 'Малое Замошье', selected: false, disabled: false},
-                {id: '8', value: 'Большое Замошье', name_option: 'Большое Замошье', selected: false, disabled: false},
+                {id: '1', value: '', name_option: 'Выберите', disabled: true},
+                {id: '2', value: 'Некохово', name_option: 'Некохово', disabled: false},
+                {id: '3', value: 'Захарьино', name_option: 'Захарьино', disabled: false},
+                {id: '4', value: 'Подберезье', name_option: 'Подберезье', disabled: false},
+                {id: '5', value: 'Вешки', name_option: 'Вешки', disabled: false},
+                {id: '6', value: 'Котовицы', name_option: 'Котовицы', disabled: false},
+                {id: '7', value: 'Малое Замошье', name_option: 'Малое Замошье', disabled: false},
+                {id: '8', value: 'Большое Замошье', name_option: 'Большое Замошье', disabled: false},
               ]}  
               is_primary={false}           
             />
@@ -719,9 +721,9 @@ const PatrolReportGenerator = () => {
               label_name='Машина патрулирования' 
               field_name='Patrol_car' 
               options_list={[
-                {id: '1', value: '', name_option: 'Выберите', selected: false, disabled: true},
-                {id: '2', value: 'С948ХК', name_option: 'Алексея Евгеньевича', selected: true, disabled: false},
-                {id: '3', value: 'C848ХМ', name_option: 'Николая Викторовича', selected: false, disabled: false},
+                {id: '1', value: '', name_option: 'Выберите', disabled: true},
+                {id: '2', value: 'С948ХК', name_option: 'Алексея Евгеньевича', disabled: false},
+                {id: '3', value: 'C848ХМ', name_option: 'Николая Викторовича', disabled: false},
               ]}  
               is_primary={false}           
             />
