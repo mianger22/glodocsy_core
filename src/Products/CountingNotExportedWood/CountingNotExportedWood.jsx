@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CubatureList from "../CubatureCalculation/CubatureList";
+import CubatureList from "../../Common/CubatureList";
 
 function CountingNotExportedWood() {
   const [isEl, setEl] = useState(0);

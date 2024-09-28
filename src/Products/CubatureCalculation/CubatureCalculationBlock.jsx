@@ -1,4 +1,4 @@
-import CubatureList from "./CubatureList";
+import CubatureList from "../../Common/CubatureList";
 
 const CubatureCalculationBlock = ({handlerClick, cubatureData, cubatureDataId}) => {
     return (
