@@ -52,6 +52,12 @@ function ContentBlock() {
                     ? <CountingNotExportedWood />
                     : ''}
 
+            {is_show_counting_not_exported_wood === undefined
+                ? <CardLink title_card='Инвентаризация' click_handler={show_counting_not_exported_wood} />
+                : is_show_counting_not_exported_wood === true
+                    ? <CountingNotExportedWood />
+                    : ''}
+
             {
                 (is_show_patrol_report_generator !== undefined || 
                     is_show_cubature_calculation !== undefined || 
