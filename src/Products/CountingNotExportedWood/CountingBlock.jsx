@@ -26,7 +26,7 @@ const CountingBlock = ({ data }) => {
                 =
             </span>
             <span>
-                {data.volume * val}
+                {(data.volume * val).toFixed(3)}
             </span>           
         </li>
     );
