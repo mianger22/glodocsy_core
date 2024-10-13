@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CubatureList from "../../Common/CubatureList";
+import CountingBlock from "./CountingBlock";
 
 function CountingNotExportedWood() {
   const [isEl, setEl] = useState(0);
@@ -77,24 +77,6 @@ function CountingNotExportedWood() {
     },  
   ]
 
-  const change_el_val = (volume, diameter, action) => {
-      if (action === 'add') {
-          setInf({changed: '', status: '', diameter: undefined});
-
-          setEl(prevIsEl => prevIsEl + volume);
-          setKol(prevIsKol => prevIsKol + 1);
-
-          setInf({changed: '+ 1', status: 'success', diameter: diameter});
-      } else if (action === 'delete') {
-          setInf({changed: '', status: '', diameter: undefined});
-
-          setEl(prevIsEl => prevIsEl - volume);
-          setKol(prevIsKol => prevIsKol - 1);
-
-          setInf({changed: '- 1', status: 'danger', diameter: diameter});
-      }
-  }
-
   return (
     <div className="uk-container">
       {/* Фиксированная верхняя панель */}
@@ -142,12 +124,10 @@ function CountingNotExportedWood() {
                             <div className="uk-accordion-content">
                                 <ul uk-accordion="collapsible: false">
                                     {group.cubatures.map(element => (
-                                        <CubatureList 
-                                            key={element.id} 
-                                            diameter={element.diameter} 
-                                            volume={element.volume} 
-                                            handlerClick={change_el_val} 
-                                        />
+                                      <CountingBlock 
+                                        key={element.id} 
+                                        data={element} 
+                                      />
                                     ))}
                                 </ul>
                             </div>
