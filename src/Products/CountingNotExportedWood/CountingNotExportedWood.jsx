@@ -6,73 +6,228 @@ function CountingNotExportedWood() {
   const [totalNumberTrees, setTotalNumberTrees] = useState(0);
   const [inf, setInf] = useState({changed: '', status: '', diameter: undefined});
 
+  const pricesSmallTypeWood = [
+    {id: 1, breed: 'сосна', price: 61.74},
+    {id: 2, breed: 'ель', price: 55.44},
+    {id: 3, breed: 'береза', price: 31.14},
+    {id: 4, breed: 'ольха черная', price: 18.72},
+    {id: 5, breed: 'осина, ольха серая', price: 6.84},
+  ];
+
+  const pricesAverageTypeWood = [
+    {id: 1, breed: 'сосна', price: 122.94},
+    {id: 2, breed: 'ель', price: 110.34},
+    {id: 3, breed: 'береза', price: 61.74},
+    {id: 4, breed: 'ольха черная', price: 36.72},
+    {id: 5, breed: 'осина, ольха серая', price: 12.42},
+  ];
+
+  const pricesLargeTypeWood = [
+    {id: 1, breed: 'сосна', price: 172.08},
+    {id: 2, breed: 'ель', price: 155.16},
+    {id: 3, breed: 'береза', price: 86.04},
+    {id: 4, breed: 'ольха черная', price: 51.66},
+    {id: 5, breed: 'осина, ольха серая', price: 16.38},
+  ];
+
   const cubatureData = [
     {
         id: 1,
         length: '3 метра',
         cubatures: [
-            {id: 1, diameter: 8, volume: 0.017},
-            {id: 2, diameter: 12, volume: 0.038},
-            {id: 3, diameter: 16, volume: 0.069},
-            {id: 4, diameter: 20, volume: 0.107},
-            {id: 5, diameter: 24, volume: 0.157},
-            {id: 6, diameter: 28, volume: 0.22},
-            {id: 7, diameter: 32, volume: 0.28},
-            {id: 8, diameter: 36, volume: 0.36},
-            {id: 9, diameter: 40, volume: 0.43},
-            {id: 10, diameter: 44, volume: 0.52},
-            {id: 11, diameter: 48, volume: 0.62},
+            {
+              id: 1, diameter: 8, volume: 0.017, 
+              prices: pricesSmallTypeWood
+            },
+            {
+              id: 2, diameter: 12, volume: 0.038,
+              prices: pricesSmallTypeWood
+            },
+            {
+              id: 3, diameter: 16, volume: 0.069,
+              prices: pricesAverageTypeWood
+            },
+            {
+              id: 4, diameter: 20, volume: 0.107,
+              prices: pricesAverageTypeWood
+            },
+            {
+              id: 5, diameter: 24, volume: 0.157,
+              prices: pricesAverageTypeWood
+            },
+            {
+              id: 6, diameter: 28, volume: 0.22,
+              prices: pricesLargeTypeWood
+            },
+            { 
+              id: 7, diameter: 32, volume: 0.28,
+              prices: pricesLargeTypeWood
+            },
+            {
+              id: 8, diameter: 36, volume: 0.36,
+              prices: pricesLargeTypeWood
+            },
+            { id: 9, diameter: 40, volume: 0.43,
+              prices: pricesLargeTypeWood
+            },
+            {
+              id: 10, diameter: 44, volume: 0.52,
+              prices: pricesLargeTypeWood
+            },
+            {
+              id: 11, diameter: 48, volume: 0.62,
+              prices: pricesLargeTypeWood
+            },
         ]
     },
     {
         id: 2,
         length: '4 метра',
         cubatures: [
-            {id: 1, diameter: 8, volume: 0.026},
-            {id: 2, diameter: 12, volume: 0.053},
-            {id: 3, diameter: 16, volume: 0.095},
-            {id: 4, diameter: 20, volume: 0.147},
-            {id: 5, diameter: 24, volume: 0.21},
-            {id: 6, diameter: 28, volume: 0.29},
-            {id: 7, diameter: 32, volume: 0.38},
-            {id: 8, diameter: 36, volume: 0.48},
-            {id: 9, diameter: 40, volume: 0.58},
-            {id: 10, diameter: 44, volume: 0.70},
-            {id: 11, diameter: 48, volume: 0.84},
+            {
+              id: 1, diameter: 8, volume: 0.026,
+              prices: pricesSmallTypeWood
+            },
+            {
+              id: 2, diameter: 12, volume: 0.053,
+              prices: pricesSmallTypeWood
+            },
+            {
+              id: 3, diameter: 16, volume: 0.095,
+              prices: pricesAverageTypeWood
+            },
+            {
+              id: 4, diameter: 20, volume: 0.147,
+              prices: pricesAverageTypeWood
+            },
+            {
+              id: 5, diameter: 24, volume: 0.21,
+              prices: pricesAverageTypeWood
+            },
+            {
+              id: 6, diameter: 28, volume: 0.29,
+              prices: pricesLargeTypeWood
+            },
+            {
+              id: 7, diameter: 32, volume: 0.38,
+              prices: pricesLargeTypeWood
+            },
+            {
+              id: 8, diameter: 36, volume: 0.48,
+              prices: pricesLargeTypeWood
+            },
+            {
+              id: 9, diameter: 40, volume: 0.58,
+              prices: pricesLargeTypeWood
+            },
+            {
+              id: 10, diameter: 44, volume: 0.70,
+              prices: pricesLargeTypeWood
+            },
+            {
+              id: 11, diameter: 48, volume: 0.84,
+              prices: pricesLargeTypeWood
+            },
         ]
     },
     {
         id: 3,
         length: '5 метров',
         cubatures: [
-            {id: 1, diameter: 8, volume: 0.035},
-            {id: 2, diameter: 12, volume: 0.073},
-            {id: 3, diameter: 16, volume: 0.124},
-            {id: 4, diameter: 20, volume: 0.190},
-            {id: 5, diameter: 24, volume: 0.27},
-            {id: 6, diameter: 28, volume: 0.37},
-            {id: 7, diameter: 32, volume: 0.48},
-            {id: 8, diameter: 36, volume: 0.60},
-            {id: 9, diameter: 40, volume: 0.74},
-            {id: 10, diameter: 44, volume: 0.89},
-            {id: 11, diameter: 48, volume: 1.06},
+            {
+              id: 1, diameter: 8, volume: 0.035,
+              prices: pricesSmallTypeWood
+            },
+            {
+              id: 2, diameter: 12, volume: 0.073,
+              prices: pricesSmallTypeWood
+            },
+            {
+              id: 3, diameter: 16, volume: 0.124,
+              prices: pricesAverageTypeWood
+            },
+            {
+              id: 4, diameter: 20, volume: 0.190,
+              prices: pricesAverageTypeWood
+            },
+            {
+              id: 5, diameter: 24, volume: 0.27,
+              prices: pricesAverageTypeWood
+            },
+            {
+              id: 6, diameter: 28, volume: 0.37,
+              prices: pricesLargeTypeWood
+            },
+            {
+              id: 7, diameter: 32, volume: 0.48,
+              prices: pricesLargeTypeWood
+            },
+            {
+              id: 8, diameter: 36, volume: 0.60,
+              prices: pricesLargeTypeWood
+            },
+            {
+              id: 9, diameter: 40, volume: 0.74,
+              prices: pricesLargeTypeWood
+            },
+            {
+              id: 10, diameter: 44, volume: 0.89,
+              prices: pricesLargeTypeWood
+            },
+            {
+              id: 11, diameter: 48, volume: 1.06,
+              prices: pricesLargeTypeWood
+            },
         ]
     },
     {
         id: 4,
         length: '6 метров',
         cubatures: [
-            {id: 1, diameter: 8, volume: 0.045},
-            {id: 2, diameter: 12, volume: 0.093},
-            {id: 3, diameter: 16, volume: 0.155},
-            {id: 4, diameter: 20, volume: 0.23},
-            {id: 5, diameter: 24, volume: 0.33},
-            {id: 6, diameter: 28, volume: 0.45},
-            {id: 7, diameter: 32, volume: 0.59},
-            {id: 8, diameter: 36, volume: 0.74},
-            {id: 9, diameter: 40, volume: 0.90},
-            {id: 10, diameter: 44, volume: 1.09},
-            {id: 11, diameter: 48, volume: 1.30},
+            {
+              id: 1, diameter: 8, volume: 0.045,
+              prices: pricesSmallTypeWood
+            },
+            {
+              id: 2, diameter: 12, volume: 0.093,
+              prices: pricesSmallTypeWood
+            },
+            {
+              id: 3, diameter: 16, volume: 0.155,
+              prices: pricesAverageTypeWood
+            },
+            {
+              id: 4, diameter: 20, volume: 0.23,
+              prices: pricesAverageTypeWood
+            },
+            {
+              id: 5, diameter: 24, volume: 0.33,
+              prices: pricesAverageTypeWood
+            },
+            {
+              id: 6, diameter: 28, volume: 0.45,
+              prices: pricesLargeTypeWood
+            },
+            {
+              id: 7, diameter: 32, volume: 0.59,
+              prices: pricesLargeTypeWood
+            },
+            {
+              id: 8, diameter: 36, volume: 0.74,
+              prices: pricesLargeTypeWood
+            },
+            {
+              id: 9, diameter: 40, volume: 0.90,
+              prices: pricesLargeTypeWood
+            },
+            {
+              id: 10, diameter: 44, volume: 1.09,
+              prices: pricesLargeTypeWood
+            },
+            {
+              id: 11, diameter: 48, volume: 1.30,
+              prices: pricesLargeTypeWood
+            },
         ]
     },  
   ]
@@ -84,6 +239,7 @@ function CountingNotExportedWood() {
         <div className="uk-card-body" style={{ height: '100%' }}>
           <div className='uk-margin-small-bottom'>
             <h3>Подсчёт суммы объёмов стволов не вывезенной древесины, м3</h3>
+            <error className='uk-text-danger'> ВСЕГДА смотреть актуальность постановления Правительства Российской Федерации от 22 мая 2007 года N 310, ставки платы и коэффициенты </error>
           </div>
           {/* <div>
             <div className='uk-margin-small-bottom'>
