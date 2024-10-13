@@ -2,8 +2,8 @@ import { useState } from "react";
 import CountingBlock from "./CountingBlock";
 
 function CountingNotExportedWood() {
-  const [isEl, setEl] = useState(0);
-  const [isKol, setKol] = useState(0);
+  const [totalStock, setTotalStock] = useState(0);
+  const [totalNumberTrees, setTotalNumberTrees] = useState(0);
   const [inf, setInf] = useState({changed: '', status: '', diameter: undefined});
 
   const cubatureData = [
@@ -85,7 +85,7 @@ function CountingNotExportedWood() {
           <div className='uk-margin-small-bottom'>
             <h3>Подсчёт суммы объёмов стволов не вывезенной древесины, м3</h3>
           </div>
-          <div>
+          {/* <div>
             <div className='uk-margin-small-bottom'>
               Статус:
               <div>
@@ -100,12 +100,12 @@ function CountingNotExportedWood() {
               </div> 
             </div>
             <div>
-                Итого: <span className='uk-badge'>{isEl}</span>
+                Общий запас: <span className='uk-badge'>{totalStock}</span>
             </div>
             <div>
-                Всего: <span className='uk-badge'>{isKol}</span>
+                Общее число деревьев: <span className='uk-badge'>{totalNumberTrees}</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -127,6 +127,8 @@ function CountingNotExportedWood() {
                                       <CountingBlock 
                                         key={element.id} 
                                         data={element} 
+                                        setTotalStock={setTotalStock}
+                                        setTotalNumberTrees={setTotalNumberTrees}
                                       />
                                     ))}
                                 </ul>

@@ -1,10 +1,15 @@
 import { useState } from 'react';
 
-const CountingBlock = ({ data }) => {
-    const [val, setVal] = useState(0);
+const CountingBlock = ({ data, setTotalStock, setTotalNumberTrees }) => {
+    const [currentStock, setCurrentStock] = useState(0);
 
     const changeHandler = (e) => {
-        setVal(e.target.value);
+        const numberTreesEntered = e.target.value;
+        const stock = (data.volume * numberTreesEntered).toFixed(3);
+        
+        setCurrentStock(stock);
+        setTotalStock(prev => Number(+prev + stock));
+        setTotalNumberTrees(prev => Number(+prev + numberTreesEntered));
     }
 
     return (
@@ -26,7 +31,7 @@ const CountingBlock = ({ data }) => {
                 =
             </span>
             <span>
-                {(data.volume * val).toFixed(3)}
+                {currentStock}
             </span>           
         </li>
     );
