@@ -5,6 +5,8 @@ function CountingNotExportedWood() {
   const [totalStock, setTotalStock] = useState(0);
   const [totalNumberTrees, setTotalNumberTrees] = useState(0);
   const [inf, setInf] = useState({changed: '', status: '', diameter: undefined});
+  const first_ko = 13.5;
+  const second_ko = 2;
 
   const pricesSmallTypeWood = [
     {id: 1, breed: 'сосна', price: 61.74},
@@ -285,6 +287,8 @@ function CountingNotExportedWood() {
                                         data={element} 
                                         setTotalStock={setTotalStock}
                                         setTotalNumberTrees={setTotalNumberTrees}
+                                        first_ko={first_ko}
+                                        second_ko={second_ko}
                                       />
                                     ))}
                                 </ul>

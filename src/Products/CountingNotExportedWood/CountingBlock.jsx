@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const CountingBlock = ({ data, setTotalStock, setTotalNumberTrees }) => {
+const CountingBlock = ({ data, setTotalStock, setTotalNumberTrees, first_ko, second_ko }) => {
     const [currentStock, setCurrentStock] = useState(0);
 
     const changeHandler = (e) => {
@@ -41,7 +41,7 @@ const CountingBlock = ({ data, setTotalStock, setTotalNumberTrees }) => {
                         className='uk-margin-small-bottom uk-container uk-flex uk-flex-middle' 
                         style={{borderBottomStyle: 'dotted', borderBottomWidth: 0.5, paddingBottom: 5}}
                     >
-                        {el.breed} | {el.price} | <p className='uk-margin-small-left'>неустойка: <b>{((currentStock * el.price).toFixed(1)).replace('.', ',')} р</b></p>
+                        {el.breed} | {el.price} | <p className='uk-margin-small-left'>неустойка: <b>{((currentStock * el.price * first_ko * second_ko).toFixed(1)).replace('.', ',')} р</b></p>
                     </li>
                 )
             }
