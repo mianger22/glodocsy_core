@@ -5,7 +5,7 @@ function CountingNotExportedWood() {
   const [totalStock, setTotalStock] = useState(0);
   const [totalNumberTrees, setTotalNumberTrees] = useState(0);
   const [inf, setInf] = useState({changed: '', status: '', diameter: undefined});
-  const first_ko = 13.5;
+  const first_ko = 3.14;
   const second_ko = 2;
 
   const pricesSmallTypeWood = [

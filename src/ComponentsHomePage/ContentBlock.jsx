@@ -47,7 +47,7 @@ function ContentBlock() {
                     ? <CubatureCalculation />
                     : ''}
             {is_show_counting_not_exported_wood === undefined
-                ? <CardLink title_card='Подсчёт кубатуры ЗО' click_handler={show_counting_not_exported_wood} />
+                ? <CardLink title_card='Расчёт неустойки' click_handler={show_counting_not_exported_wood} />
                 : is_show_counting_not_exported_wood === true
                     ? <CountingNotExportedWood />
                     : ''}
