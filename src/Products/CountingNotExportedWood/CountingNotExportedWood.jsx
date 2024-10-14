@@ -242,7 +242,8 @@ function CountingNotExportedWood() {
           <div className='uk-margin-small-bottom'>
             <h3>Подсчёт суммы объёмов стволов не вывезенной древесины, м3</h3>
             <div className='uk-text-danger'> ВСЕГДА смотреть актуальность постановления Правительства Российской Федерации от 22 мая 2007 года N 310, ставки платы и коэффициенты </div>
-            <div className='uk-text-success'>первый коэффициент: {first_ko}, второй: {second_ko}</div>
+            <div className='uk-text-success uk-margin-small-bottom'>первый коэффициент: {first_ko}, второй: {second_ko}</div>
+            <a href="#3">3 метра</a> | <a href="#4">4 метра</a> | <a href="#5">5 метров</a> | <a href="#6">6 метров</a>
           </div>
           {/* <div>
             <div className='uk-margin-small-bottom'>
@@ -278,7 +279,7 @@ function CountingNotExportedWood() {
             <ul uk-accordion="collapsible: false">
                 {
                     cubatureData.map(group => (
-                        <li>
+                        <li id={`${group.length.charAt(0)}`}>
                             <a className="uk-accordion-title uk-text-bold" href>{group.length}</a>
                             <div className="uk-accordion-content">
                                 <ul uk-accordion="collapsible: false">
