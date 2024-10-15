@@ -240,7 +240,6 @@ function CountingNotExportedWood() {
       <div className="uk-card uk-card-default uk-margin-top uk-sticky uk-sticky-top" uk-sticky="top: 0; offset: 0">
         <div className="uk-card-body" style={{ height: '100%' }}>
           <div className='uk-margin-small-bottom'>
-            <h3>Подсчёт суммы объёмов стволов не вывезенной древесины, м3</h3>
             <div className='uk-text-danger'> ВСЕГДА смотреть актуальность постановления Правительства Российской Федерации от 22 мая 2007 года N 310, ставки платы и коэффициенты </div>
             <div className='uk-text-success uk-margin-small-bottom'>первый коэффициент: {first_ko}, второй: {second_ko}</div>
             <a href="#3">3 метра</a> | <a href="#4">4 метра</a> | <a href="#5">5 метров</a> | <a href="#6">6 метров</a>
