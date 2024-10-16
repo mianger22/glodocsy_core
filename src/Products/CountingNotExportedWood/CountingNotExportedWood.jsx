@@ -240,7 +240,17 @@ function CountingNotExportedWood() {
       <div className="uk-card uk-card-default uk-margin-top uk-sticky uk-sticky-top" uk-sticky="top: 0; offset: 0">
         <div className="uk-card-body" style={{ height: '100%' }}>
           <div className='uk-margin-small-bottom'>
-            <div className='uk-text-danger'> ВСЕГДА смотреть актуальность постановления Правительства Российской Федерации от 22 мая 2007 года N 310, ставки платы и коэффициенты </div>
+            <div className='uk-text-danger'> 
+              <div>
+                <a href="https://docs.cntd.ru/document/902044488" className="uk-text-danger">посл.изм: 6 марта 2024 года</a>
+              </div>
+              <div>
+                <a href="https://docs.cntd.ru/document/1300402965" className="uk-text-danger">в 2025 коэффициент другой</a>
+              </div>
+              <div>
+                х2 - согласно соглашению от 2013 года
+              </div>
+            </div>
             <div className='uk-text-success uk-margin-small-bottom'>первый коэффициент: {first_ko}, второй: {second_ko}</div>
             <a href="#3">3 метра</a> | <a href="#4">4 метра</a> | <a href="#5">5 метров</a> | <a href="#6">6 метров</a>
           </div>
