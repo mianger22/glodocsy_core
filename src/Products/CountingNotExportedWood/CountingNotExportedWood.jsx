@@ -5,6 +5,11 @@ function CountingNotExportedWood() {
   const [totalStock, setTotalStock] = useState(0);
   const [totalNumberTrees, setTotalNumberTrees] = useState(0);
   const [inf, setInf] = useState({changed: '', status: '', diameter: undefined});
+  // тут будет массив, в который будут заноситься измененные значения в виде объекта
+  // и который будет отображаться в шапке
+
+  // структура объекта
+  // {changed: '', status: '', diameter: undefined}
   const first_ko = 3.14;
   const second_ko = 2;
 
