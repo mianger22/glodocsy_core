@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-const CubatureList = ({breed, diameter, volume, handlerClick, isHistory}) => {
+const CubatureList = ({breed, diameter, volume, handlerClick, isHistory, category}) => {
     const [isClickedBtnAdd, setIsClickedBtnAdd] = useState(false);
     const [isClickedBtnDelete, setIsClickedBtnDelete] = useState(false);
 
     const handlerClickBtnAdd = () => {
-        handlerClick(breed, volume, diameter, 'add');
+        handlerClick(breed, volume, diameter, 'add', category);
         setIsClickedBtnAdd(true);
 
         setTimeout(() => {
@@ -14,7 +14,7 @@ const CubatureList = ({breed, diameter, volume, handlerClick, isHistory}) => {
     }
 
     const handlerClickBtnDelete = () => {
-        handlerClick(breed, volume, diameter, 'delete');
+        handlerClick(breed, volume, diameter, 'delete', category);
         setIsClickedBtnDelete(true);
 
         setTimeout(() => {

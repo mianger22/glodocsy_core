@@ -8,26 +8,32 @@ function CubatureCalculation() {
   const [isHistory, setHistory] = useState([
     {
         breed: 'Осина', 
+        category: undefined,
         data: []
     },
     {
         breed: 'Берёза', 
+        category: undefined,
         data: []
     },
     {
         breed: 'Ольха серая', 
+        category: undefined,
         data: []
     },
     {
         breed: 'Ольха чёрная', 
+        category: undefined,
         data: []
     },
     {
         breed: 'Ель', 
+        category: undefined,
         data: []
     },
     {
         breed: 'Сосна', 
+        category: undefined,
         data: []
     },
   ]);
@@ -487,7 +493,7 @@ function CubatureCalculation() {
     },       
   ]
 
-  const change_el_val = (breed, volume, diameter, action) => {
+  const change_el_val = (breed, volume, diameter, action, category) => {
       const newRecord = { diameter: diameter, number: 1 };
 
       if (action === 'add') {
@@ -498,6 +504,7 @@ function CubatureCalculation() {
                 tree.breed === breed 
                     ? {
                         ...tree, 
+                        category: category,
                         data: tree.data.some(item => item.diameter === newRecord.diameter) 
                             ? tree.data.map(item => 
                                 item.diameter === newRecord.diameter 
@@ -517,6 +524,7 @@ function CubatureCalculation() {
                 tree.breed === breed
                     ? {
                         ...tree,
+                        category: category,
                         data: tree.data.some(item => item.diameter === newRecord.diameter)
                             ? tree.data.map(item =>
                                 item.diameter === newRecord.diameter
@@ -538,29 +546,35 @@ function CubatureCalculation() {
     setHistory([
         {
             breed: 'Осина', 
+            category: undefined,
             data: []
         },
         {
             breed: 'Берёза', 
+            category: undefined,
             data: []
         },
         {
             breed: 'Ольха серая', 
+            category: undefined,
             data: []
         },
         {
             breed: 'Ольха чёрная', 
+            category: undefined,
             data: []
         },
         {
             breed: 'Ель', 
+            category: undefined,
             data: []
         },
         {
             breed: 'Сосна', 
+            category: undefined,
             data: []
         },
-    ]);
+      ]);
   }
   
   // сделать так, чтобы каждый клик добавлял в маассив инфу и эта инфа отображалась
@@ -587,7 +601,7 @@ function CubatureCalculation() {
                 {isHistory.map(breed_data => breed_data.data.length > 0 ?
                     <>
                         <div className='uk-margin-bottom'>
-                            {breed_data.breed} - {
+                            {breed_data.category} разряд - {breed_data.breed} - {
                                 breed_data.data.map(element => 
                                     <>{element.diameter} (<b>{element.number}</b>), </>
                                 )}

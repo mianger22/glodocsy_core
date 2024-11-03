@@ -14,6 +14,7 @@ const CubatureCalculationBlock = ({handlerClick, cubatureData, isHistory}) => {
                             volume={el.volume} 
                             handlerClick={handlerClick} 
                             isHistory={isHistory}
+                            category={cubatureData.category}
                         />
                     )}
                 </ul>
