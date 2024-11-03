@@ -63,6 +63,7 @@ function CubatureCalculation() {
                             {id: 9, diameter: 40, volume: 1.45},
                             {id: 10, diameter: 44, volume: 1.78},
                             {id: 11, diameter: 48, volume: 2.09},
+                            {id: 12, diameter: 52, volume: 2.40},
                         ]
                     },
                     {
