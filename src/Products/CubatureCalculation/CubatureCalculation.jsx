@@ -562,28 +562,30 @@ function CubatureCalculation() {
       <div className="uk-card uk-card-default uk-margin-top uk-sticky uk-sticky-top" uk-sticky="top: 0; offset: 0">
         <div className="uk-card-body" style={{ height: '100%' }}>
           <div className='uk-margin-small-bottom'>
-            <h3>Подсчёт суммы объёмов стволов в коре, м3</h3>
+            <h3>Сумма объёмов стволов в коре</h3>
           </div>
           <div>
-            <div>
-                Итого: <span className='uk-badge'>{isEl}</span>
+            <div className='uk-margin-bottom'>
+                Запас, кбм.: <span className='uk-badge'>{isEl.toFixed(0)}</span>
             </div>
-            <div>
-                Всего: <span className='uk-badge'>{isKol}</span>
-            </div>
-            <div>
+            <div className='uk-margin-bottom'>
                 <button onClick={refresh}>
                     Обнулить
                 </button>
             </div>
             <div>
                 {isHistory.map(breed_data => breed_data.data.length > 0 ?
-                    <div>
-                        {breed_data.breed} - {
-                            breed_data.data.map(element => 
-                                <>{element.diameter} (<b>{element.number}</b>), </>
-                            )}
-                    </div> : <div></div>
+                    <>
+                        <div className='uk-margin-bottom'>
+                            {breed_data.breed} - {
+                                breed_data.data.map(element => 
+                                    <>{element.diameter} (<b>{element.number}</b>), </>
+                                )}
+                        </div>
+                        <div>
+                            Число деревьев: <span className='uk-badge'>{isKol}</span>
+                        </div>
+                    </> : <></>
                 )}
             </div>
           </div>
