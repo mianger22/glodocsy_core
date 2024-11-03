@@ -598,19 +598,25 @@ function CubatureCalculation() {
                 </button>
             </div>
             <div>
-                {isHistory.map(breed_data => breed_data.data.length > 0 ?
-                    <>
+                {isHistory.map(breed_data => breed_data.data.length > 0 
+                    &&
                         <div className='uk-margin-bottom'>
                             {breed_data.category} разряд - {breed_data.breed} - {
                                 breed_data.data.map(element => 
-                                    <>{element.diameter} (<b>{element.number}</b>), </>
+                                    <>
+                                        {element.diameter} (<b>{element.number}</b>), 
+                                    </>
                                 )}
                         </div>
+                )}
+            </div>
+            <div>
+                {
+                    isKol > 0 && 
                         <div>
                             Число деревьев: <span className='uk-badge'>{isKol}</span>
                         </div>
-                    </> : <></>
-                )}
+                }
             </div>
           </div>
         </div>
