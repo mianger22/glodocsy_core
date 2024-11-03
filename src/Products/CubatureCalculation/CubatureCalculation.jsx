@@ -34,9 +34,11 @@ function CubatureCalculation() {
 
   const cubatureData = [
     {
+        id: 1, 
         section_name: 'Основные',
         section_data: [
             {   
+                id: 1,
                 group_name: '3 разряд',
                 group_data: [
                     {
@@ -116,6 +118,7 @@ function CubatureCalculation() {
                 ]
             },
             {   
+                id: 2,
                 group_name: '4 разряд',
                 group_data: [
                     {
@@ -195,6 +198,7 @@ function CubatureCalculation() {
                 ]
             },
             {   
+                id: 3,
                 group_name: '5 разряд',
                 group_data: [
                     {
@@ -258,9 +262,11 @@ function CubatureCalculation() {
         ]
     },
     {
+        id: 2,
         section_name: 'Редко используемые',
         section_data: [
             {   
+                id: 1,
                 group_name: '1 разряд',
                 group_data: [
                     {
@@ -284,6 +290,7 @@ function CubatureCalculation() {
                 ]
             },
             {   
+                id: 2,
                 group_name: '2 разряд',
                 group_data: [
                     {
@@ -345,6 +352,7 @@ function CubatureCalculation() {
                 ]
             },
             {   
+                id: 3,
                 group_name: '6 разряд',
                 group_data: [
                     {
@@ -406,6 +414,7 @@ function CubatureCalculation() {
                 ]
             },
             {   
+                id: 4,
                 group_name: '7 разряд',
                 group_data: [
                     {
@@ -449,6 +458,7 @@ function CubatureCalculation() {
                 ]
             },
             {   
+                id: 5,
                 group_name: '8 разряд',
                 group_data: [
                     {
@@ -501,7 +511,13 @@ function CubatureCalculation() {
           );
       } else if (action === 'delete') {
           setEl(prevIsEl => prevIsEl - volume);
-          setKol(prevIsKol => prevIsKol - 1);
+          setKol(prevIsKol => {
+            const pkol = prevIsKol - 1;
+
+            if (pkol < 0) alert(' меньше 0 ');
+
+            return pkol;
+          });
           setHistory(prevTrees => 
             prevTrees.map(tree => 
                 tree.breed === breed 
@@ -574,7 +590,7 @@ function CubatureCalculation() {
                 </button>
             </div>
             <div>
-                {isHistory.map(breed_data => breed_data.data.length > 0 ?
+                {isHistory.map(breed_data => isKol > 0 && breed_data.data.length > 0 ?
                     <>
                         <div className='uk-margin-bottom'>
                             {breed_data.breed} - {
@@ -611,11 +627,11 @@ function CubatureCalculation() {
                                             <a className="uk-accordion-title" href>{group.group_name}</a>
                                             <div className="uk-accordion-content">
                                                 <ul uk-accordion="collapsible: false">
-                                                    {group.group_data.map(element => (
+                                                    {group.group_data.map(el => (
                                                         <CubatureCalculationBlock 
+                                                            key={el.id}
                                                             handlerClick={change_el_val} 
-                                                            cubatureData={element} 
-                                                            cubatureDataId={element.id} 
+                                                            cubatureData={el} 
                                                             isEl={isEl} />
                                                     ))}
                                                 </ul>

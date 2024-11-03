@@ -1,6 +1,6 @@
 import CubatureList from "./CubatureList";
 
-const CubatureCalculationBlock = ({handlerClick, cubatureData, cubatureDataId, isEl}) => {
+const CubatureCalculationBlock = ({handlerClick, cubatureData, isEl}) => {
     return (
         <li>
             <a className="uk-accordion-title" href>{cubatureData.breed} - {cubatureData.category}</a>
