@@ -1,9 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-const CubatureList = ({breed, diameter, volume, handlerClick, isEl, isHistory}) => {
-    useEffect(()=>{
-        console.log('isHistory: ', isHistory);
-    })
+const CubatureList = ({breed, diameter, volume, handlerClick, isHistory}) => {
     const [isClickedBtnAdd, setIsClickedBtnAdd] = useState(false);
     const [isClickedBtnDelete, setIsClickedBtnDelete] = useState(false);
 
