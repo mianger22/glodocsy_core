@@ -4,7 +4,33 @@ import CubatureCalculationBlock from "./CubatureCalculationBlock";
 function CubatureCalculation() {
   const [isEl, setEl] = useState(0);
   const [isKol, setKol] = useState(0);
-  const [inf, setInf] = useState({changed: '', status: '', diameter: undefined});
+
+  const [isHistory, setHistory] = useState([
+    {
+        breed: 'Осина', 
+        data: []
+    },
+    {
+        breed: 'Берёза', 
+        data: []
+    },
+    {
+        breed: 'Ольха серая', 
+        data: []
+    },
+    {
+        breed: 'Ольха чёрная', 
+        data: []
+    },
+    {
+        breed: 'Ель', 
+        data: []
+    },
+    {
+        breed: 'Сосна', 
+        data: []
+    },
+  ]);
 
   const cubatureData = [
     {
@@ -451,23 +477,84 @@ function CubatureCalculation() {
     },       
   ]
 
-  const change_el_val = (volume, diameter, action) => {
-      if (action === 'add') {
-          setInf({changed: '', status: '', diameter: undefined});
+  const change_el_val = (breed, volume, diameter, action) => {
+      const newRecord = { diameter: diameter, number: 1 };
 
+      if (action === 'add') {
           setEl(prevIsEl => prevIsEl + volume);
           setKol(prevIsKol => prevIsKol + 1);
-
-          setInf({changed: '+ 1', status: 'success', diameter: diameter});
+          setHistory(prevTrees => 
+            prevTrees.map(tree => 
+                tree.breed === breed 
+                    ? {
+                        ...tree, 
+                        data: tree.data.some(item => item.diameter === newRecord.diameter) 
+                            ? tree.data.map(item => 
+                                item.diameter === newRecord.diameter 
+                                    ? { ...item, number: String(Number(item.number) + 1) }
+                                    : item
+                              )
+                            : [...tree.data, newRecord]
+                    }
+                    : tree
+            )
+          );
       } else if (action === 'delete') {
-          setInf({changed: '', status: '', diameter: undefined});
-
           setEl(prevIsEl => prevIsEl - volume);
           setKol(prevIsKol => prevIsKol - 1);
-
-          setInf({changed: '- 1', status: 'danger', diameter: diameter});
+          setHistory(prevTrees => 
+            prevTrees.map(tree => 
+                tree.breed === breed 
+                    ? {
+                        ...tree, 
+                        data: tree.data.some(item => item.diameter === newRecord.diameter) 
+                            ? tree.data.map(item => 
+                                item.diameter === newRecord.diameter 
+                                    ? { ...item, number: String(Number(item.number) - 1) }
+                                    : item
+                              )
+                            : [...tree.data, newRecord]
+                    }
+                    : tree
+            )
+          );
       }
   }
+
+  const refresh = () => {
+    setEl(0);
+    setKol(0);
+
+    setHistory([
+        {
+            breed: 'Осина', 
+            data: []
+        },
+        {
+            breed: 'Берёза', 
+            data: []
+        },
+        {
+            breed: 'Ольха серая', 
+            data: []
+        },
+        {
+            breed: 'Ольха чёрная', 
+            data: []
+        },
+        {
+            breed: 'Ель', 
+            data: []
+        },
+        {
+            breed: 'Сосна', 
+            data: []
+        },
+    ]);
+  }
+  
+  // сделать так, чтобы каждый клик добавлял в маассив инфу и эта инфа отображалась
+  // структура { breed: '', diameter: '' }
 
   return (
     <div className="uk-container">
@@ -478,24 +565,26 @@ function CubatureCalculation() {
             <h3>Подсчёт суммы объёмов стволов в коре, м3</h3>
           </div>
           <div>
-            <div className='uk-margin-small-bottom'>
-              Статус:
-              <div>
-                  {
-                      inf.changed === '' 
-                          ? <span className='uk-text-secondary'> в процессе</span> 
-                          : <>
-                              <span className={`uk-text-${inf.status} uk-text-bold`}>{inf.changed}, </span>
-                              диаметр: <span className={`uk-text-${inf.status} uk-text-bold`}>{inf.diameter}</span>
-                          </>
-                  }
-              </div> 
-            </div>
             <div>
                 Итого: <span className='uk-badge'>{isEl}</span>
             </div>
             <div>
                 Всего: <span className='uk-badge'>{isKol}</span>
+            </div>
+            <div>
+                <button onClick={refresh}>
+                    Обнулить
+                </button>
+            </div>
+            <div>
+                {isHistory.map(breed_data => breed_data.data.length > 0 ?
+                    <div>
+                        {breed_data.breed} - {
+                            breed_data.data.map(element => 
+                                <>{element.diameter} (<b>{element.number}</b>), </>
+                            )}
+                    </div> : <div></div>
+                )}
             </div>
           </div>
         </div>

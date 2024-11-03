@@ -9,6 +9,7 @@ const CubatureCalculationBlock = ({handlerClick, cubatureData, cubatureDataId}) 
                     {cubatureData.cubatures.map(el => 
                         <CubatureList 
                             key={el.id} 
+                            breed={cubatureData.breed}
                             diameter={el.diameter} 
                             volume={el.volume} 
                             handlerClick={handlerClick} 

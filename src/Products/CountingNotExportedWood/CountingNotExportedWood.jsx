@@ -10,6 +10,7 @@ function CountingNotExportedWood() {
 
   // структура объекта
   // {changed: '', status: '', diameter: undefined}
+  
   const first_ko = 3.14;
   const second_ko = 2;
 
