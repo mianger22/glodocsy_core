@@ -36,13 +36,14 @@ const CubatureList = ({breed, diameter, volume, handlerClick, isEl}) => {
                 +
             </button>
                     
-            <button 
-                onClick={handlerClickBtnDelete} 
-                className={`uk-button ${isClickedBtnDelete ? `uk-button-primary` : `uk-button-default`} uk-button-small`} 
-                disabled={isEl === 0} 
-            >
-                -
-            </button>
+            {isEl > 0 && 
+                <button 
+                    onClick={handlerClickBtnDelete} 
+                    className={`uk-button ${isClickedBtnDelete ? `uk-button-primary` : `uk-button-default`} uk-button-small`} 
+                >
+                    -
+                </button>
+            }
         </li>
     )
 }
