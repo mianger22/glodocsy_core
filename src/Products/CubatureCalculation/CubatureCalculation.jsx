@@ -45,24 +45,104 @@ function CubatureCalculation() {
         section_data: [
             {   
                 id: 1,
+                group_name: '4 разряд',
+                group_data: [
+                    {
+                        id: 1,
+                        breed: 'Осина',
+                        category: 4,
+                        cubatures: [
+                            {id: 1, diameter: 8, volume: 0.035},
+                            {id: 2, diameter: 12, volume: 0.096},
+                            {id: 3, diameter: 16, volume: 0.19},
+                            {id: 4, diameter: 20, volume: 0.31},
+                            {id: 5, diameter: 24, volume: 0.47},
+                            {id: 6, diameter: 28, volume: 0.67},
+                            {id: 7, diameter: 32, volume: 0.89},
+                            {id: 8, diameter: 36, volume: 1.16},
+                            {id: 9, diameter: 40, volume: 1.45},
+                            {id: 10, diameter: 44, volume: 1.78},
+                            {id: 11, diameter: 48, volume: 2.09},
+                        ]
+                    },
+                    {
+                        id: 2,
+                        breed: 'Берёза',
+                        category: 4,
+                        cubatures: [
+                            {id: 1, diameter: 8, volume: 0.030},
+                            {id: 2, diameter: 12, volume: 0.090},
+                            {id: 3, diameter: 16, volume: 0.18},
+                            {id: 4, diameter: 20, volume: 0.31},
+                            {id: 5, diameter: 24, volume: 0.49},
+                            {id: 6, diameter: 28, volume: 0.68},
+                            {id: 7, diameter: 32, volume: 0.91},
+                            {id: 8, diameter: 36, volume: 1.18},
+                            {id: 9, diameter: 40, volume: 1.48},
+                            {id: 10, diameter: 44, volume: 1.81},
+                            {id: 11, diameter: 48, volume: 2.13},
+                        ]
+                    },
+                    {
+                        id: 3,
+                        breed: 'Ель',
+                        category: 4,
+                        cubatures: [
+                            {id: 1, diameter: 8, volume: 0.029},
+                            {id: 2, diameter: 12, volume: 0.091},
+                            {id: 3, diameter: 16, volume: 0.19},
+                            {id: 4, diameter: 20, volume: 0.33},
+                            {id: 5, diameter: 24, volume: 0.50},
+                            {id: 6, diameter: 28, volume: 0.71},
+                            {id: 7, diameter: 32, volume: 0.96},
+                            {id: 8, diameter: 36, volume: 1.25},
+                            {id: 9, diameter: 40, volume: 1.74},
+                            {id: 10, diameter: 44, volume: 1.91},
+                            {id: 11, diameter: 48, volume: 2.31},
+                            {id: 12, diameter: 52, volume: 2.74},
+                            {id: 13, diameter: 56, volume: 3.19},
+                        ]
+                    },
+                    {
+                        id: 4,
+                        breed: 'Сосна',
+                        category: 4,
+                        cubatures: [
+                            {id: 1, diameter: 8, volume: 0.037},
+                            {id: 2, diameter: 12, volume: 0.098},
+                            {id: 3, diameter: 16, volume: 0.19},
+                            {id: 4, diameter: 20, volume: 0.32},
+                            {id: 5, diameter: 24, volume: 0.48},
+                            {id: 6, diameter: 28, volume: 0.68},
+                            {id: 7, diameter: 32, volume: 0.90},
+                            {id: 8, diameter: 36, volume: 1.16},
+                            {id: 9, diameter: 40, volume: 1.45},
+                            {id: 10, diameter: 44, volume: 1.77},
+                            {id: 11, diameter: 48, volume: 2.14},
+                        ]
+                    },
+                ]
+            },
+            {   
+                id: 2,
                 group_name: '3 разряд',
                 group_data: [
                     {
                         id: 1,
-                        breed: 'Сосна',
+                        breed: 'Осина',
                         category: 3,
                         cubatures: [
-                            {id: 1, diameter: 8, volume: 0.039},
-                            {id: 2, diameter: 12, volume: 0.112},
-                            {id: 3, diameter: 16, volume: 0.21},
-                            {id: 4, diameter: 20, volume: 0.35},
-                            {id: 5, diameter: 24, volume: 0.52},
+                            {id: 1, diameter: 8, volume: 0.036},
+                            {id: 2, diameter: 12, volume: 0.099},
+                            {id: 3, diameter: 16, volume: 0.20},
+                            {id: 4, diameter: 20, volume: 0.34},
+                            {id: 5, diameter: 24, volume: 0.51},
                             {id: 6, diameter: 28, volume: 0.73},
                             {id: 7, diameter: 32, volume: 0.98},
                             {id: 8, diameter: 36, volume: 1.26},
-                            {id: 9, diameter: 40, volume: 1.57},
-                            {id: 10, diameter: 44, volume: 1.92},
-                            {id: 11, diameter: 48, volume: 2.28},
+                            {id: 9, diameter: 40, volume: 1.59},
+                            {id: 10, diameter: 44, volume: 1.93},
+                            {id: 11, diameter: 48, volume: 2.30},
                         ]
                     },
                     {
@@ -105,100 +185,20 @@ function CubatureCalculation() {
                     },
                     {
                         id: 4,
-                        breed: 'Осина',
+                        breed: 'Сосна',
                         category: 3,
                         cubatures: [
-                            {id: 1, diameter: 8, volume: 0.036},
-                            {id: 2, diameter: 12, volume: 0.099},
-                            {id: 3, diameter: 16, volume: 0.20},
-                            {id: 4, diameter: 20, volume: 0.34},
-                            {id: 5, diameter: 24, volume: 0.51},
+                            {id: 1, diameter: 8, volume: 0.039},
+                            {id: 2, diameter: 12, volume: 0.112},
+                            {id: 3, diameter: 16, volume: 0.21},
+                            {id: 4, diameter: 20, volume: 0.35},
+                            {id: 5, diameter: 24, volume: 0.52},
                             {id: 6, diameter: 28, volume: 0.73},
                             {id: 7, diameter: 32, volume: 0.98},
                             {id: 8, diameter: 36, volume: 1.26},
-                            {id: 9, diameter: 40, volume: 1.59},
-                            {id: 10, diameter: 44, volume: 1.93},
-                            {id: 11, diameter: 48, volume: 2.30},
-                        ]
-                    },
-                ]
-            },
-            {   
-                id: 2,
-                group_name: '4 разряд',
-                group_data: [
-                    {
-                        id: 1,
-                        breed: 'Ель',
-                        category: 4,
-                        cubatures: [
-                            {id: 1, diameter: 8, volume: 0.029},
-                            {id: 2, diameter: 12, volume: 0.091},
-                            {id: 3, diameter: 16, volume: 0.19},
-                            {id: 4, diameter: 20, volume: 0.33},
-                            {id: 5, diameter: 24, volume: 0.50},
-                            {id: 6, diameter: 28, volume: 0.71},
-                            {id: 7, diameter: 32, volume: 0.96},
-                            {id: 8, diameter: 36, volume: 1.25},
-                            {id: 9, diameter: 40, volume: 1.74},
-                            {id: 10, diameter: 44, volume: 1.91},
-                            {id: 11, diameter: 48, volume: 2.31},
-                            {id: 12, diameter: 52, volume: 2.74},
-                            {id: 13, diameter: 56, volume: 3.19},
-                        ]
-                    },
-                    {
-                        id: 2,
-                        breed: 'Сосна',
-                        category: 4,
-                        cubatures: [
-                            {id: 1, diameter: 8, volume: 0.037},
-                            {id: 2, diameter: 12, volume: 0.098},
-                            {id: 3, diameter: 16, volume: 0.19},
-                            {id: 4, diameter: 20, volume: 0.32},
-                            {id: 5, diameter: 24, volume: 0.48},
-                            {id: 6, diameter: 28, volume: 0.68},
-                            {id: 7, diameter: 32, volume: 0.90},
-                            {id: 8, diameter: 36, volume: 1.16},
-                            {id: 9, diameter: 40, volume: 1.45},
-                            {id: 10, diameter: 44, volume: 1.77},
-                            {id: 11, diameter: 48, volume: 2.14},
-                        ]
-                    },
-                    {
-                        id: 3,
-                        breed: 'Берёза',
-                        category: 4,
-                        cubatures: [
-                            {id: 1, diameter: 8, volume: 0.030},
-                            {id: 2, diameter: 12, volume: 0.090},
-                            {id: 3, diameter: 16, volume: 0.18},
-                            {id: 4, diameter: 20, volume: 0.31},
-                            {id: 5, diameter: 24, volume: 0.49},
-                            {id: 6, diameter: 28, volume: 0.68},
-                            {id: 7, diameter: 32, volume: 0.91},
-                            {id: 8, diameter: 36, volume: 1.18},
-                            {id: 9, diameter: 40, volume: 1.48},
-                            {id: 10, diameter: 44, volume: 1.81},
-                            {id: 11, diameter: 48, volume: 2.13},
-                        ]
-                    },
-                    {
-                        id: 4,
-                        breed: 'Осина',
-                        category: 4,
-                        cubatures: [
-                            {id: 1, diameter: 8, volume: 0.035},
-                            {id: 2, diameter: 12, volume: 0.096},
-                            {id: 3, diameter: 16, volume: 0.19},
-                            {id: 4, diameter: 20, volume: 0.31},
-                            {id: 5, diameter: 24, volume: 0.47},
-                            {id: 6, diameter: 28, volume: 0.67},
-                            {id: 7, diameter: 32, volume: 0.89},
-                            {id: 8, diameter: 36, volume: 1.16},
-                            {id: 9, diameter: 40, volume: 1.45},
-                            {id: 10, diameter: 44, volume: 1.78},
-                            {id: 11, diameter: 48, volume: 2.09},
+                            {id: 9, diameter: 40, volume: 1.57},
+                            {id: 10, diameter: 44, volume: 1.92},
+                            {id: 11, diameter: 48, volume: 2.28},
                         ]
                     },
                 ]
@@ -209,24 +209,6 @@ function CubatureCalculation() {
                 group_data: [
                     {
                         id: 1,
-                        breed: 'Сосна',
-                        category: 5,
-                        cubatures: [
-                            {id: 1, diameter: 8, volume: 0.031},
-                            {id: 2, diameter: 12, volume: 0.087},
-                            {id: 3, diameter: 16, volume: 0.17},
-                            {id: 4, diameter: 20, volume: 0.28},
-                            {id: 5, diameter: 24, volume: 0.43},
-                            {id: 6, diameter: 28, volume: 0.61},
-                            {id: 7, diameter: 32, volume: 0.81},
-                            {id: 8, diameter: 36, volume: 1.04},
-                            {id: 9, diameter: 40, volume: 1.32},
-                            {id: 10, diameter: 44, volume: 1.61},
-                            {id: 11, diameter: 48, volume: 1.91},
-                        ]
-                    },
-                    {
-                        id: 2,
                         breed: 'Берёза',
                         category: 5,
                         cubatures: [
@@ -244,7 +226,7 @@ function CubatureCalculation() {
                         ]
                     },
                     {
-                        id: 3,
+                        id: 2,
                         breed: 'Ель',
                         category: 5,
                         cubatures: [
@@ -261,6 +243,24 @@ function CubatureCalculation() {
                             {id: 11, diameter: 48, volume: 2.10},
                             {id: 12, diameter: 52, volume: 2.48},
                             {id: 13, diameter: 56, volume: 2.90},
+                        ]
+                    },
+                    {
+                        id: 3,
+                        breed: 'Сосна',
+                        category: 5,
+                        cubatures: [
+                            {id: 1, diameter: 8, volume: 0.031},
+                            {id: 2, diameter: 12, volume: 0.087},
+                            {id: 3, diameter: 16, volume: 0.17},
+                            {id: 4, diameter: 20, volume: 0.28},
+                            {id: 5, diameter: 24, volume: 0.43},
+                            {id: 6, diameter: 28, volume: 0.61},
+                            {id: 7, diameter: 32, volume: 0.81},
+                            {id: 8, diameter: 36, volume: 1.04},
+                            {id: 9, diameter: 40, volume: 1.32},
+                            {id: 10, diameter: 44, volume: 1.61},
+                            {id: 11, diameter: 48, volume: 1.91},
                         ]
                     },
                 ]
