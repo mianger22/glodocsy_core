@@ -612,7 +612,11 @@ function CubatureCalculation() {
                                             <div className="uk-accordion-content">
                                                 <ul uk-accordion="collapsible: false">
                                                     {group.group_data.map(element => (
-                                                        <CubatureCalculationBlock handlerClick={change_el_val} cubatureData={element} cubatureDataId={element.id} />
+                                                        <CubatureCalculationBlock 
+                                                            handlerClick={change_el_val} 
+                                                            cubatureData={element} 
+                                                            cubatureDataId={element.id} 
+                                                            isEl={isEl} />
                                                     ))}
                                                 </ul>
                                             </div>

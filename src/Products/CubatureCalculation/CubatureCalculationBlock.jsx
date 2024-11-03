@@ -1,6 +1,6 @@
 import CubatureList from "./CubatureList";
 
-const CubatureCalculationBlock = ({handlerClick, cubatureData, cubatureDataId}) => {
+const CubatureCalculationBlock = ({handlerClick, cubatureData, cubatureDataId, isEl}) => {
     return (
         <li>
             <a className="uk-accordion-title" href>{cubatureData.breed} - {cubatureData.category}</a>
@@ -13,6 +13,7 @@ const CubatureCalculationBlock = ({handlerClick, cubatureData, cubatureDataId}) 
                             diameter={el.diameter} 
                             volume={el.volume} 
                             handlerClick={handlerClick} 
+                            isEl={isEl}
                         />
                     )}
                 </ul>
