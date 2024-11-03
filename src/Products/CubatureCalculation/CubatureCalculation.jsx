@@ -511,13 +511,7 @@ function CubatureCalculation() {
           );
       } else if (action === 'delete') {
           setEl(prevIsEl => prevIsEl - volume);
-          setKol(prevIsKol => {
-            const pkol = prevIsKol - 1;
-
-            if (pkol < 0) alert(' меньше 0 ');
-
-            return pkol;
-          });
+          setKol(prevIsKol => prevIsKol - 1);
           setHistory(prevTrees => 
             prevTrees.map(tree => 
                 tree.breed === breed 
@@ -582,7 +576,7 @@ function CubatureCalculation() {
           </div>
           <div>
             <div className='uk-margin-bottom'>
-                Запас, кбм.: <span className='uk-badge'>{isEl.toFixed(0)}</span>
+                Запас, кбм.: <span className='uk-badge'>{isEl.toFixed(0) == '-0' ? 0 : isEl.toFixed(0)}</span>
             </div>
             <div className='uk-margin-bottom'>
                 <button onClick={refresh}>
