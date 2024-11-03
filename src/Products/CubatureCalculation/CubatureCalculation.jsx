@@ -626,7 +626,9 @@ function CubatureCalculation() {
                                                             key={el.id}
                                                             handlerClick={change_el_val} 
                                                             cubatureData={el} 
-                                                            isEl={isEl} />
+                                                            isEl={isEl}
+                                                            isHistory={isHistory} 
+                                                        />
                                                     ))}
                                                 </ul>
                                             </div>

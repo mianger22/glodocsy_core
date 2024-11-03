@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const CubatureList = ({breed, diameter, volume, handlerClick, isEl}) => {
+const CubatureList = ({breed, diameter, volume, handlerClick, isEl, isHistory}) => {
+    useEffect(()=>{
+        console.log('isHistory: ', isHistory);
+    })
     const [isClickedBtnAdd, setIsClickedBtnAdd] = useState(false);
     const [isClickedBtnDelete, setIsClickedBtnDelete] = useState(false);
 
@@ -35,15 +38,21 @@ const CubatureList = ({breed, diameter, volume, handlerClick, isEl}) => {
             >
                 +
             </button>
-                    
-            {isEl > 0 && 
-                <button 
-                    onClick={handlerClickBtnDelete} 
-                    className={`uk-button ${isClickedBtnDelete ? `uk-button-primary` : `uk-button-default`} uk-button-small`} 
-                >
-                    -
-                </button>
-            }
+
+            {isHistory.map((breed_group, index_breed_group) => (
+                <div key={index_breed_group}>
+                    {breed_group.data.map((breed_group_data, index_breed_group_data) => (
+                        <div key={index_breed_group_data}>{breed_group_data.diameter === diameter && 
+                            <button 
+                                onClick={handlerClickBtnDelete} 
+                                className={`uk-button ${isClickedBtnDelete ? `uk-button-primary` : `uk-button-default`} uk-button-small`} 
+                            >
+                                -
+                            </button>
+                        }</div>
+                    ))}
+                </div>
+            ))}
         </li>
     )
 }
