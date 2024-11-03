@@ -514,15 +514,15 @@ function CubatureCalculation() {
           setKol(prevIsKol => prevIsKol - 1);
           setHistory(prevTrees => 
             prevTrees.map(tree => 
-                tree.breed === breed 
+                tree.breed === breed
                     ? {
-                        ...tree, 
-                        data: tree.data.some(item => item.diameter === newRecord.diameter) 
-                            ? tree.data.map(item => 
-                                item.diameter === newRecord.diameter 
-                                    ? { ...item, number: String(Number(item.number) - 1) }
+                        ...tree,
+                        data: tree.data.some(item => item.diameter === newRecord.diameter)
+                            ? tree.data.map(item =>
+                                item.diameter === newRecord.diameter
+                                    ? { ...item, number: String(Number(item.number) - 1) } 
                                     : item
-                              )
+                              ).filter(item => Number(item.number) > 0) // Фильтруем записи, чтобы удалить те, у кого number стал 0
                             : [...tree.data, newRecord]
                     }
                     : tree
@@ -584,7 +584,7 @@ function CubatureCalculation() {
                 </button>
             </div>
             <div>
-                {isHistory.map(breed_data => isKol > 0 && breed_data.data.length > 0 ?
+                {isHistory.map(breed_data => breed_data.data.length > 0 ?
                     <>
                         <div className='uk-margin-bottom'>
                             {breed_data.breed} - {
