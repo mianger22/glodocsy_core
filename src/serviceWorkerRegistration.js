@@ -41,7 +41,7 @@ const isLocalhost = Boolean(
   
       window.addEventListener('load', () => {
         // новое
-        navigator.serviceWorker.register('service-worker-v2.js')
+        navigator.serviceWorker.register('service-worker-v3.js')
             .then(registration => {
               console.log('Service Worker зарегистрирован с областью:', registration.scope);
     

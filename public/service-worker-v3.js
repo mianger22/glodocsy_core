@@ -5,7 +5,7 @@ self.addEventListener('install', (event) => {
     console.log('Service Worker установился.');
 
     event.waitUntil(
-      caches.open('my-cache-v1').then((cache) => {
+      caches.open('my-cache-v3').then((cache) => {
         return cache.addAll([
             '/',
             '/index.html',
@@ -51,7 +51,7 @@ self.addEventListener('activate', event => {
 // Событие запроса (fetch)
 self.addEventListener('fetch', event => {
   event.respondWith(
-      caches.open('my-cache-v2').then(cache => {
+      caches.open('my-cache-v3').then(cache => {
           return fetch(event.request).then(response => {
               // Обновляем кэш новыми данными
               cache.put(event.request, response.clone());
