@@ -122,6 +122,43 @@ function CubatureCalculation() {
                             {id: 11, diameter: 48, volume: 2.14},
                         ]
                     },
+                    {
+                        id: 5,
+                        breed: 'ОлС',
+                        category: 4,
+                        cubatures: [
+                            {id: 1, diameter: 8, volume: 0.035},
+                            {id: 2, diameter: 12, volume: 0.096},
+                            {id: 3, diameter: 16, volume: 0.19},
+                            {id: 4, diameter: 20, volume: 0.31},
+                            {id: 5, diameter: 24, volume: 0.47},
+                            {id: 6, diameter: 28, volume: 0.67},
+                            {id: 7, diameter: 32, volume: 0.89},
+                            {id: 8, diameter: 36, volume: 1.16},
+                            {id: 9, diameter: 40, volume: 1.45},
+                            {id: 10, diameter: 44, volume: 1.78},
+                            {id: 11, diameter: 48, volume: 2.09},
+                            {id: 12, diameter: 52, volume: 2.40},
+                        ]
+                    },
+                    {
+                        id: 6,
+                        breed: 'ОлЧ',
+                        category: 4,
+                        cubatures: [
+                            {id: 1, diameter: 8, volume: 0.030},
+                            {id: 2, diameter: 12, volume: 0.090},
+                            {id: 3, diameter: 16, volume: 0.18},
+                            {id: 4, diameter: 20, volume: 0.31},
+                            {id: 5, diameter: 24, volume: 0.49},
+                            {id: 6, diameter: 28, volume: 0.68},
+                            {id: 7, diameter: 32, volume: 0.91},
+                            {id: 8, diameter: 36, volume: 1.18},
+                            {id: 9, diameter: 40, volume: 1.48},
+                            {id: 10, diameter: 44, volume: 1.81},
+                            {id: 11, diameter: 48, volume: 2.13},
+                        ]
+                    }
                 ]
             },
             {   
@@ -200,6 +237,42 @@ function CubatureCalculation() {
                             {id: 9, diameter: 40, volume: 1.57},
                             {id: 10, diameter: 44, volume: 1.92},
                             {id: 11, diameter: 48, volume: 2.28},
+                        ]
+                    },
+                    {
+                        id: 5,
+                        breed: 'ОлС',
+                        category: 3,
+                        cubatures: [
+                            {id: 1, diameter: 8, volume: 0.036},
+                            {id: 2, diameter: 12, volume: 0.099},
+                            {id: 3, diameter: 16, volume: 0.20},
+                            {id: 4, diameter: 20, volume: 0.34},
+                            {id: 5, diameter: 24, volume: 0.51},
+                            {id: 6, diameter: 28, volume: 0.73},
+                            {id: 7, diameter: 32, volume: 0.98},
+                            {id: 8, diameter: 36, volume: 1.26},
+                            {id: 9, diameter: 40, volume: 1.59},
+                            {id: 10, diameter: 44, volume: 1.93},
+                            {id: 11, diameter: 48, volume: 2.30},
+                        ]
+                    },
+                    {
+                        id: 6,
+                        breed: 'ОлЧ',
+                        category: 3,
+                        cubatures: [
+                            {id: 1, diameter: 8, volume: 0.032},
+                            {id: 2, diameter: 12, volume: 0.097},
+                            {id: 3, diameter: 16, volume: 0.20},
+                            {id: 4, diameter: 20, volume: 0.34},
+                            {id: 5, diameter: 24, volume: 0.52},
+                            {id: 6, diameter: 28, volume: 0.73},
+                            {id: 7, diameter: 32, volume: 0.98},
+                            {id: 8, diameter: 36, volume: 1.26},
+                            {id: 9, diameter: 40, volume: 1.59},
+                            {id: 10, diameter: 44, volume: 1.95},
+                            {id: 11, diameter: 48, volume: 2.31},
                         ]
                     },
                 ]
