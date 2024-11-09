@@ -124,7 +124,7 @@ function CubatureCalculation() {
                     },
                     {
                         id: 5,
-                        breed: 'ОлС',
+                        breed: 'Ольха серая',
                         category: 4,
                         cubatures: [
                             {id: 1, diameter: 8, volume: 0.035},
@@ -143,7 +143,7 @@ function CubatureCalculation() {
                     },
                     {
                         id: 6,
-                        breed: 'ОлЧ',
+                        breed: 'Ольха чёрная',
                         category: 4,
                         cubatures: [
                             {id: 1, diameter: 8, volume: 0.030},
@@ -241,7 +241,7 @@ function CubatureCalculation() {
                     },
                     {
                         id: 5,
-                        breed: 'ОлС',
+                        breed: 'Ольха серая',
                         category: 3,
                         cubatures: [
                             {id: 1, diameter: 8, volume: 0.036},
@@ -259,7 +259,7 @@ function CubatureCalculation() {
                     },
                     {
                         id: 6,
-                        breed: 'ОлЧ',
+                        breed: 'Ольха чёрная',
                         category: 3,
                         cubatures: [
                             {id: 1, diameter: 8, volume: 0.032},
