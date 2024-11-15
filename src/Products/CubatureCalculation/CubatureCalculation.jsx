@@ -82,6 +82,7 @@ function CubatureCalculation() {
                             {id: 9, diameter: 40, volume: 1.48},
                             {id: 10, diameter: 44, volume: 1.81},
                             {id: 11, diameter: 48, volume: 2.13},
+                            {id: 12, diameter: 52, volume: 2.45},
                         ]
                     },
                     {
@@ -120,6 +121,7 @@ function CubatureCalculation() {
                             {id: 9, diameter: 40, volume: 1.45},
                             {id: 10, diameter: 44, volume: 1.77},
                             {id: 11, diameter: 48, volume: 2.14},
+                            {id: 12, diameter: 52, volume: 2.51},
                         ]
                     },
                     {
@@ -157,6 +159,7 @@ function CubatureCalculation() {
                             {id: 9, diameter: 40, volume: 1.48},
                             {id: 10, diameter: 44, volume: 1.81},
                             {id: 11, diameter: 48, volume: 2.13},
+                            {id: 12, diameter: 52, volume: 2.45},
                         ]
                     }
                 ]
@@ -181,6 +184,7 @@ function CubatureCalculation() {
                             {id: 9, diameter: 40, volume: 1.59},
                             {id: 10, diameter: 44, volume: 1.93},
                             {id: 11, diameter: 48, volume: 2.30},
+                            {id: 12, diameter: 52, volume: 2.67},
                         ]
                     },
                     {
@@ -199,6 +203,7 @@ function CubatureCalculation() {
                             {id: 9, diameter: 40, volume: 1.59},
                             {id: 10, diameter: 44, volume: 1.95},
                             {id: 11, diameter: 48, volume: 2.31},
+                            {id: 12, diameter: 52, volume: 2.67},
                         ]
                     },
                     {
@@ -237,6 +242,7 @@ function CubatureCalculation() {
                             {id: 9, diameter: 40, volume: 1.57},
                             {id: 10, diameter: 44, volume: 1.92},
                             {id: 11, diameter: 48, volume: 2.28},
+                            {id: 12, diameter: 52, volume: 2.64},
                         ]
                     },
                     {
@@ -255,6 +261,7 @@ function CubatureCalculation() {
                             {id: 9, diameter: 40, volume: 1.59},
                             {id: 10, diameter: 44, volume: 1.93},
                             {id: 11, diameter: 48, volume: 2.30},
+                            {id: 12, diameter: 52, volume: 2.67},
                         ]
                     },
                     {
@@ -273,6 +280,7 @@ function CubatureCalculation() {
                             {id: 9, diameter: 40, volume: 1.59},
                             {id: 10, diameter: 44, volume: 1.95},
                             {id: 11, diameter: 48, volume: 2.31},
+                            {id: 12, diameter: 52, volume: 2.67},
                         ]
                     },
                 ]
@@ -297,6 +305,7 @@ function CubatureCalculation() {
                             {id: 9, diameter: 40, volume: 1.33},
                             {id: 10, diameter: 44, volume: 1.65},
                             {id: 11, diameter: 48, volume: 1.97},
+                            {id: 12, diameter: 52, volume: 2.29},
                         ]
                     },
                     {
@@ -335,6 +344,26 @@ function CubatureCalculation() {
                             {id: 9, diameter: 40, volume: 1.32},
                             {id: 10, diameter: 44, volume: 1.61},
                             {id: 11, diameter: 48, volume: 1.91},
+                            {id: 12, diameter: 52, volume: 2.21},
+                        ]
+                    },
+                    {
+                        id: 4,
+                        breed: 'Ольха чёрная',
+                        category: 5,
+                        cubatures: [
+                            {id: 1, diameter: 8, volume: 0.028},
+                            {id: 2, diameter: 12, volume: 0.081},
+                            {id: 3, diameter: 16, volume: 0.17},
+                            {id: 4, diameter: 20, volume: 0.28},
+                            {id: 5, diameter: 24, volume: 0.43},
+                            {id: 6, diameter: 28, volume: 0.61},
+                            {id: 7, diameter: 32, volume: 0.82},
+                            {id: 8, diameter: 36, volume: 1.06},
+                            {id: 9, diameter: 40, volume: 1.33},
+                            {id: 10, diameter: 44, volume: 1.65},
+                            {id: 11, diameter: 48, volume: 1.97},
+                            {id: 12, diameter: 52, volume: 2.29},
                         ]
                     },
                 ]
@@ -365,6 +394,26 @@ function CubatureCalculation() {
                             {id: 9, diameter: 40, volume: 1.89},
                             {id: 10, diameter: 44, volume: 2.31},
                             {id: 11, diameter: 48, volume: 2.77},
+                            {id: 12, diameter: 52, volume: 3.23},
+                        ]
+                    },
+                    {
+                        id: 2,
+                        breed: 'Ольха чёрная',
+                        category: 1,
+                        cubatures: [
+                            {id: 1, diameter: 8, volume: 0.036},
+                            {id: 2, diameter: 12, volume: 0.114},
+                            {id: 3, diameter: 16, volume: 0.23},
+                            {id: 4, diameter: 20, volume: 0.40},
+                            {id: 5, diameter: 24, volume: 0.61},
+                            {id: 6, diameter: 28, volume: 0.87},
+                            {id: 7, diameter: 32, volume: 1.17},
+                            {id: 8, diameter: 36, volume: 1.52},
+                            {id: 9, diameter: 40, volume: 1.89},
+                            {id: 10, diameter: 44, volume: 2.31},
+                            {id: 11, diameter: 48, volume: 2.77},
+                            {id: 12, diameter: 52, volume: 3.23},
                         ]
                     },
                 ]
@@ -389,6 +438,7 @@ function CubatureCalculation() {
                             {id: 9, diameter: 40, volume: 1.73},
                             {id: 10, diameter: 44, volume: 2.11},
                             {id: 11, diameter: 48, volume: 2.53},
+                            {id: 12, diameter: 52, volume: 2.95},
                         ]
                     },
                     {
@@ -407,6 +457,7 @@ function CubatureCalculation() {
                             {id: 9, diameter: 40, volume: 1.70},
                             {id: 10, diameter: 44, volume: 2.06},
                             {id: 11, diameter: 48, volume: 2.46},
+                            {id: 12, diameter: 52, volume: 2.86},
                         ]
                     },
                     {
@@ -427,6 +478,44 @@ function CubatureCalculation() {
                             {id: 11, diameter: 48, volume: 2.81},
                             {id: 12, diameter: 52, volume: 3.32},
                             {id: 13, diameter: 56, volume: 3.87},
+                        ]
+                    },
+                    {
+                        id: 4,
+                        breed: 'Ольха чёрная',
+                        category: 2,
+                        cubatures: [
+                            {id: 1, diameter: 8, volume: 0.034},
+                            {id: 2, diameter: 12, volume: 0.104},
+                            {id: 3, diameter: 16, volume: 0.22},
+                            {id: 4, diameter: 20, volume: 0.37},
+                            {id: 5, diameter: 24, volume: 0.56},
+                            {id: 6, diameter: 28, volume: 0.80},
+                            {id: 7, diameter: 32, volume: 1.08},
+                            {id: 8, diameter: 36, volume: 1.38},
+                            {id: 9, diameter: 40, volume: 1.73},
+                            {id: 10, diameter: 44, volume: 2.11},
+                            {id: 11, diameter: 48, volume: 2.53},
+                            {id: 12, diameter: 52, volume: 2.95},
+                        ]
+                    },
+                    {
+                        id: 5,
+                        breed: 'Ольха серая',
+                        category: 2,
+                        cubatures: [
+                            {id: 1, diameter: 8, volume: 0.038},
+                            {id: 2, diameter: 12, volume: 0.106},
+                            {id: 3, diameter: 16, volume: 0.21},
+                            {id: 4, diameter: 20, volume: 0.36},
+                            {id: 5, diameter: 24, volume: 0.55},
+                            {id: 6, diameter: 28, volume: 0.78},
+                            {id: 7, diameter: 32, volume: 1.06},
+                            {id: 8, diameter: 36, volume: 1.35},
+                            {id: 9, diameter: 40, volume: 1.70},
+                            {id: 10, diameter: 44, volume: 2.06},
+                            {id: 11, diameter: 48, volume: 2.46},
+                            {id: 12, diameter: 52, volume: 2.86},
                         ]
                     },
                 ]
@@ -451,6 +540,7 @@ function CubatureCalculation() {
                             {id: 9, diameter: 40, volume: 1.23},
                             {id: 10, diameter: 44, volume: 1.48},
                             {id: 11, diameter: 48, volume: 1.80},
+                            {id: 12, diameter: 52, volume: 2.12},
                         ]
                     },
                     {
@@ -469,6 +559,7 @@ function CubatureCalculation() {
                             {id: 9, diameter: 40, volume: 1.16},
                             {id: 10, diameter: 44, volume: 1.43},
                             {id: 11, diameter: 48, volume: 1.75},
+                            {id: 12, diameter: 52, volume: 2.07},
                         ]
                     },
                     {
@@ -489,6 +580,25 @@ function CubatureCalculation() {
                             {id: 11, diameter: 48, volume: 1.87},
                             {id: 12, diameter: 52, volume: 2.22},
                             {id: 13, diameter: 56, volume: 2.61},
+                        ]
+                    },
+                    {
+                        id: 4,
+                        breed: 'Ольха чёрная',
+                        category: 6,
+                        cubatures: [
+                            {id: 1, diameter: 8, volume: 0.026},
+                            {id: 2, diameter: 12, volume: 0.074},
+                            {id: 3, diameter: 16, volume: 0.15},
+                            {id: 4, diameter: 20, volume: 0.26},
+                            {id: 5, diameter: 24, volume: 0.38},
+                            {id: 6, diameter: 28, volume: 0.54},
+                            {id: 7, diameter: 32, volume: 0.71},
+                            {id: 8, diameter: 36, volume: 0.91},
+                            {id: 9, diameter: 40, volume: 1.16},
+                            {id: 10, diameter: 44, volume: 1.43},
+                            {id: 11, diameter: 48, volume: 1.75},
+                            {id: 12, diameter: 52, volume: 2.07},
                         ]
                     },
                 ]
@@ -513,6 +623,7 @@ function CubatureCalculation() {
                             {id: 9, diameter: 40, volume: 1.14},
                             {id: 10, diameter: 44, volume: 1.41},
                             {id: 11, diameter: 48, volume: 1.72},
+                            {id: 12, diameter: 52, volume: 2.03},
                         ]
                     },
                     {
