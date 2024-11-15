@@ -487,7 +487,9 @@ const PatrolReportGenerator = () => {
 
             actions.setSubmitting(false);
             custom_alert('Задание и схему можно распечатывать, акт и фототаблица будут заполнены после патруля');
-          setIsFresh(true)
+            setIsFresh(true);
+
+            window.scrollTo(0, 0);
           }, 500);
         }}
       >
