@@ -64,7 +64,7 @@ const PatrolReportGenerator = () => {
 
       <Formik
         initialValues={{ Patrol_task_number: undefined, Date_issue_task: '', Patrol_date: '', 
-          Patrol_route_number: '', What_date_was_approved: '08.12.2023', Year_patrol: 2024,
+          Patrol_route_number: '', What_date_was_approved: '28.10.2024', Year_patrol: 2025,
           Person_issued_task: 'директор ГОКУ "Новгородское лесничество" Иванов К.В.',
           Full_name_senior_patroller: 'мастер леса Мясноборского участкового лесничества Устинов Дмитрий Сергеевич', 
           Full_name_junior_patroller: 'участковый лесничий Новгородского участкового лесничества Маркова Ирина Фирсовна', 
@@ -280,50 +280,100 @@ const PatrolReportGenerator = () => {
 
             // 2.7. Создание описания маршрута патрулирования
             switch (Patrol_route_number) {
-                case '70,1':
-                    Patrol_route_declaration = 'квартал 128 (выдела 14,17,26,30,36,38), квартал 126 (выдела 8,7,15), квартал 228 (выдела 13,21,25), квартал 216 (выдела 17,18,19,23,30), квартал 213 (выдела 20,24,16), квартал 211 (выдела 20,21,24,30,32), квартал 199 (выдела 21,22,31,33,35), квартал 12 (выдела 7,10), квартал 13 (выдела 1,23,40,35)';
+                case '106':
+                    Patrol_route_declaration = 'квартал 128 (части выделов 14,17,26,30,36,38), квартал 126 (части выделов 8,7,15), квартал 228 (части выделов 13,21,25), квартал 216 (части выделов 17,18,19,23,30), квартал 213 (части выделов 20,24,16), квартал 211 (части выделов 20,21,24,30,32), квартал 199 (части выделов 21,22,31,33,35)';
                     Patrol_time = '35 мин.';
                     Length_patrol = '14 км.';
                     break;
-                case '71,2':
-                    Patrol_route_declaration = 'квартал 200 (выдела 49,50,51,4,6,7), квартал 191 (выдела 25,26,27), квартал 40 (выдела 19,20), квартал 201 (выдела 6,8,14,15,18,24,26,28,31), квартал 195 (выдела 11,12), квартал 196 (выдела 2,10,11,12)';
+                case '107':
+                    Patrol_route_declaration = 'квартал 200 (части выделов 49,50,51,4,6,7), квартал 191 (части выделов 25,26,27), квартал 40 (части выделов 19,20), квартал 201 (части выделов 6,8,14,15,18,24,26,28,31), квартал 195 (части выделов 11,12), квартал 196 (части выделов 2,10,11,12)';
                     Patrol_time = '15 мин.';
                     Length_patrol = '5 км.';
                     break;
-                case '72,3':
-                    Patrol_route_declaration = 'квартал 45 (выдела 7,9), квартал 30 (выдела 12,15,17,19), квартал 192 (выдела 3,13), квартал 82 (выдела 5,6,14,20,25), квартал 100 (выдела 14,19,21), квартал 105 (выдела 3,10,14,17,18), квартал 110 (выдела 9,8,17)';
-                    Patrol_time = '1 ч. 20 мин.';
-                    Length_patrol = '10 км.';
+                case '108':
+                    Patrol_route_declaration = 'квартал 43 (части выделов 7,9), квартал 30 (части выделов 12,15,17,19), квартал 192 (части выделов 3,13)';
+                    Patrol_time = '60 мин.';
+                    Length_patrol = '5 км.';
                     break;
-                case '73,4':
-                    Patrol_route_declaration = 'квартал 229 (выдела 2,4,8,9,10,12,13,6,7,11), квартал 116 (выдела 9,13,15,7,18,5,11,12,16), квартал 117 (выдела 18,15,12,16,17,18,21), квартал 119 (выдела 7,16,3,2,17,6,13,14,15)';
+                case '109':
+                    Patrol_route_declaration = 'квартал 229 (части выделов 2,4,8,9,10,12,13,6,7,11), квартал 116 (части выделов 9,13,15,7,18,5,11,12,16), квартал 117 (части выделов 18,15,12,16,17,18,21), квартал 119 (части выделов 7,16,3,2,17,6,13,14,15)';
                     Patrol_time = '10 мин.';
                     Length_patrol = '4 км.';
                     break;
-                case '74,5':
-                    Patrol_route_declaration = 'квартал 240 (выдела 1,2,3,4,5,6,13,11,37,38,41,27,29), квартал 250 (выдела 2,3,5), квартал 257 (выдела 1,47,57), квартал 251 (выдела 1,3), квартал 252 (выдела 23,22,24,18,19)';
-                    Patrol_time = '2 ч.';
+                case '110':
+                    Patrol_route_declaration = 'квартал 252 (часть выдела 18)';
+                    Patrol_time = '10 мин.';
+                    Length_patrol = '0,3 км.';
+                    break;
+                case '111':
+                    Patrol_route_declaration = 'квартал  255 (части выделов 2,4,6,7,9), квартал 254 (части выделов 2,3,5,7,8,9,16,19), квартал 248 (части выделов 26,27,28), квартал 247 (части выделов 35,36,39,46,49,38,45,47,48,51,53,4,6,7,8,5,19,18,23), квартал 232 (части выделов 2,4,3,5,6,10,11,21), квартал 233 (части выделов 4,5,3,7,2), квартал 230 (части выделов 2,3,4,8,9,10,11,12)';
+                    Patrol_time = '20 мин.';
                     Length_patrol = '8 км.';
                     break;
-                case '75,6':
-                    Patrol_route_declaration = 'квартал 267 (выдела 12,23,11,8), квартал 265 (выдела 20,24,22), квартал 255 (выдела 2,5,7,8,9,10), квартал 254 (выдела 13,17,3,5,16,17,2), квартал 248 (выдела 27,28), квартал 247 (выдела 35,38,45,47,48,51,53,4,6,7,8,5,19,18,23), квартал 232 (выдела 2,4,3,5,6,10,11,21), квартал 233 (выдела 4,5,3,7,2), квартал 230 (выдела 2,3,4,8,9,10,11,12), квартал 227 (выдела 3,2,6,1,3), квартал 125 (выдела 1,2,3)';
-                    Patrol_time = '25 мин.';
-                    Length_patrol = '11 км.';
-                    break;
-                case '76,7':
-                    Patrol_route_declaration = 'квартал 226 (выдела 1,2,4,3,9,8,12), квартал 111 (выдела 4,7,8), квартал 106 (выдела 6,16,5,8), квартал 208 (выдела 6,17,20,10,9,5,7), квартал 207 (выдела 8,7,9,15,16,17), квартал 197 (выдела 9,12,8,14,11,18), квартал 198 (выдела 10,19,11)';
+                case '112':
+                    Patrol_route_declaration = 'квартал 226 (части выделов 1,2,4,3,9,8,12), квартал 111 (части выделов 4,7,8), квартал 106 (части выделов 6,16,5,8), квартал 208 (части выделов 6,17,20,10,9,5,7), квартал 207 (части выделов 8,7,9,15,16,17), квартал 197 (части выделов 9,12,8,14,11,18)';
                     Patrol_time = '1 ч. 20 мин.';
                     Length_patrol = '20 км.';
                     break;
-                case '77,8':
-                    Patrol_route_declaration = 'квартал 246 (выдела 17,18,19,20,21,22), квартал 257 (выдела 2,1,7,8,10), квартал 155 (выдела 14,26,28,31,13,15,23,40,30), квартал 244 (выдела 4,5,10,8,9,36,47,53), квартал 151 (выдела 9,18,17,12,13), квартал 243 (выдела 12), квартал 224 (выдела 31,32,37,38,41), квартал 223 (выдела 33,36,38,45,49,54,61), квартал 153 (выдел 41)';
-                    Patrol_time = '1 ч. 55 мин.';
-                    Length_patrol = '14 км.';
+                case '113':
+                    Patrol_route_declaration = 'квартал 246 (части выделов 17,18,19,20,21,22), квартал 155 (части выделов 14,26,28,31,13,15,23,40,30), квартал 244 (части выделов 4,5,10,8,9,36,47,53), квартал 151 (части выделов 9,18,17,12,13), квартал 243 (части выделов 12)';
+                    Patrol_time = '1 ч. 45 мин.';
+                    Length_patrol = '12 км.';
                     break;
-                case '78,9':
-                    Patrol_route_declaration = 'квартал 225 (выдела 39,40,47,61,21,29,32), квартал 218 (выдела 14,11,12,13,20,19), квартал 86 (выдела 19,20,34,35,33,36), квартал 204 (выдела 16), квартал 203 (выдела 14,15)';
+                case '114':
+                    Patrol_route_declaration = 'квартал 225 (части выделов 39,40,47,61,21,29,32), квартал 218 (части выделов 14,11,12,13,20,19), квартал 86 (части выделов 19,20,34,35,33,36)';
                     Patrol_time = '40 мин.';
                     Length_patrol = '12 км.';
+                    break;
+                case '115':
+                    Patrol_route_declaration = 'квартал 82 (части выделов 5,6,14,20,25), квартал 100 (части выделов 14,19,21), квартал 105 (части выделов 3,10,14,17,18), квартал 110 (части выделов 9,8,17)';
+                    Patrol_time = '1 ч.';
+                    Length_patrol = '5 км.';
+                    break;
+                case '116':
+                    Patrol_route_declaration = 'квартал 240 (части выделов 1,2,3,4,5,6,13,11,37,38,41,27,29)';
+                    Patrol_time = '15 мин.';
+                    Length_patrol = '0,5 км.';
+                    break;
+                case '117':
+                    Patrol_route_declaration = 'квартал 250 (части выделов 2,3,5), квартал 251 (части выделов 1,3)';
+                    Patrol_time = '5 мин.';
+                    Length_patrol = '1 км.';
+                    break;
+                case '118':
+                    Patrol_route_declaration = 'квартал 252 (части выделов 3,5,6)';
+                    Patrol_time = '40 мин.';
+                    Length_patrol = '1 км.';
+                    break;
+                case '119':
+                    Patrol_route_declaration = 'квартал 224 (части выделов 31,32,37,38,41), квартал 223 (части выделов 33,36,38,45,49,54,61)';
+                    Patrol_time = '10 мин.';
+                    Length_patrol = '2 км.';
+                    break;
+                case '120':
+                    Patrol_route_declaration = 'квартал 262 (часть выдела 27)';
+                    Patrol_time = '15 мин.';
+                    Length_patrol = '0,5 км.';
+                    break;
+                case '121':
+                    Patrol_route_declaration = 'квартал 235 (части выделов 16,20)';
+                    Patrol_time = '30 мин.';
+                    Length_patrol = '1 км.';
+                    break;
+                case '122':
+                    Patrol_route_declaration = 'квартал 259 (часть выдела 2)';
+                    Patrol_time = '30 мин.';
+                    Length_patrol = '1 км.';
+                    break;
+                case '123':
+                    Patrol_route_declaration = 'квартал 235 (части выделов 16,20,23,24)';
+                    Patrol_time = '40 мин.';
+                    Length_patrol = '1 км.';
+                    break;
+                case '124':
+                    Patrol_route_declaration = 'квартал 12 (части выделов 7,10), квартал 13 (части выделов 1,23,40,35)';
+                    Patrol_time = '10 мин.';
+                    Length_patrol = '4 км.';
                     break;
                 default:
                     break;
@@ -402,7 +452,7 @@ const PatrolReportGenerator = () => {
                   // Создание элемента ссылки для скачивания файла
                   const link = document.createElement('a');
                   link.href = URL.createObjectURL(out);
-                  link.download = `2. Акт о проведённом патрулировании по МБ л-ву № ${Number_patrol_act}.docx`;
+                  link.download = `2. Акт о проведённом патрулировании по МБ л-ву № ${Number_patrol_act}.doc`;
                   link.click();
               })
               .catch(error => {
@@ -538,15 +588,25 @@ const PatrolReportGenerator = () => {
               field_name='Patrol_route_number' 
               options_list={[
                 {id: '1', value: '', name_option: 'Выберите', disabled: true},
-                {id: '2', value: '70,1', name_option: '70', disabled: false},
-                {id: '3', value: '71,2', name_option: '71', disabled: false},
-                {id: '4', value: '72,3', name_option: '72', disabled: false},
-                {id: '5', value: '73,4', name_option: '73', disabled: false},
-                {id: '6', value: '74,5', name_option: '74', disabled: false},
-                {id: '7', value: '75,6', name_option: '75', disabled: false},
-                {id: '8', value: '76,7', name_option: '76', disabled: false},
-                {id: '9', value: '77,8', name_option: '77', disabled: false},
-                {id: '10', value: '78,9', name_option: '78', disabled: false},
+                {id: '2', value: '106', name_option: '106', disabled: false},
+                {id: '3', value: '107', name_option: '107', disabled: false},
+                {id: '4', value: '108', name_option: '108', disabled: false},
+                {id: '5', value: '109', name_option: '109', disabled: false},
+                {id: '6', value: '110', name_option: '110', disabled: false},
+                {id: '7', value: '111', name_option: '111', disabled: false},
+                {id: '8', value: '112', name_option: '112', disabled: false},
+                {id: '9', value: '113', name_option: '113', disabled: false},
+                {id: '10', value: '114', name_option: '114', disabled: false},
+                {id: '11', value: '115', name_option: '115', disabled: false},
+                {id: '12', value: '116', name_option: '116', disabled: false},
+                {id: '13', value: '117', name_option: '117', disabled: false},
+                {id: '14', value: '118', name_option: '118', disabled: false},
+                {id: '15', value: '119', name_option: '119', disabled: false},
+                {id: '16', value: '120', name_option: '120', disabled: false},
+                {id: '17', value: '121', name_option: '121', disabled: false},
+                {id: '18', value: '122', name_option: '122', disabled: false},
+                {id: '19', value: '123', name_option: '123', disabled: false},
+                {id: '20', value: '124', name_option: '124', disabled: false},
               ]} 
               is_primary={true}           
             />
@@ -568,10 +628,10 @@ const PatrolReportGenerator = () => {
               label_name='Год патрулирования' 
               field_name='Year_patrol' 
               options_list={[
-                {id: '1', value: '2024', name_option: '2024', disabled: false},
-                {id: '2', value: '2025', name_option: '2025', disabled: false},
-                {id: '3', value: '2026', name_option: '2026', disabled: false},
-                {id: '4', value: '2027', name_option: '2027', disabled: false},
+                {id: '1', value: '2025', name_option: '2025', disabled: false},
+                {id: '2', value: '2026', name_option: '2026', disabled: false},
+                {id: '3', value: '2027', name_option: '2027', disabled: false},
+                {id: '4', value: '2028', name_option: '2028', disabled: false},
               ]} 
               is_primary={false} 
             />
@@ -716,7 +776,7 @@ const PatrolReportGenerator = () => {
               is_primary={false}           
             />
 
-            <Select 
+            {/* <Select 
               handleChange={handleChange}  
               setIsFresh={setIsFresh}
               isFresh={isFresh}
@@ -728,7 +788,7 @@ const PatrolReportGenerator = () => {
                 {id: '3', value: 'C848ХМ', name_option: 'Николая Викторовича', disabled: false},
               ]}  
               is_primary={false}           
-            />
+            /> */}
 
             <Checkbox name="Is_there_photo_table" label="Есть ли фототаблица?" />
 
