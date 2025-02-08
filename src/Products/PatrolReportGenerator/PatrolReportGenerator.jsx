@@ -6,9 +6,9 @@ import Checkbox from '../../Common/Checkbox';
 import PizZip from 'pizzip';
 import Docxtemplater from 'docxtemplater';
 import Phototable_template from '../../Assets/Шаблон фототаблицы по патрулированию.docx';
-import Act_template from '../../Assets/Шаблон акта о проведённом патрулировании.doc';
+import Act_template from '../../Assets/Шаблон акта о проведённом патрулировании.docx';
 import Schema_template from '../../Assets/Шаблон схемы проведённого патрулирования.docx';
-import Task_template from '../../Assets/Шаблон задания на патрулирование.doc';
+import Task_template from '../../Assets/Шаблон задания на патрулирование.docx';
 
 const PatrolReportGenerator = () => {
   const [isFresh, setIsFresh] = useState(false);
@@ -405,7 +405,7 @@ const PatrolReportGenerator = () => {
                   // Создание элемента ссылки для скачивания файла
                   const link = document.createElement('a');
                   link.href = URL.createObjectURL(out);
-                  link.download = `+1. Задание на проведение патрулирования по МБ л-ву № ${Patrol_task_number}.doc`;
+                  link.download = `+1. Задание на проведение патрулирования по МБ л-ву № ${Patrol_task_number}.docx`;
                   link.click();
               })
               .catch(error => {
@@ -446,7 +446,7 @@ const PatrolReportGenerator = () => {
                   // Создание элемента ссылки для скачивания файла
                   const link = document.createElement('a');
                   link.href = URL.createObjectURL(out);
-                  link.download = `2. Акт о проведённом патрулировании по МБ л-ву № ${Number_patrol_act}.doc`;
+                  link.download = `2. Акт о проведённом патрулировании по МБ л-ву № ${Number_patrol_act}.docx`;
                   link.click();
               })
               .catch(error => {
