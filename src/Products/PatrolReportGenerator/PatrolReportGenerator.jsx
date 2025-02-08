@@ -405,7 +405,7 @@ const PatrolReportGenerator = () => {
                   // Создание элемента ссылки для скачивания файла
                   const link = document.createElement('a');
                   link.href = URL.createObjectURL(out);
-                  link.download = `+1. Задание на проведение патрулирования по МБ л-ву № ${Patrol_task_number}.docx`;
+                  link.download = `+1. Задание на проведение патрулирования по МБ л-ву № ${Patrol_task_number}.doc`;
                   link.click();
               })
               .catch(error => {
@@ -446,7 +446,7 @@ const PatrolReportGenerator = () => {
                   // Создание элемента ссылки для скачивания файла
                   const link = document.createElement('a');
                   link.href = URL.createObjectURL(out);
-                  link.download = `2. Акт о проведённом патрулировании по МБ л-ву № ${Number_patrol_act}.docx`;
+                  link.download = `2. Акт о проведённом патрулировании по МБ л-ву № ${Number_patrol_act}.doc`;
                   link.click();
               })
               .catch(error => {
