@@ -6,9 +6,9 @@ import Checkbox from '../../Common/Checkbox';
 import PizZip from 'pizzip';
 import Docxtemplater from 'docxtemplater';
 import Phototable_template from '../../Assets/Шаблон фототаблицы по патрулированию.docx';
-import Act_template from '../../Assets/Шаблон акта о проведённом патрулировании.docx';
+import Act_template from '../../Assets/Шаблон акта о проведённом патрулировании.doc';
 import Schema_template from '../../Assets/Шаблон схемы проведённого патрулирования.docx';
-import Task_template from '../../Assets/Шаблон задания на патрулирование.docx';
+import Task_template from '../../Assets/Шаблон задания на патрулирование.doc';
 
 const PatrolReportGenerator = () => {
   const [isFresh, setIsFresh] = useState(false);
@@ -68,7 +68,7 @@ const PatrolReportGenerator = () => {
           Person_issued_task: 'директор ГОКУ "Новгородское лесничество" Иванов К.В.',
           Full_name_senior_patroller: 'мастер леса Мясноборского участкового лесничества Устинов Дмитрий Сергеевич', 
           Full_name_junior_patroller: 'участковый лесничий Новгородского участкового лесничества Маркова Ирина Фирсовна', 
-          Time_assignment_issue: '', Date_assignment_issue: '', Additional_order: false, 
+          Time_assignment_issue: '', Additional_order: false, 
           Number_patrol_act: undefined, Object_leaflet: '', Village_leaflet: '', 
           Number_informed_people: '', Village_informed_people: '', Patrol_car: 'С948ХК',
           Is_there_photo_table: false 
@@ -120,10 +120,6 @@ const PatrolReportGenerator = () => {
             errors.Time_assignment_issue = 'Введите время выдачи задания';
           } 
 
-          if (!values.Date_assignment_issue) {
-            errors.Date_assignment_issue = 'Выберите дату выдачи задания';
-          }
-
           if (!values.Number_patrol_act) {
             errors.Number_patrol_act = 'Введите номер акта патрулирования';
           } else if (!/^\d{1,4}$/i.test(values.Number_patrol_act)) {
@@ -171,7 +167,6 @@ const PatrolReportGenerator = () => {
             const Full_name_senior_patroller = values.Full_name_senior_patroller; 
             const Full_name_junior_patroller = values.Full_name_junior_patroller; 
             let Time_assignment_issue = values.Time_assignment_issue;
-            let Date_assignment_issue = values.Date_assignment_issue; 
             const Additional_order = values.Additional_order === true ? " (приказ директора от _____._____._____ года № _____)" : "";
             const Number_patrol_act = values.Number_patrol_act; 
             
@@ -206,7 +201,6 @@ const PatrolReportGenerator = () => {
             Date_issue_task = date_formation(Date_issue_task);
             Patrol_date = date_formation(Patrol_date);
             Date_patrol_act = date_formation(Date_patrol_act);
-            Date_assignment_issue = date_formation(Date_assignment_issue);          
 
             // 2.3. Создание фамилии с инициалами из полного имени
             let Senior_patroller, Declension_name_senior_patroller, Initials_senior_patroller, 
@@ -397,7 +391,7 @@ const PatrolReportGenerator = () => {
                   // Обработка документа (замена {user_name} на имя пользователя, {user_surname} на фамилию пользователя и т.д.)
                   doc.render({
                       Full_name_senior_patroller, Senior_patroller, Full_name_junior_patroller, 
-                      Junior_patroller, Additional_order, Time_assignment_issue, Date_assignment_issue, 
+                      Junior_patroller, Additional_order, Time_assignment_issue, 
                       Patrol_task_number, Date_issue_task, Patrol_date, Patrol_route_number, What_date_was_approved, 
                       Year_patrol, Person_issued_task
                   });
@@ -452,7 +446,7 @@ const PatrolReportGenerator = () => {
                   // Создание элемента ссылки для скачивания файла
                   const link = document.createElement('a');
                   link.href = URL.createObjectURL(out);
-                  link.download = `2. Акт о проведённом патрулировании по МБ л-ву № ${Number_patrol_act}.doc`;
+                  link.download = `2. Акт о проведённом патрулировании по МБ л-ву № ${Number_patrol_act}.docx`;
                   link.click();
               })
               .catch(error => {
@@ -578,7 +572,7 @@ const PatrolReportGenerator = () => {
               field_name='Patrol_date' 
               placeholder='' 
               input_type='date' 
-              is_primary={false} />      
+              is_primary={true} />      
             
             <Select 
               handleChange={handleChange}  
@@ -677,16 +671,7 @@ const PatrolReportGenerator = () => {
               field_name='Time_assignment_issue' 
               placeholder='' 
               input_type='time' 
-              is_primary={true} />   
-            <Input 
-              handleChange={handleChange} 
-              isFresh={isFresh}
-              setIsFresh={setIsFresh}
-              label_name='Дата выдачи задания' 
-              field_name='Date_assignment_issue' 
-              placeholder='' 
-              input_type='date' 
-              is_primary={false} />   
+              is_primary={true} />    
 
             <Checkbox name="Additional_order" label="Дополнительный приказ" />
 
